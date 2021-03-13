@@ -126,11 +126,14 @@ export const GlobalContextProvider = (props) => {
       [newItem.category]: [...myItems[newItem.category], newItem],
     });
   };
-  //Delete items from myItems
+
+  // Delete items from myItems
   const deleteItem = (category, id) => {
     const filtered = myItems[category].filter((el) => el.id !== id);
     setMyItems({ ...myItems, [category]: filtered });
   };
+
+  // Search logic
   const handleSearch = (query) => {
     let filtered = mainData[route].filter(
       (el) =>
