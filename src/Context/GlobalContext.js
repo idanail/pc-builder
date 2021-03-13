@@ -13,7 +13,7 @@ const { Provider } = GlobalContext;
 export const GlobalContextProvider = (props) => {
   const [initialData, setInitialData] = useState(data);
   const [mainData, setMainData] = useState(initialData);
-  // const [mainData, setMainData] = useState(initialData);
+  const [filteredData, setFilteredData] = useState(mainData);
   const [route, setRoute] = useState("");
   const [brands, setBrands] = useState([]);
   const [type, setType] = useState([]);
@@ -42,7 +42,9 @@ export const GlobalContextProvider = (props) => {
       setClickedBrands([...clickedBrands, brand]);
     }
   };
-
+  // useEffect(() => {
+  //   console.log(clickedBrands);
+  // }, [clickedBrands]);
   //Filtering brands of the current component
   const filterBrands = (brand) => {
     //Remove filtered brand
@@ -61,10 +63,11 @@ export const GlobalContextProvider = (props) => {
         currentColor && handleSelect(currentColor, "color");
       }
       if (filtered.length >= 1) {
-        setMainData({ ...mainData, [route]: filtered });
+        setFilteredData({ ...mainData, [route]: filtered });
+
         // Return all data if filtered lenght is eq to 0.
       } else {
-        setMainData(initialData);
+        setFilteredData(initialData);
       }
     }
   };
@@ -115,6 +118,7 @@ export const GlobalContextProvider = (props) => {
   const handleItems = () => {
     setMyItems(myItemsInitial);
   };
+  //Add items in myitems component
   const addItem = (currentItem) => {
     let newItem = { ...currentItem, id: uuid() };
     setMyItems({
@@ -122,15 +126,24 @@ export const GlobalContextProvider = (props) => {
       [newItem.category]: [...myItems[newItem.category], newItem],
     });
   };
-
+  //Delete items from myItems
   const deleteItem = (category, id) => {
     const filtered = myItems[category].filter((el) => el.id !== id);
     setMyItems({ ...myItems, [category]: filtered });
   };
-
+  const handleSearch = (query) => {
+    let filtered = mainData[route].filter(
+      (el) =>
+        el.brand.toLowerCase().includes(query.toLowerCase()) ||
+        el.model.toLowerCase().includes(query.toLowerCase())
+    );
+    console.log(filtered);
+    setFilteredData({ ...filteredData, [route]: filtered });
+  };
   const globalState = {
     mainData,
     initialData,
+    filteredData,
     getRoute,
     brands,
     filterBrands,
@@ -154,6 +167,7 @@ export const GlobalContextProvider = (props) => {
     addItem,
     deleteItem,
     handleItems,
+    handleSearch,
   };
 
   return <Provider value={globalState}>{props.children}</Provider>;

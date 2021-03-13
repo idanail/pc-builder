@@ -14,6 +14,7 @@ import { Heading20 } from "../../Assets/Text/Text";
 // context imports
 import { GlobalContext } from "../../Context/GlobalContext";
 // component imports
+import SearchBar from "./SearchBar/SearchBar";
 
 // styled-components
 const FooterWrapper = styled.div`
@@ -139,7 +140,7 @@ const Footer = (props) => {
       className="footer"
     >
       <div className="search-bar">
-        <input type="text" />
+        <SearchBar />
       </div>
       <div className="mobile-menu">
         <ul className="navigation-links">

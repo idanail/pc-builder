@@ -74,10 +74,10 @@ const MainFilter = ({ open, handleClose, currentData }) => {
                 brands.map((el, i) => <BrandsRender key={i} brand={el} />)}
             </div>
             <div className="filter-select">
-              {currentData[0].type && (
+              {currentData.hasOwnProperty("type") && (
                 <FilterSelect query={type} title="Type" />
               )}
-              {currentData[0].color && (
+              {currentData.hasOwnProperty("color") && (
                 <FilterSelect query={color} title="Color" />
               )}
             </div>

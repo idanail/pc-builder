@@ -40,16 +40,44 @@ const MainShowCaseWrapper = styled.div`
 
 const MainShowCase = () => {
   const location = useLocation();
-  const { mainData, getRoute, setCurrentType, setCurrentColor } = useContext(
-    GlobalContext
-  );
+  const {
+    mainData,
+    filteredData,
+    myItems,
+    getRoute,
+    setCurrentType,
+    setCurrentColor,
+  } = useContext(GlobalContext);
   const currentComponent = Object.keys(mainData)
     .filter(
       (el) =>
         el.replace(" ", "_").toLowerCase() === location.pathname.split("/")[2]
     )
     .toString();
-  const currentData = mainData[currentComponent];
+
+  // const currentData = filteredData[currentComponent];
+  let currentData;
+  if (currentComponent === "Motherboard" && myItems.Processor.length === 1) {
+    currentData = filteredData[currentComponent].filter(
+      (el) => el.socket === myItems.Processor[0].socket
+    );
+  } else if (
+    currentComponent === "CPU Cooler" &&
+    myItems.Processor.length === 1
+  ) {
+    currentData = filteredData[currentComponent].filter((el) =>
+      el.socket.includes(myItems.Processor[0].socket)
+    );
+  } else if (
+    currentComponent === "RAM Memory" &&
+    myItems.Processor.length === 1
+  ) {
+    currentData = filteredData[currentComponent].filter((el) =>
+      myItems.Motherboard[0].support.includes(el.memorySpeed)
+    );
+  } else {
+    currentData = filteredData[currentComponent];
+  }
   //Model
   const [open, setOpen] = useState(false);
 
