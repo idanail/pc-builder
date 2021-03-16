@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 // npm imports
 import styled from "styled-components";
@@ -90,9 +90,10 @@ const MyItemsWrapper = styled.div`
 // component
 
 const MyItems = (props) => {
-  const { myItems, deleteItem } = useContext(GlobalContext);
+  const { deleteItem } = useContext(GlobalContext);
   const [clickedCategory, setClickedCategory] = useState("");
   const [clickedId, setClickedId] = useState("");
+  const myItems = JSON.parse(localStorage.getItem("myItems"));
 
   //Model
   const [open, setOpen] = useState(false);

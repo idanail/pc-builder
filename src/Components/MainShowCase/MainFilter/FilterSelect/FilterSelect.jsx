@@ -22,19 +22,23 @@ const FilterSelectWrapper = styled.select`
 // component
 
 const FilterSelect = ({ title, query }) => {
-  const { handleSelect, mainData, currentType, currentColor } = useContext(
-    GlobalContext
-  );
+  const {
+    handleSelect,
+    mainData,
+    currentType,
+    currentColor,
+    currentObj,
+  } = useContext(GlobalContext);
 
   return (
     <FilterSelectWrapper
       defaultValue={
         title.toLowerCase() === "type"
-          ? currentType
-            ? currentType
+          ? currentObj.type
+            ? currentObj.type[0]
             : "--"
-          : currentColor
-          ? currentColor
+          : currentObj.color
+          ? currentObj.color[0]
           : "--"
       }
       onChange={(e) => handleSelect(e.target.value, title.toLowerCase())}

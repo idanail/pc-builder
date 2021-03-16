@@ -127,7 +127,7 @@ const FooterWrapper = styled.div`
 // component
 
 const Footer = (props) => {
-  const { mainData } = useContext(GlobalContext);
+  const { mainData, setCurrentObj } = useContext(GlobalContext);
 
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
@@ -148,7 +148,10 @@ const Footer = (props) => {
             Object.keys(mainData).map((el, i) => (
               <li key={i}>
                 <Link
-                  onClick={() => setMobileMenuActive(false)}
+                  onClick={() => {
+                    setCurrentObj({});
+                    setMobileMenuActive(false);
+                  }}
                   to={Paths.paths.main.replace(
                     "{COMPONENT}",
                     el.replace(" ", "_").toLocaleLowerCase()

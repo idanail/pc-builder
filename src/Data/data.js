@@ -578,7 +578,7 @@ export const data = {
       type: "Liquid Cooler",
       id: uuid(),
       brand: "Cooler Master",
-      model: "MASTERLIQUID ML360L V2",
+      model: "MASTERLIQUID ML360L V2 W3",
       color: "White",
       socket: [
         "LGA2066",
@@ -675,7 +675,7 @@ export const data = {
       type: "Liquid Cooler",
       id: uuid(),
       brand: "Cooler Master",
-      model: "MASTERLIQUID ML360L V2",
+      model: "MASTERLIQUID ML360L V2 W2",
       color: "White",
       socket: [
         "LGA2066",
@@ -4705,7 +4705,7 @@ export const data = {
       type: "Full-Tower",
       id: uuid(),
       brand: "Corsair",
-      model: "Graphite Series™ 780T",
+      model: "Graphite Series™ 780T - White",
       color: "White",
       caseDimensions: "637mm x 288mm x 602mm",
       compatibleLiquidCoolers: [

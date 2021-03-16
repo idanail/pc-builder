@@ -14,6 +14,7 @@ import { GlobalContext } from "../../../Context/GlobalContext";
 // component imports
 import BrandsRender from "./BrandsRender/BrandsRender";
 import FilterSelect from "./FilterSelect/FilterSelect";
+import PriceRange from "./PriceRange/PriceRange";
 
 // npm text imports
 import { Text30, Text24, Text22 } from "../../../Assets/Text/Text";
@@ -43,11 +44,16 @@ const useStyles = makeStyles((theme) => ({
   marginB: {
     marginBottom: "10px",
   },
+  marginT: {
+    marginTop: "20px",
+  },
 }));
 
 const MainFilter = ({ open, handleClose, currentData }) => {
-  const { brands, type, color } = useContext(GlobalContext);
+  const { mainData, brands, type, color } = useContext(GlobalContext);
   const classes = useStyles();
+  const route = localStorage.getItem("route");
+
   return (
     <MainFilterWrapper>
       <Modal
@@ -73,13 +79,17 @@ const MainFilter = ({ open, handleClose, currentData }) => {
               {brands &&
                 brands.map((el, i) => <BrandsRender key={i} brand={el} />)}
             </div>
-            <div className="filter-select">
-              {currentData.hasOwnProperty("type") && (
+            <div className={`filter-select ${classes.marginB}`}>
+              {mainData[route][0].type && (
                 <FilterSelect query={type} title="Type" />
               )}
-              {currentData.hasOwnProperty("color") && (
+              {mainData[route][0].color && (
                 <FilterSelect query={color} title="Color" />
               )}
+            </div>
+            <div className={`price-range ${classes.marginT}`}>
+              <Text22 className={classes.marginB}>Price:</Text22>
+              <PriceRange />
             </div>
           </div>
         </Fade>

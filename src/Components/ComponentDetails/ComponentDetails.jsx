@@ -3,6 +3,11 @@ import React, { useContext, useEffect, useState } from "react";
 // npm imports
 import styled from "styled-components";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import { useParams } from "@reach/router";
+
+// data imports
+import { data } from "../../Data/data";
+
 // consts imports
 
 // context imports
@@ -137,9 +142,24 @@ const ComponentDetailsWrapper = styled.div`
 // component
 
 const ComponentDetails = (props) => {
-  const { route, details, myItems, addItem, removeItem } = useContext(
-    GlobalContext
+  const { details, addItem, removeItem } = useContext(GlobalContext);
+  const [prevUrl, setPrevUrl] = useState(useParams());
+
+  // console.log(`${prevUrl.currentComponent}/${prevUrl.componentDetails}`);
+
+  const currentCategory = Object.keys(data).filter(
+    (el) => el.replace(/ /g, "_").toLowerCase() === prevUrl.currentComponent
   );
+
+  const currentObj = data[currentCategory].filter(
+    (el) =>
+      `${el.brand.replace(/ /g, "_").toLowerCase()}_${el.model
+        .replace(/ /g, "_")
+        .toLowerCase()}` === prevUrl.componentDetails
+  );
+
+  const route = currentCategory.toString();
+  const myItems = JSON.parse(localStorage.getItem("myItems"));
 
   const {
     img,
@@ -162,15 +182,15 @@ const ComponentDetails = (props) => {
     formFactor,
     maxCapacity,
     cpuSupport,
-  } = details[0];
+  } = currentObj[0];
   const procentOfRating = Math.floor((rating / 70000) * 100);
 
-  //Model
+  //Modal
   const [open, setOpen] = useState(false);
-
   const handleOpen = () => setOpen(true);
-
   const handleClose = () => setOpen(false);
+
+  // console.log(myItems.Motherboard[0].slots);
 
   return (
     <ComponentDetailsWrapper rating={procentOfRating}>
@@ -185,7 +205,8 @@ const ComponentDetails = (props) => {
           className="add-to-cart"
           disabled={
             route === "RAM Memory"
-              ? myItems[route].length >= myItems.Motherboard.slots
+              ? myItems["Motherboard"].length === 1 &&
+                myItems[route].length >= myItems.Motherboard[0].slots
               : route === "SSD" || route === "Hard Drive"
               ? myItems[route].length >= 2
               : myItems[route].length >= 1
@@ -194,20 +215,20 @@ const ComponentDetails = (props) => {
             // CPU Cooler
             route === "CPU Cooler"
               ? myItems["Processor"].length === 1
-                ? addItem(details[0])
+                ? addItem(currentObj[0])
                 : handleOpen()
               : // Motherboard
               route === "Motherboard"
               ? myItems["Processor"].length === 1 &&
                 myItems["CPU Cooler"].length === 1
-                ? addItem(details[0])
+                ? addItem(currentObj[0])
                 : handleOpen()
               : // Graphic Card
               route === "Graphic Card"
               ? myItems["Processor"].length === 1 &&
                 myItems["CPU Cooler"].length === 1 &&
                 myItems["Motherboard"].length === 1
-                ? addItem(details[0])
+                ? addItem(currentObj[0])
                 : handleOpen()
               : // RAM Memory
               route === "RAM Memory"
@@ -215,7 +236,7 @@ const ComponentDetails = (props) => {
                 myItems["CPU Cooler"].length === 1 &&
                 myItems["Motherboard"].length === 1 &&
                 myItems["Graphic Card"].length === 1
-                ? addItem(details[0])
+                ? addItem(currentObj[0])
                 : handleOpen()
               : // SSD
               route === "SSD"
@@ -223,8 +244,8 @@ const ComponentDetails = (props) => {
                 myItems["CPU Cooler"].length === 1 &&
                 myItems["Motherboard"].length === 1 &&
                 myItems["Graphic Card"].length === 1 &&
-                myItems["RAM Memory"].length === 1
-                ? addItem(details[0])
+                myItems["RAM Memory"].length >= 1
+                ? addItem(currentObj[0])
                 : handleOpen()
               : // Hard Drive
               route === "Hard Drive"
@@ -232,9 +253,9 @@ const ComponentDetails = (props) => {
                 myItems["CPU Cooler"].length === 1 &&
                 myItems["Motherboard"].length === 1 &&
                 myItems["Graphic Card"].length === 1 &&
-                myItems["RAM Memory"].length === 1 &&
-                myItems["SSD"].length === 1
-                ? addItem(details[0])
+                myItems["RAM Memory"].length >= 1 &&
+                myItems["SSD"].length >= 1
+                ? addItem(currentObj[0])
                 : handleOpen()
               : // Optical Drive
               route === "Optical Drive"
@@ -242,10 +263,10 @@ const ComponentDetails = (props) => {
                 myItems["CPU Cooler"].length === 1 &&
                 myItems["Motherboard"].length === 1 &&
                 myItems["Graphic Card"].length === 1 &&
-                myItems["RAM Memory"].length === 1 &&
-                myItems["SSD"].length === 1 &&
-                myItems["Hard Drive"].length === 1
-                ? addItem(details[0])
+                myItems["RAM Memory"].length >= 1 &&
+                myItems["SSD"].length >= 1 &&
+                myItems["Hard Drive"].length >= 1
+                ? addItem(currentObj[0])
                 : handleOpen()
               : // Power Supply
               route === "Power Supply"
@@ -253,11 +274,11 @@ const ComponentDetails = (props) => {
                 myItems["CPU Cooler"].length === 1 &&
                 myItems["Motherboard"].length === 1 &&
                 myItems["Graphic Card"].length === 1 &&
-                myItems["RAM Memory"].length === 1 &&
-                myItems["SSD"].length === 1 &&
-                myItems["Hard Drive"].length === 1 &&
+                myItems["RAM Memory"].length >= 1 &&
+                myItems["SSD"].length >= 1 &&
+                myItems["Hard Drive"].length >= 1 &&
                 myItems["Optical Drive"].length === 1
-                ? addItem(details[0])
+                ? addItem(currentObj[0])
                 : handleOpen()
               : // Case
               route === "Case"
@@ -265,15 +286,15 @@ const ComponentDetails = (props) => {
                 myItems["CPU Cooler"].length === 1 &&
                 myItems["Motherboard"].length === 1 &&
                 myItems["Graphic Card"].length === 1 &&
-                myItems["RAM Memory"].length === 1 &&
-                myItems["SSD"].length === 1 &&
-                myItems["Hard Drive"].length === 1 &&
+                myItems["RAM Memory"].length >= 1 &&
+                myItems["SSD"].length >= 1 &&
+                myItems["Hard Drive"].length >= 1 &&
                 myItems["Optical Drive"].length === 1 &&
                 myItems["Case"].length === 1
-                ? addItem(details[0])
+                ? addItem(currentObj[0])
                 : handleOpen()
               : // Else
-                addItem(details[0]);
+                addItem(currentObj[0]);
           }}
         >
           <AddShoppingCartIcon />

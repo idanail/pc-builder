@@ -33,8 +33,8 @@ const BrandsRender = ({ brand }) => {
   return (
     <BrandsRenderWrapper
       onClick={() => {
-        filterBrands();
         findeClickedBrand(brand);
+        // filterBrands();
         setIsActive(!isActive);
       }}
     >

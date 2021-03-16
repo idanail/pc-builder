@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 
 // npm imports
 import styled from "styled-components";
@@ -6,6 +6,10 @@ import { Link } from "@reach/router";
 
 //Const imports
 import { Paths } from "../../Consts/Paths";
+import { data, myItems as myItemsData } from "../../Data/data";
+
+// context imports
+import { GlobalContext } from "../../Context/GlobalContext";
 
 // npm text imports
 import { Heading55, Text17, Heading22 } from "../../Assets/Text/Text";
@@ -61,6 +65,11 @@ const HomePageWrapper = styled.div`
 `;
 
 const HomePage = () => {
+  useEffect(() => {
+    localStorage.setItem("route", "Processor");
+    localStorage.setItem("myItems", JSON.stringify(myItemsData));
+  }, []);
+
   return (
     <HomePageWrapper className="home-page">
       <div className="home-page-info">
@@ -69,7 +78,13 @@ const HomePage = () => {
           Be your own boss and complete the system of your dreams. Pick your
           favorite parts for all components of your system.
         </Text17>
-        <Link to={Paths.paths.main.replace("{COMPONENT}", "processor")}>
+        <Link
+          to={Paths.paths.main.replace("{COMPONENT}", "processor")}
+          // onClick={() => {
+          //   localStorage.setItem("route", "Processor");
+          //   localStorage.setItem("myItems", JSON.stringify(myItemsData));
+          // }}
+        >
           <button className="home-info-btn">
             <Heading22>Start Building</Heading22>
           </button>

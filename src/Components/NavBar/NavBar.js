@@ -35,7 +35,8 @@ const NavBarWrapper = styled.div`
 `;
 
 const NavBar = () => {
-  const { myItems } = useContext(GlobalContext);
+  // const { myItems } = useContext(GlobalContext);
+  const myItems = JSON.parse(localStorage.getItem("myItems"));
 
   return (
     <NavBarWrapper>

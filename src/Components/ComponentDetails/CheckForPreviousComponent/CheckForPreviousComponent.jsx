@@ -60,7 +60,8 @@ const useStyles = makeStyles((theme) => ({
 
 // component
 const CheckForPreviousComponent = ({ open, handleClose, category }) => {
-  const { handleItems, myItems } = useContext(GlobalContext);
+  const { handleItems } = useContext(GlobalContext);
+  const myItems = JSON.parse(localStorage.getItem("myItems"));
   const classes = useStyles();
 
   return (

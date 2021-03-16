@@ -43,7 +43,6 @@ const MainShowCase = () => {
   const {
     mainData,
     filteredData,
-    myItems,
     getRoute,
     setCurrentType,
     setCurrentColor,
@@ -55,7 +54,7 @@ const MainShowCase = () => {
     )
     .toString();
 
-  // const currentData = filteredData[currentComponent];
+  const myItems = JSON.parse(localStorage.getItem("myItems"));
   let currentData;
   if (currentComponent === "Motherboard" && myItems.Processor.length === 1) {
     currentData = filteredData[currentComponent].filter(
