@@ -646,7 +646,7 @@ export const data = {
       category: "CPU Cooler",
       price: 117.99,
       img: "MASTERLIQUID-ML360L-V2-ARGB-WHITE-EDITION.png",
-      thumbnail: "thumbnail-MASTERLIQUID-ML360L-V2-ARGB-WHITE-EDITION.png",
+      thumbnail: "thumbnail-MASTERLIQUID-ML360L-V2-ARGB-WHITE-EDITION.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -678,7 +678,7 @@ export const data = {
       category: "CPU Cooler",
       price: 179.99,
       img: "Kraken-X73.png",
-      thumbnail: "thumbnail-Kraken-X73.png",
+      thumbnail: "thumbnail-Kraken-X73.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -710,7 +710,7 @@ export const data = {
       category: "CPU Cooler",
       price: 149.99,
       img: "Kraken-X63.png",
-      thumbnail: "thumbnail-Kraken-X63.png",
+      thumbnail: "thumbnail-Kraken-X63.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -746,7 +746,7 @@ export const data = {
       category: "CPU Cooler",
       price: 102.02,
       img: "MASTERLIQUID-ML360L-V2-ARGB-WHITE-EDITION-2P.png",
-      thumbnail: "thumbnail-MASTERLIQUID-ML360L-V2-ARGB-WHITE-EDITION-2P.png",
+      thumbnail: "thumbnail-MASTERLIQUID-ML360L-V2-ARGB-WHITE-EDITION-2P.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -782,7 +782,7 @@ export const data = {
       category: "CPU Cooler",
       price: 202.49,
       img: "MASTERLIQUID-ML360R-RGB.png",
-      thumbnail: "thumbnail-MASTERLIQUID-ML360R-RGB.png",
+      thumbnail: "thumbnail-MASTERLIQUID-ML360R-RGB.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -818,7 +818,7 @@ export const data = {
       category: "CPU Cooler",
       price: 102.96,
       img: "MASTERLIQUID-240.png",
-      thumbnail: "thumbnail-MASTERLIQUID-240.png",
+      thumbnail: "thumbnail-MASTERLIQUID-240.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -850,7 +850,7 @@ export const data = {
       category: "CPU Cooler",
       price: 219.99,
       img: "Kraken-X73-RGB.png",
-      thumbnail: "thumbnail-Kraken-X73-RGB.png",
+      thumbnail: "thumbnail-Kraken-X73-RGB.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -882,7 +882,7 @@ export const data = {
       category: "CPU Cooler",
       price: 179.99,
       img: "Kraken-X63-RGB.png",
-      thumbnail: "thumbnail-Kraken-X63-RGB.png",
+      thumbnail: "thumbnail-Kraken-X63-RGB.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -901,7 +901,7 @@ export const data = {
       category: "CPU Cooler",
       price: 349.99,
       img: "MASTERLIQUID-ML360-SUB-ZERO.png",
-      thumbnail: "thumbnail-MASTERLIQUID-ML360-SUB-ZERO.png",
+      thumbnail: "thumbnail-MASTERLIQUID-ML360-SUB-ZERO.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -937,7 +937,7 @@ export const data = {
       category: "CPU Cooler",
       price: 399.99,
       img: "HIGH-PERFORMANCE-PUMP.png",
-      thumbnail: "thumbnail-HIGH-PERFORMANCE-PUMP.png",
+      thumbnail: "thumbnail-HIGH-PERFORMANCE-PUMP.jpg",
     },
     {
       type: "Air Cooler",
@@ -974,7 +974,7 @@ export const data = {
       category: "CPU Cooler",
       price: 45.55,
       img: "MASTERAIR-MA612-STEALTH.png",
-      thumbnail: "thumbnail-MASTERAIR-MA612-STEALTH.png",
+      thumbnail: "thumbnail-MASTERAIR-MA612-STEALTH.jpg",
     },
     {
       type: "Air Cooler",
@@ -1010,7 +1010,7 @@ export const data = {
       category: "CPU Cooler",
       price: 123.18,
       img: "MASTERAIR-MA620M.png",
-      thumbnail: "thumbnail-MASTERAIR-MA620M.png",
+      thumbnail: "thumbnail-MASTERAIR-MA620M.jpg",
     },
     {
       type: "Air Cooler",
@@ -1047,7 +1047,7 @@ export const data = {
       category: "CPU Cooler",
       price: 41.9,
       img: "HYPER-H410R-WHITE-EDITION.png",
-      thumbnail: "thumbnail-HYPER-H410R-WHITE-EDITION.png",
+      thumbnail: "thumbnail-HYPER-H410R-WHITE-EDITION.jpg",
     },
     {
       type: "Air Cooler",
@@ -1085,7 +1085,7 @@ export const data = {
       category: "CPU Cooler",
       price: 76.95,
       img: "MASTERAIR-G100M.png",
-      thumbnail: "thumbnail-MASTERAIR-G100M.png",
+      thumbnail: "thumbnail-MASTERAIR-G100M.jpg",
     },
     {
       type: "Air Cooler",
@@ -1123,7 +1123,7 @@ export const data = {
       category: "CPU Cooler",
       price: 48.0,
       img: "HYPER-212-LED.png",
-      thumbnail: "thumbnail-HYPER-212-LED.png",
+      thumbnail: "thumbnail-HYPER-212-LED.jpg",
     },
     {
       type: "Air Cooler",
@@ -1157,7 +1157,7 @@ export const data = {
       category: "CPU Cooler",
       price: 34.99,
       img: "BLIZZARD-T2.png",
-      thumbnail: "thumbnail-BLIZZARD-T2.png",
+      thumbnail: "thumbnail-BLIZZARD-T2.jpg",
     },
     {
       type: "Air Cooler",
@@ -1195,7 +1195,7 @@ export const data = {
       category: "CPU Cooler",
       price: 122.35,
       img: "MASTERAIR-MA620P.png",
-      thumbnail: "thumbnail-MASTERAIR-MA620P.png",
+      thumbnail: "thumbnail-MASTERAIR-MA620P.jpg",
     },
     {
       type: "Air Cooler",
@@ -1231,8 +1231,8 @@ export const data = {
       warranty: "5 years",
       category: "CPU Cooler",
       price: 136.35,
-      img: "MASTERAIR-MA410M-TUF-GAMING EDITION.png",
-      thumbnail: "thumbnail-MASTERAIR-MA410M-TUF-GAMING EDITION.png",
+      img: "MASTERAIR-MA410M-TUF-GAMING-EDITION.png",
+      thumbnail: "thumbnail-MASTERAIR-MA410M-TUF-GAMING-EDITION.jpg",
     },
     {
       type: "Air Cooler",
@@ -1263,7 +1263,7 @@ export const data = {
       category: "CPU Cooler",
       price: 99.99,
       img: "A500-Dual-Fan-CPU-Cooler.png",
-      thumbnail: "thumbnail-A500-Dual-Fan-CPU-Cooler.png",
+      thumbnail: "thumbnail-A500-Dual-Fan-CPU-Cooler.jpg",
     },
 
     {
@@ -1297,7 +1297,7 @@ export const data = {
       category: "CPU Cooler",
       price: 199.99,
       img: "iCUE-H150i-ELITE-CAPELLIX-3P.png",
-      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-3P.png",
+      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-3P.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -1330,7 +1330,7 @@ export const data = {
       category: "CPU Cooler",
       price: 159.99,
       img: "iCUE-H150i-ELITE-CAPELLIX-2P.png",
-      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-2P.png",
+      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-2P.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -1363,7 +1363,7 @@ export const data = {
       category: "CPU Cooler",
       price: 189.99,
       img: "iCUE-H150i-ELITE-CAPELLIX-3P-BLACK.png",
-      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-3P-BLACK.png",
+      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-3P-BLACK.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -1396,7 +1396,7 @@ export const data = {
       category: "CPU Cooler",
       price: 169.99,
       img: "iCUE-H150i-ELITE-CAPELLIX-2P-BLACK.png",
-      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-2P-BLACK.png",
+      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-2P-BLACK.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -1429,7 +1429,7 @@ export const data = {
       category: "CPU Cooler",
       price: 99.99,
       img: "Hydro-Series-H100x.png",
-      thumbnail: "thumbnail-Hydro-Series-H100x.png",
+      thumbnail: "thumbnail-Hydro-Series-H100x.jpg",
     },
     {
       type: "Liquid Cooler",
@@ -1462,7 +1462,7 @@ export const data = {
       category: "CPU Cooler",
       price: 169.99,
       img: "Hydro-Series-H100i.png",
-      thumbnail: "thumbnail-Hydro-Series-H100i.png",
+      thumbnail: "thumbnail-Hydro-Series-H100i.jpg",
     },
   ],
   Motherboard: [
@@ -1476,7 +1476,7 @@ export const data = {
       category: "Motherboard",
       price: 327,
       img: "x299-taichi-clx.png",
-      thumbnail: "thumbnail-x299-taichi-clx.png",
+      thumbnail: "thumbnail-x299-taichi-clx.jpg",
       cpuSupport: [
         "i9-10980XE",
         "i9-10940X",
@@ -1529,7 +1529,7 @@ export const data = {
       category: "Motherboard",
       price: 577,
       img: "x299-creator.png",
-      thumbnail: "thumbnail-x299-creator.png",
+      thumbnail: "thumbnail-x299-creator.jpg",
       cpuSupport: [
         "i9-10980XE",
         "i9-10940X",
@@ -1582,7 +1582,7 @@ export const data = {
       category: "Motherboard",
       price: 391,
       img: "x299-oc-formula.png",
-      thumbnail: "thumbnail-x299-oc-formula.png",
+      thumbnail: "thumbnail-x299-oc-formula.jpg",
       cpuSupport: [
         "i9-10980XE",
         "i9-10940X",
@@ -1642,7 +1642,7 @@ export const data = {
       category: "Motherboard",
       price: 429,
       img: "z590-taichi.png",
-      thumbnail: "thumbnail-z590-taichi.png",
+      thumbnail: "thumbnail-z590-taichi.jpg",
       cpuSupport: [
         "i9-10900K",
         "i9-10900KF",
@@ -1718,7 +1718,7 @@ export const data = {
       category: "Motherboard",
       price: 224,
       img: "z590-extreme-wifi-6e.png",
-      thumbnail: "thumbnail-z590-extreme-wifi-6e.png",
+      thumbnail: "thumbnail-z590-extreme-wifi-6e.jpg",
       cpuSupport: [
         "i9-10900K",
         "i9-10900KF",
@@ -1794,7 +1794,7 @@ export const data = {
       category: "Motherboard",
       price: 169,
       img: "z590-pro4.png",
-      thumbnail: "thumbnail-z590-pro4.png",
+      thumbnail: "thumbnail-z590-pro4.jpg",
       cpuSupport: [
         "i9-10900K",
         "i9-10900KF",
@@ -1870,7 +1870,7 @@ export const data = {
       category: "Motherboard",
       price: 139,
       img: "z390-pro4.png",
-      thumbnail: "thumbnail-z390-pro4.png",
+      thumbnail: "thumbnail-z390-pro4.jpg",
       cpuSupport: [
         "i9-9900KS",
         "i9-9900KF",
@@ -1979,7 +1979,7 @@ export const data = {
       category: "Motherboard",
       price: 145,
       img: "z390-steel-legend.png",
-      thumbnail: "thumbnail-z390-steel-legend.png",
+      thumbnail: "thumbnail-z390-steel-legend.jpg",
       cpuSupport: [
         "i9-9900KS",
         "i9-9900KF",
@@ -2088,7 +2088,7 @@ export const data = {
       category: "Motherboard",
       price: 164,
       img: "z390-phantom-gaming-sli-ac.png",
-      thumbnail: "thumbnail-z390-phantom-gaming-sli-ac.png",
+      thumbnail: "thumbnail-z390-phantom-gaming-sli-ac.jpg",
       cpuSupport: [
         "i9-9900KS",
         "i9-9900KF",
@@ -2198,7 +2198,7 @@ export const data = {
       category: "Motherboard",
       price: 503,
       img: "trx40-taichi.png",
-      thumbnail: "thumbnail-trx40-taichi.png",
+      thumbnail: "thumbnail-trx40-taichi.jpg",
       cpuSupport: ["3990X", "3970X", "3960X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -2240,7 +2240,7 @@ export const data = {
       category: "Motherboard",
       price: 595,
       img: "trx40-creator.png",
-      thumbnail: "thumbnail-trx40-creator.png",
+      thumbnail: "thumbnail-trx40-creator.jpg",
       cpuSupport: ["3990X", "3970X", "3960X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -2282,7 +2282,7 @@ export const data = {
       category: "Motherboard",
       price: 249,
       img: "x399-phantom-gaming-6.png",
-      thumbnail: "thumbnail-x399-phantom-gaming-6.png",
+      thumbnail: "thumbnail-x399-phantom-gaming-6.jpg",
       cpuSupport: ["2950X", "2920X", "1950X", "1920X", "1920", "1900X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -2310,7 +2310,7 @@ export const data = {
       category: "Motherboard",
       price: 480,
       img: "fatal1ty-x399-professional-gaming.png",
-      thumbnail: "thumbnail-fatal1ty-x399-professional-gaming.png",
+      thumbnail: "thumbnail-fatal1ty-x399-professional-gaming.jpg",
       cpuSupport: [
         "2990WX",
         "2970WX",
@@ -2348,7 +2348,7 @@ export const data = {
       category: "Motherboard",
       price: 396,
       img: "x399-taichi.png",
-      thumbnail: "thumbnail-x399-taichi.png",
+      thumbnail: "thumbnail-x399-taichi.jpg",
       cpuSupport: [
         "2990WX",
         "2970WX",
@@ -2386,7 +2386,7 @@ export const data = {
       category: "Motherboard",
       price: 989,
       img: "x570-aqua.png",
-      thumbnail: "thumbnail-x570-aqua.png",
+      thumbnail: "thumbnail-x570-aqua.jpg",
       cpuSupport: [
         "5950X",
         "5900X",
@@ -2481,7 +2481,7 @@ export const data = {
       category: "Motherboard",
       price: 299,
       img: "x570-pro4.png",
-      thumbnail: "thumbnail-x570-pro4.png",
+      thumbnail: "thumbnail-x570-pro4.jpg",
       cpuSupport: [
         "5950X",
         "5900X",
@@ -2571,7 +2571,7 @@ export const data = {
       category: "Motherboard",
       price: 399,
       img: "x570-taichi-razer-edition.png",
-      thumbnail: "thumbnail-x570-taichi-razer-edition.png",
+      thumbnail: "thumbnail-x570-taichi-razer-edition.jpg",
       cpuSupport: [
         "5950X",
         "5900X",
@@ -2648,7 +2648,7 @@ export const data = {
       category: "Motherboard",
       price: 617,
       img: "ws-x299-sage.png",
-      thumbnail: "thumbnail-ws-x299-sage.png",
+      thumbnail: "thumbnail-ws-x299-sage.jpg",
       cpuSupport: [
         "i5-7640X",
         "i7-7740X",
@@ -2703,7 +2703,7 @@ export const data = {
       category: "Motherboard",
       price: 749,
       img: "prime-x299-deluxe.png",
-      thumbnail: "thumbnail-prime-x299-deluxe.png",
+      thumbnail: "thumbnail-prime-x299-deluxe.jpg",
       cpuSupport: [
         "i5-7640X",
         "i7-7740X",
@@ -2760,7 +2760,7 @@ export const data = {
       category: "Motherboard",
       price: 499,
       img: "rog-strix-x299-e-gaming-ii.png",
-      thumbnail: "thumbnail-rog-strix-x299-e-gaming-ii.png",
+      thumbnail: "thumbnail-rog-strix-x299-e-gaming-ii.jpg",
       cpuSupport: [
         "i5-7640X",
         "i7-7740X",
@@ -2816,7 +2816,7 @@ export const data = {
       category: "Motherboard",
       price: 305,
       img: "proart-z490-creator-10g.png",
-      thumbnail: "thumbnail-proart-z490-creator-10g.png",
+      thumbnail: "thumbnail-proart-z490-creator-10g.jpg",
       cpuSupport: [
         "G5905",
         "G5905T",
@@ -2891,7 +2891,7 @@ export const data = {
       category: "Motherboard",
       price: 273,
       img: "prime-z490-p.png",
-      thumbnail: "thumbnail-prime-z490-p.png",
+      thumbnail: "thumbnail-prime-z490-p.jpg",
       cpuSupport: [
         "G5900",
         "G5900T",
@@ -2968,7 +2968,7 @@ export const data = {
       category: "Motherboard",
       price: 119,
       img: "prime-b560-plus.png",
-      thumbnail: "thumbnail-prime-b560-plus.png",
+      thumbnail: "thumbnail-prime-b560-plus.jpg",
       cpuSupport: [
         "G5900",
         "G5900T",
@@ -3043,7 +3043,7 @@ export const data = {
       category: "Motherboard",
       price: 134,
       img: "prime-z390-p.png",
-      thumbnail: "thumbnail-prime-z390-p.png",
+      thumbnail: "thumbnail-prime-z390-p.jpg",
       cpuSupport: [
         "G4900",
         "G4900T",
@@ -3142,7 +3142,7 @@ export const data = {
       category: "Motherboard",
       price: 180,
       img: "prime-b365-plus.png",
-      thumbnail: "thumbnail-prime-b365-plus.png",
+      thumbnail: "thumbnail-prime-b365-plus.jpg",
       cpuSupport: [
         "G4900",
         "G4900T",
@@ -3226,7 +3226,7 @@ export const data = {
       category: "Motherboard",
       price: 183,
       img: "prime-h270-plus.png",
-      thumbnail: "thumbnail-prime-h270-plus.png",
+      thumbnail: "thumbnail-prime-h270-plus.jpg",
       cpuSupport: [
         "G3900",
         "G3900T",
@@ -3297,7 +3297,7 @@ export const data = {
       category: "Motherboard",
       price: 139,
       img: "prime-b550-plus.png",
-      thumbnail: "thumbnail-prime-b550-plus.png",
+      thumbnail: "thumbnail-prime-b550-plus.jpg",
       cpuSupport: [
         "3100",
         "3300X",
@@ -3358,7 +3358,7 @@ export const data = {
       category: "Motherboard",
       price: 156,
       img: "tuf-gaming-b550-plus.png",
-      thumbnail: "thumbnail-tuf-gaming-b550-plus.png",
+      thumbnail: "thumbnail-tuf-gaming-b550-plus.jpg",
       cpuSupport: [
         "3100",
         "3300X",
@@ -3419,7 +3419,7 @@ export const data = {
       category: "Motherboard",
       price: 119,
       img: "tuf-gaming-b450-plus-ii.png",
-      thumbnail: "thumbnail-tuf-gaming-b450-plus-ii.png",
+      thumbnail: "thumbnail-tuf-gaming-b450-plus-ii.jpg",
       cpuSupport: [
         "200G",
         "200GE",
@@ -3521,7 +3521,7 @@ export const data = {
       category: "Motherboard",
       price: 449,
       img: "rog-strix-x399-e-gaming.png",
-      thumbnail: "thumbnail-rog-strix-x399-e-gaming.png",
+      thumbnail: "thumbnail-rog-strix-x399-e-gaming.jpg",
       cpuSupport: [
         "2990WX",
         "2970WX",
@@ -3560,7 +3560,7 @@ export const data = {
       category: "Motherboard",
       price: 655,
       img: "rog-zenith-extreme-alpha.png",
-      thumbnail: "thumbnail-rog-zenith-extreme-alpha.png",
+      thumbnail: "thumbnail-rog-zenith-extreme-alpha.jpg",
       cpuSupport: [
         "2990WX",
         "2970WX",
@@ -3599,7 +3599,7 @@ export const data = {
       category: "Motherboard",
       price: 555,
       img: "rog-zenith-extreme.png",
-      thumbnail: "thumbnail-rog-zenith-extreme.png",
+      thumbnail: "thumbnail-rog-zenith-extreme.jpg",
       cpuSupport: [
         "2990WX",
         "2970WX",
@@ -3636,7 +3636,7 @@ export const data = {
       category: "Motherboard",
       price: 420,
       img: "prime-trx40-pro.png",
-      thumbnail: "thumbnail-prime-trx40-pro.png",
+      thumbnail: "thumbnail-prime-trx40-pro.jpg",
       cpuSupport: ["3960X", "3970X", "3990X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -3672,7 +3672,7 @@ export const data = {
       category: "Motherboard",
       price: 799,
       img: "rog-strix-trx40-e-gaming.png",
-      thumbnail: "thumbnail-rog-strix-trx40-e-gaming.png",
+      thumbnail: "thumbnail-rog-strix-trx40-e-gaming.jpg",
       cpuSupport: ["3960X", "3970X", "3990X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -3708,7 +3708,7 @@ export const data = {
       category: "Motherboard",
       price: 699,
       img: "rog-zenith-ii-extreme.png",
-      thumbnail: "thumbnail-rog-zenith-ii-extreme.png",
+      thumbnail: "thumbnail-rog-zenith-ii-extreme.jpg",
       cpuSupport: ["3960X", "3970X", "3990X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -3752,7 +3752,7 @@ export const data = {
       category: "Graphic Card",
       price: 1949.99,
       img: "speedster-merc-319-amd-radeon-rx-6900-xt-black.png",
-      thumbnail: "thumbnail-speedster-merc-319-amd-radeon-rx-6900-xt-black.png",
+      thumbnail: "thumbnail-speedster-merc-319-amd-radeon-rx-6900-xt-black.jpg",
     },
     {
       id: uuid(),
@@ -3769,7 +3769,7 @@ export const data = {
       category: "Graphic Card",
       price: 899.99,
       img: "speedster-merc-319-amd-radeon-rx-6800-xt-core.png",
-      thumbnail: "thumbnail-speedster-merc-319-amd-radeon-rx-6800-xt-core.png",
+      thumbnail: "thumbnail-speedster-merc-319-amd-radeon-rx-6800-xt-core.jpg",
     },
     {
       id: uuid(),
@@ -3786,7 +3786,7 @@ export const data = {
       category: "Graphic Card",
       price: 599.99,
       img: "double-dissipation-amd-radeon-rx-5700-xt.png",
-      thumbnail: "thumbnail-double-dissipation-amd-radeon-rx-5700-xt.png",
+      thumbnail: "thumbnail-double-dissipation-amd-radeon-rx-5700-xt.jpg",
     },
     {
       id: uuid(),
@@ -3803,7 +3803,7 @@ export const data = {
       category: "Graphic Card",
       price: 329.99,
       img: "amd-radeon-rx-5600-xt-thicc-iii-ultra.png",
-      thumbnail: "thumbnail-amd-radeon-rx-5600-xt-thicc-iii-ultra.png",
+      thumbnail: "thumbnail-amd-radeon-rx-5600-xt-thicc-iii-ultra.jpg",
     },
     {
       id: uuid(),
@@ -3820,7 +3820,7 @@ export const data = {
       category: "Graphic Card",
       price: 229.99,
       img: "amd-radeon-rx-5500-xt-thicc-ii-pro.png",
-      thumbnail: "thumbnail-amd-radeon-rx-5500-xt-thicc-ii-pro.png",
+      thumbnail: "thumbnail-amd-radeon-rx-5500-xt-thicc-ii-pro.jpg",
     },
     {
       id: uuid(),
@@ -3837,7 +3837,7 @@ export const data = {
       category: "Graphic Card",
       price: 499.99,
       img: "xfx-amd-radeon-rx-590-fatboy-core-edition.png",
-      thumbnail: "thumbnail-xfx-amd-radeon-rx-590-fatboy-core-edition.png",
+      thumbnail: "thumbnail-xfx-amd-radeon-rx-590-fatboy-core-edition.jpg",
     },
     {
       id: uuid(),
@@ -3854,7 +3854,7 @@ export const data = {
       category: "Graphic Card",
       price: 399.99,
       img: "xfx-amd-radeon-rx-580-gtr-xxx-edition-crimson.png",
-      thumbnail: "thumbnail-xfx-amd-radeon-rx-580-gtr-xxx-edition-crimson.png",
+      thumbnail: "thumbnail-xfx-amd-radeon-rx-580-gtr-xxx-edition-crimson.jpg",
     },
     {
       id: uuid(),
@@ -3871,7 +3871,7 @@ export const data = {
       category: "Graphic Card",
       price: 179.99,
       img: "xfx-amd-radeon-rx-570-rs-xxx-edition.png",
-      thumbnail: "thumbnail-xfx-amd-radeon-rx-570-rs-xxx-edition.png",
+      thumbnail: "thumbnail-xfx-amd-radeon-rx-570-rs-xxx-edition.jpg",
     },
     {
       id: uuid(),
@@ -3888,7 +3888,7 @@ export const data = {
       category: "Graphic Card",
       price: 99.99,
       img: "xfx-amd-radeon-rx-560-14cu-single-fan.png",
-      thumbnail: "thumbnail-xfx-amd-radeon-rx-560-14cu-single-fan.png",
+      thumbnail: "thumbnail-xfx-amd-radeon-rx-560-14cu-single-fan.jpg",
     },
     {
       id: uuid(),
@@ -3905,7 +3905,7 @@ export const data = {
       category: "Graphic Card",
       price: 1699.99,
       img: "geForce-rtx-3090-xc3-ultra-hybrid-gaming.png",
-      thumbnail: "thumbnail-geForce-rtx-3090-xc3-ultra-hybrid-gaming.png",
+      thumbnail: "thumbnail-geForce-rtx-3090-xc3-ultra-hybrid-gaming.jpg",
     },
     {
       id: uuid(),
@@ -3922,7 +3922,7 @@ export const data = {
       category: "Graphic Card",
       price: 899.99,
       img: "geForce-rtx-3080-xc3-ultra-hydro-copper-gaming.png",
-      thumbnail: "thumbnail-geForce-rtx-3080-xc3-ultra-hydro-copper-gaming.png",
+      thumbnail: "thumbnail-geForce-rtx-3080-xc3-ultra-hydro-copper-gaming.jpg",
     },
     {
       id: uuid(),
@@ -3939,7 +3939,7 @@ export const data = {
       category: "Graphic Card",
       price: 629.99,
       img: "geForce-rtx-3070-xc3-ultra-gaming.png",
-      thumbnail: "thumbnail-geForce-rtx-3070-xc3-ultra-gaming.png",
+      thumbnail: "thumbnail-geForce-rtx-3070-xc3-ultra-gaming.jpg",
     },
     {
       id: uuid(),
@@ -3956,7 +3956,7 @@ export const data = {
       category: "Graphic Card",
       price: 489.99,
       img: "geForce-rtx-3060-ti-ftw3-gaming.png",
-      thumbnail: "thumbnail-geForce-rtx-3060-ti-ftw3-gaming.png",
+      thumbnail: "thumbnail-geForce-rtx-3060-ti-ftw3-gaming.jpg",
     },
     {
       id: uuid(),
@@ -3973,7 +3973,7 @@ export const data = {
       category: "Graphic Card",
       price: 329.99,
       img: "geForce-rtx-3060-xc-black-gaming.png",
-      thumbnail: "thumbnail-geForce-rtx-3060-xc-black-gaming.png",
+      thumbnail: "thumbnail-geForce-rtx-3060-xc-black-gaming.jpg",
     },
     {
       id: uuid(),
@@ -3990,7 +3990,7 @@ export const data = {
       category: "Graphic Card",
       price: 189.99,
       img: "geForce-gtx-1650-super-sc-ultra-gaming.png",
-      thumbnail: "thumbnail-geForce-gtx-1650-super-sc-ultra-gaming.png",
+      thumbnail: "thumbnail-geForce-gtx-1650-super-sc-ultra-gaming.jpg",
     },
     {
       id: uuid(),
@@ -4007,7 +4007,7 @@ export const data = {
       category: "Graphic Card",
       price: 109.99,
       img: "geForce-gt-1030-sc.png",
-      thumbnail: "thumbnail-geForce-gt-1030-sc.png",
+      thumbnail: "thumbnail-geForce-gt-1030-sc.jpg",
     },
   ],
   "RAM Memory": [
@@ -4023,7 +4023,7 @@ export const data = {
       category: "RAM Memory",
       price: 179.99,
       img: "corsair-dominator-platinum-16bg.png",
-      thumbnail: "thumbnail-corsair-dominator-platinum-16bg.png",
+      thumbnail: "thumbnail-corsair-dominator-platinum-16bg.jpg",
     },
     {
       id: uuid(),
@@ -4037,7 +4037,7 @@ export const data = {
       category: "RAM Memory",
       price: 114.99,
       img: "corsair-vengeance-rgb-pro-16bg.png",
-      thumbnail: "thumbnail-corsair-vengeance-rgb-pro-16bg.png",
+      thumbnail: "thumbnail-corsair-vengeance-rgb-pro-16bg.jpg",
     },
     {
       id: uuid(),
@@ -4051,7 +4051,7 @@ export const data = {
       category: "RAM Memory",
       price: 219.99,
       img: "corsair-vengeance-rgb-pro-sl-white-16bg.png",
-      thumbnail: "thumbnail-corsair-vengeance-rgb-pro-sl-white-16bg.png",
+      thumbnail: "thumbnail-corsair-vengeance-rgb-pro-sl-white-16bg.jpg",
     },
     {
       id: uuid(),
@@ -4065,7 +4065,7 @@ export const data = {
       category: "RAM Memory",
       price: 139.99,
       img: "corsair-dominator-platinum-rgb-white-8bg.png",
-      thumbnail: "thumbnail-corsair-dominator-platinum-rgb-white-8bg.png",
+      thumbnail: "thumbnail-corsair-dominator-platinum-rgb-white-8bg.jpg",
     },
     {
       id: uuid(),
@@ -4079,7 +4079,7 @@ export const data = {
       category: "RAM Memory",
       price: 79.99,
       img: "corsair-vengeance-rgb-pro-white-8bg.png",
-      thumbnail: "thumbnail-corsair-vengeance-rgb-pro-white-8bg.png",
+      thumbnail: "thumbnail-corsair-vengeance-rgb-pro-white-8bg.jpg",
     },
     {
       id: uuid(),
@@ -4093,7 +4093,7 @@ export const data = {
       category: "RAM Memory",
       price: 55.99,
       img: "corsair-vengeance-lpx-red-8bg.png",
-      thumbnail: "thumbnail-corsair-vengeance-lpx-red-8bg.png",
+      thumbnail: "thumbnail-corsair-vengeance-lpx-red-8bg.jpg",
     },
     {
       id: uuid(),
@@ -4107,7 +4107,7 @@ export const data = {
       category: "RAM Memory",
       price: 133.99,
       img: "kingston-hyperx-fury-rgb-16bg.png",
-      thumbnail: "thumbnail-kingston-hyperx-fury-rgb-16bg.png",
+      thumbnail: "thumbnail-kingston-hyperx-fury-rgb-16bg.jpg",
     },
     {
       id: uuid(),
@@ -4121,7 +4121,7 @@ export const data = {
       category: "RAM Memory",
       price: 129.99,
       img: "kingston-hyperx-predator-black-16bg.png",
-      thumbnail: "thumbnail-kingston-hyperx-predator-black-16bg.png",
+      thumbnail: "thumbnail-kingston-hyperx-predator-black-16bg.jpg",
     },
     {
       id: uuid(),
@@ -4135,7 +4135,7 @@ export const data = {
       category: "RAM Memory",
       price: 112.99,
       img: "kingston-hyperx-fury-black-16bg.png",
-      thumbnail: "thumbnail-kingston-hyperx-fury-black-16bg.png",
+      thumbnail: "thumbnail-kingston-hyperx-fury-black-16bg.jpg",
     },
     {
       id: uuid(),
@@ -4149,7 +4149,7 @@ export const data = {
       category: "RAM Memory",
       price: 89.99,
       img: "kingston-value-ram-16bg.png",
-      thumbnail: "thumbnail-kingston-value-ram-16bg.png",
+      thumbnail: "thumbnail-kingston-value-ram-16bg.jpg",
     },
     {
       id: uuid(),
@@ -4163,7 +4163,7 @@ export const data = {
       category: "RAM Memory",
       price: 52.99,
       img: "kingston-value-ram-8bg.png",
-      thumbnail: "thumbnail-kingston-value-ram-8bg.png",
+      thumbnail: "thumbnail-kingston-value-ram-8bg.jpg",
     },
     {
       id: uuid(),
@@ -4177,7 +4177,7 @@ export const data = {
       category: "RAM Memory",
       price: 31.99,
       img: "kingston-value-ram-4bg.png",
-      thumbnail: "thumbnail-kingston-value-ram-4bg.png",
+      thumbnail: "thumbnail-kingston-value-ram-4bg.jpg",
     },
     {
       id: uuid(),
@@ -4191,7 +4191,7 @@ export const data = {
       category: "RAM Memory",
       price: 169.99,
       img: "crucial-ballistix-max-16bg.png",
-      thumbnail: "thumbnail-crucial-ballistix-max-16bg.png",
+      thumbnail: "thumbnail-crucial-ballistix-max-16bg.jpg",
     },
     {
       id: uuid(),
@@ -4205,7 +4205,7 @@ export const data = {
       category: "RAM Memory",
       price: 189.99,
       img: "crucial-ballistix-max-rgb-16bg.png",
-      thumbnail: "thumbnail-crucial-ballistix-max-rgb-16bg.png",
+      thumbnail: "thumbnail-crucial-ballistix-max-rgb-16bg.jpg",
     },
     {
       id: uuid(),
@@ -4219,7 +4219,7 @@ export const data = {
       category: "RAM Memory",
       price: 84.99,
       img: "crucial-single-module-16gb.png",
-      thumbnail: "thumbnail-crucial-single-module-16gb.png",
+      thumbnail: "thumbnail-crucial-single-module-16gb.jpg",
     },
     {
       id: uuid(),
@@ -4233,7 +4233,7 @@ export const data = {
       category: "RAM Memory",
       price: 52.99,
       img: "crucial-single-module-8gb.png",
-      thumbnail: "thumbnail-crucial-single-module-8gb.png",
+      thumbnail: "thumbnail-crucial-single-module-8gb.jpg",
     },
     {
       id: uuid(),
@@ -4247,7 +4247,7 @@ export const data = {
       category: "RAM Memory",
       price: 32.99,
       img: "crucial-single-module-4gb.png",
-      thumbnail: "thumbnail-crucial-single-module-4gb.png",
+      thumbnail: "thumbnail-crucial-single-module-4gb.jpg",
     },
   ],
   SSD: [
