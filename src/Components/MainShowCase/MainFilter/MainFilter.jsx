@@ -88,7 +88,7 @@ const MainFilter = ({ open, handleClose, currentData }) => {
               )}
             </div>
             <div className={`price-range ${classes.marginT}`}>
-              <Text22 className={classes.marginB}>Price:</Text22>
+              <Text22 className={classes.marginB}>Price range:</Text22>
               <PriceRange />
             </div>
           </div>

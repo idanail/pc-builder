@@ -54,7 +54,7 @@ const CardWrapper = styled.div`
 
 const Card = ({ el, name }) => {
   const { route, handleDetails } = useContext(GlobalContext);
-  const { img, brand, model, price } = el;
+  const { img, brand, model, price, thumbnail } = el;
   return (
     <CardWrapper>
       <Link
@@ -79,7 +79,7 @@ const Card = ({ el, name }) => {
         </div>
         <div className="card-img">
           <img
-            src={`/img/${name.replace(" ", "-").toLowerCase()}/${img}`}
+            src={`/img/${name.replace(" ", "-").toLowerCase()}/${thumbnail}`}
             alt=""
           />
         </div>

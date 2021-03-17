@@ -16,6 +16,7 @@ export const data = {
       price: 109.95,
       category: "Processor",
       img: "i-core-duo.jpg",
+      thumbnail: "thumbnail-i-core-duo.jpg",
     },
     {
       id: uuid(),
@@ -31,6 +32,7 @@ export const data = {
       price: 80.55,
       category: "Processor",
       img: "i-pentium.jpg",
+      thumbnail: "thumbnail-i-pentium.jpg",
     },
     {
       id: uuid(),
@@ -46,6 +48,7 @@ export const data = {
       price: 74.99,
       category: "Processor",
       img: "i-pentium.jpg",
+      thumbnail: "thumbnail-i-pentium.jpg",
     },
     {
       id: uuid(),
@@ -61,6 +64,7 @@ export const data = {
       price: 73.73,
       category: "Processor",
       img: "i-pentium-gold.jpg",
+      thumbnail: "thumbnail-i-pentium-gold.jpg",
     },
     {
       id: uuid(),
@@ -76,6 +80,7 @@ export const data = {
       price: 73.73,
       category: "Processor",
       img: "i-pentium-gold.jpg",
+      thumbnail: "thumbnail-i-pentium-gold.jpg",
     },
     {
       id: uuid(),
@@ -91,6 +96,7 @@ export const data = {
       price: 64.99,
       category: "Processor",
       img: "i-pentium-gold.jpg",
+      thumbnail: "thumbnail-i-pentium-gold.jpg",
     },
     {
       id: uuid(),
@@ -106,6 +112,7 @@ export const data = {
       price: 69.12,
       category: "Processor",
       img: "i-celeron.jpg",
+      thumbnail: "thumbnail-i-celeron.jpg",
     },
     {
       id: uuid(),
@@ -121,6 +128,7 @@ export const data = {
       price: 42.0,
       category: "Processor",
       img: "i-celeron.jpg",
+      thumbnail: "thumbnail-i-celeron.jpg",
     },
     {
       id: uuid(),
@@ -136,6 +144,7 @@ export const data = {
       price: 122.99,
       category: "Processor",
       img: "i3-9gen.jpg",
+      thumbnail: "thumbnail-i3-9gen.jpg",
     },
     {
       id: uuid(),
@@ -151,6 +160,7 @@ export const data = {
       price: 129.0,
       category: "Processor",
       img: "i3-9gen.jpg",
+      thumbnail: "thumbnail-i3-9gen.jpg",
     },
     {
       id: uuid(),
@@ -166,6 +176,7 @@ export const data = {
       price: 143.42,
       category: "Processor",
       img: "i3-10gen.jpg",
+      thumbnail: "thumbnail-i3-10gen.jpg",
     },
     {
       id: uuid(),
@@ -181,6 +192,7 @@ export const data = {
       price: 143.42,
       category: "Processor",
       img: "i3-10gen.jpg",
+      thumbnail: "thumbnail-i3-10gen.jpg",
     },
     {
       id: uuid(),
@@ -196,6 +208,7 @@ export const data = {
       price: 299.99,
       category: "Processor",
       img: "i5-8gen.jpg",
+      thumbnail: "thumbnail-i5-8gen.jpg",
     },
     {
       id: uuid(),
@@ -211,6 +224,7 @@ export const data = {
       price: 139.99,
       category: "Processor",
       img: "i5-9gen.jpg",
+      thumbnail: "thumbnail-i5-9gen.jpg",
     },
     {
       id: uuid(),
@@ -226,6 +240,7 @@ export const data = {
       price: 153.99,
       category: "Processor",
       img: "i5-9gen.jpg",
+      thumbnail: "thumbnail-i5-9gen.jpg",
     },
     {
       id: uuid(),
@@ -241,6 +256,7 @@ export const data = {
       price: 219.99,
       category: "Processor",
       img: "i5-10gen.jpg",
+      thumbnail: "thumbnail-i5-10gen.jpg",
     },
     {
       id: uuid(),
@@ -256,6 +272,7 @@ export const data = {
       price: 189.99,
       category: "Processor",
       img: "i5-10gen.jpg",
+      thumbnail: "thumbnail-i5-10gen.jpg",
     },
     {
       id: uuid(),
@@ -271,6 +288,7 @@ export const data = {
       price: 322.99,
       category: "Processor",
       img: "i7-9gen.jpg",
+      thumbnail: "thumbnail-i7-9gen.jpg",
     },
     {
       id: uuid(),
@@ -286,6 +304,7 @@ export const data = {
       price: 349.99,
       category: "Processor",
       img: "i7-9gen.jpg",
+      thumbnail: "thumbnail-i7-9gen.jpg",
     },
     {
       id: uuid(),
@@ -301,6 +320,7 @@ export const data = {
       price: 329.99,
       category: "Processor",
       img: "i7-10gen.jpg",
+      thumbnail: "thumbnail-i7-10gen.jpg",
     },
     {
       id: uuid(),
@@ -316,6 +336,7 @@ export const data = {
       price: 344.99,
       category: "Processor",
       img: "i7-10gen-unlock.jpg",
+      thumbnail: "thumbnail-i7-10gen-unlock.jpg",
     },
     {
       id: uuid(),
@@ -331,6 +352,7 @@ export const data = {
       price: 379.99,
       category: "Processor",
       img: "i9-9gen-unlock.jpg",
+      thumbnail: "thumbnail-i9-9gen-unlock.jpg",
     },
     {
       id: uuid(),
@@ -346,6 +368,7 @@ export const data = {
       price: 562.99,
       category: "Processor",
       img: "i-9-Xseries.jpg",
+      thumbnail: "thumbnail-i-9-Xseries.jpg",
     },
     {
       id: uuid(),
@@ -361,6 +384,7 @@ export const data = {
       price: 899.99,
       category: "Processor",
       img: "i9-extreme.jpg",
+      thumbnail: "thumbnail-i9-extreme.jpg",
     },
     {
       id: uuid(),
@@ -376,6 +400,7 @@ export const data = {
       price: 54.95,
       category: "Processor",
       img: "a-series.jpg",
+      thumbnail: "thumbnail-a-series.jpg",
     },
     {
       id: uuid(),
@@ -391,6 +416,7 @@ export const data = {
       price: 111.25,
       category: "Processor",
       img: "a-series.jpg",
+      thumbnail: "thumbnail-a-series.jpg",
     },
     {
       id: uuid(),
@@ -406,6 +432,7 @@ export const data = {
       price: 300.0,
       category: "Processor",
       img: "ryzen-3-1gen.jpg",
+      thumbnail: "thumbnail-ryzen-3-1gen.jpg",
     },
     {
       id: uuid(),
@@ -421,6 +448,7 @@ export const data = {
       price: 180.0,
       category: "Processor",
       img: "ryzen-3-3genX.jpg",
+      thumbnail: "thumbnail-ryzen-3-3genX.jpg",
     },
     {
       id: uuid(),
@@ -436,6 +464,7 @@ export const data = {
       price: 169.58,
       category: "Processor",
       img: "ryzen-5-1gen.jpg",
+      thumbnail: "thumbnail-ryzen-5-1gen.jpg",
     },
     {
       id: uuid(),
@@ -451,6 +480,7 @@ export const data = {
       price: 175.95,
       category: "Processor",
       img: "ryzen-5-3genG.jpg",
+      thumbnail: "thumbnail-ryzen-5-3genG.jpg",
     },
     {
       id: uuid(),
@@ -466,6 +496,7 @@ export const data = {
       price: 189.99,
       category: "Processor",
       img: "ryzen-5-3gen.jpg",
+      thumbnail: "thumbnail-ryzen-5-3gen.jpg",
     },
     {
       id: uuid(),
@@ -481,6 +512,7 @@ export const data = {
       price: 199.99,
       category: "Processor",
       img: "ryzen-5-3gen.jpg",
+      thumbnail: "thumbnail-ryzen-5-3gen.jpg",
     },
     {
       id: uuid(),
@@ -496,6 +528,7 @@ export const data = {
       price: 312.99,
       category: "Processor",
       img: "ryzen-7-2gen.jpg",
+      thumbnail: "thumbnail-ryzen-7-2gen.jpg",
     },
     {
       id: uuid(),
@@ -511,6 +544,7 @@ export const data = {
       price: 409.98,
       category: "Processor",
       img: "ryzen-7-3genXT.jpg",
+      thumbnail: "thumbnail-ryzen-7-3genXT.jpg",
     },
     {
       id: uuid(),
@@ -526,6 +560,7 @@ export const data = {
       price: 306.47,
       category: "Processor",
       img: "ryzen-7-2gen.jpg",
+      thumbnail: "thumbnail-ryzen-7-2gen.jpg",
     },
     {
       id: uuid(),
@@ -541,6 +576,7 @@ export const data = {
       price: 724.99,
       category: "Processor",
       img: "ryzen-9-3genX.jpg",
+      thumbnail: "thumbnail-ryzen-9-3genX.jpg",
     },
     {
       id: uuid(),
@@ -556,6 +592,7 @@ export const data = {
       price: 1349.99,
       category: "Processor",
       img: "threadripper.jpg",
+      thumbnail: "thumbnail-threadripper.jpg",
     },
     {
       id: uuid(),
@@ -571,6 +608,7 @@ export const data = {
       price: 3909.99,
       category: "Processor",
       img: "threadripper.jpg",
+      thumbnail: "thumbnail-threadripper.jpg",
     },
   ],
   "CPU Cooler": [
@@ -578,7 +616,7 @@ export const data = {
       type: "Liquid Cooler",
       id: uuid(),
       brand: "Cooler Master",
-      model: "MASTERLIQUID ML360L V2 W3",
+      model: "MASTERLIQUID ML360L V2 3",
       color: "White",
       socket: [
         "LGA2066",
@@ -608,6 +646,7 @@ export const data = {
       category: "CPU Cooler",
       price: 117.99,
       img: "MASTERLIQUID-ML360L-V2-ARGB-WHITE-EDITION.png",
+      thumbnail: "thumbnail-MASTERLIQUID-ML360L-V2-ARGB-WHITE-EDITION.png",
     },
     {
       type: "Liquid Cooler",
@@ -639,6 +678,7 @@ export const data = {
       category: "CPU Cooler",
       price: 179.99,
       img: "Kraken-X73.png",
+      thumbnail: "thumbnail-Kraken-X73.png",
     },
     {
       type: "Liquid Cooler",
@@ -670,12 +710,13 @@ export const data = {
       category: "CPU Cooler",
       price: 149.99,
       img: "Kraken-X63.png",
+      thumbnail: "thumbnail-Kraken-X63.png",
     },
     {
       type: "Liquid Cooler",
       id: uuid(),
       brand: "Cooler Master",
-      model: "MASTERLIQUID ML360L V2 W2",
+      model: "MASTERLIQUID ML360L V2 2",
       color: "White",
       socket: [
         "LGA2066",
@@ -705,6 +746,7 @@ export const data = {
       category: "CPU Cooler",
       price: 102.02,
       img: "MASTERLIQUID-ML360L-V2-ARGB-WHITE-EDITION-2P.png",
+      thumbnail: "thumbnail-MASTERLIQUID-ML360L-V2-ARGB-WHITE-EDITION-2P.png",
     },
     {
       type: "Liquid Cooler",
@@ -740,6 +782,7 @@ export const data = {
       category: "CPU Cooler",
       price: 202.49,
       img: "MASTERLIQUID-ML360R-RGB.png",
+      thumbnail: "thumbnail-MASTERLIQUID-ML360R-RGB.png",
     },
     {
       type: "Liquid Cooler",
@@ -775,12 +818,13 @@ export const data = {
       category: "CPU Cooler",
       price: 102.96,
       img: "MASTERLIQUID-240.png",
+      thumbnail: "thumbnail-MASTERLIQUID-240.png",
     },
     {
       type: "Liquid Cooler",
       id: uuid(),
       brand: "NZXT",
-      model: "Kraken X73 RGB",
+      model: "Kraken X73 RGB 3",
       color: "Black",
       socket: [
         "LGA2066",
@@ -806,12 +850,13 @@ export const data = {
       category: "CPU Cooler",
       price: 219.99,
       img: "Kraken-X73-RGB.png",
+      thumbnail: "thumbnail-Kraken-X73-RGB.png",
     },
     {
       type: "Liquid Cooler",
       id: uuid(),
       brand: "NZXT",
-      model: "Kraken X73 RGB",
+      model: "Kraken X73 RGB 2",
       color: "Black",
       socket: [
         "LGA2066",
@@ -837,6 +882,7 @@ export const data = {
       category: "CPU Cooler",
       price: 179.99,
       img: "Kraken-X63-RGB.png",
+      thumbnail: "thumbnail-Kraken-X63-RGB.png",
     },
     {
       type: "Liquid Cooler",
@@ -855,6 +901,7 @@ export const data = {
       category: "CPU Cooler",
       price: 349.99,
       img: "MASTERLIQUID-ML360-SUB-ZERO.png",
+      thumbnail: "thumbnail-MASTERLIQUID-ML360-SUB-ZERO.png",
     },
     {
       type: "Liquid Cooler",
@@ -890,6 +937,7 @@ export const data = {
       category: "CPU Cooler",
       price: 399.99,
       img: "HIGH-PERFORMANCE-PUMP.png",
+      thumbnail: "thumbnail-HIGH-PERFORMANCE-PUMP.png",
     },
     {
       type: "Air Cooler",
@@ -926,6 +974,7 @@ export const data = {
       category: "CPU Cooler",
       price: 45.55,
       img: "MASTERAIR-MA612-STEALTH.png",
+      thumbnail: "thumbnail-MASTERAIR-MA612-STEALTH.png",
     },
     {
       type: "Air Cooler",
@@ -961,6 +1010,7 @@ export const data = {
       category: "CPU Cooler",
       price: 123.18,
       img: "MASTERAIR-MA620M.png",
+      thumbnail: "thumbnail-MASTERAIR-MA620M.png",
     },
     {
       type: "Air Cooler",
@@ -997,6 +1047,7 @@ export const data = {
       category: "CPU Cooler",
       price: 41.9,
       img: "HYPER-H410R-WHITE-EDITION.png",
+      thumbnail: "thumbnail-HYPER-H410R-WHITE-EDITION.png",
     },
     {
       type: "Air Cooler",
@@ -1034,6 +1085,7 @@ export const data = {
       category: "CPU Cooler",
       price: 76.95,
       img: "MASTERAIR-G100M.png",
+      thumbnail: "thumbnail-MASTERAIR-G100M.png",
     },
     {
       type: "Air Cooler",
@@ -1071,6 +1123,7 @@ export const data = {
       category: "CPU Cooler",
       price: 48.0,
       img: "HYPER-212-LED.png",
+      thumbnail: "thumbnail-HYPER-212-LED.png",
     },
     {
       type: "Air Cooler",
@@ -1104,6 +1157,7 @@ export const data = {
       category: "CPU Cooler",
       price: 34.99,
       img: "BLIZZARD-T2.png",
+      thumbnail: "thumbnail-BLIZZARD-T2.png",
     },
     {
       type: "Air Cooler",
@@ -1141,6 +1195,7 @@ export const data = {
       category: "CPU Cooler",
       price: 122.35,
       img: "MASTERAIR-MA620P.png",
+      thumbnail: "thumbnail-MASTERAIR-MA620P.png",
     },
     {
       type: "Air Cooler",
@@ -1177,6 +1232,7 @@ export const data = {
       category: "CPU Cooler",
       price: 136.35,
       img: "MASTERAIR-MA410M-TUF-GAMING EDITION.png",
+      thumbnail: "thumbnail-MASTERAIR-MA410M-TUF-GAMING EDITION.png",
     },
     {
       type: "Air Cooler",
@@ -1207,13 +1263,14 @@ export const data = {
       category: "CPU Cooler",
       price: 99.99,
       img: "A500-Dual-Fan-CPU-Cooler.png",
+      thumbnail: "thumbnail-A500-Dual-Fan-CPU-Cooler.png",
     },
 
     {
       type: "Liquid Cooler",
       id: uuid(),
       brand: "Corsair",
-      model: "iCUE H150i ELITE CAPELLIX",
+      model: "iCUE H150i ELITE CAPELLIX WHITE 3",
       color: "White",
       socket: [
         "LGA2066",
@@ -1240,12 +1297,13 @@ export const data = {
       category: "CPU Cooler",
       price: 199.99,
       img: "iCUE-H150i-ELITE-CAPELLIX-3P.png",
+      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-3P.png",
     },
     {
       type: "Liquid Cooler",
       id: uuid(),
       brand: "Corsair",
-      model: "iCUE H150i ELITE CAPELLIX",
+      model: "iCUE H150i ELITE CAPELLIX WHITE 2",
       color: "White",
       socket: [
         "LGA2066",
@@ -1272,12 +1330,13 @@ export const data = {
       category: "CPU Cooler",
       price: 159.99,
       img: "iCUE-H150i-ELITE-CAPELLIX-2P.png",
+      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-2P.png",
     },
     {
       type: "Liquid Cooler",
       id: uuid(),
       brand: "Corsair",
-      model: "iCUE H150i ELITE CAPELLIX",
+      model: "iCUE H150i ELITE CAPELLIX 3",
       color: "Black",
       socket: [
         "LGA2066",
@@ -1304,12 +1363,13 @@ export const data = {
       category: "CPU Cooler",
       price: 189.99,
       img: "iCUE-H150i-ELITE-CAPELLIX-3P-BLACK.png",
+      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-3P-BLACK.png",
     },
     {
       type: "Liquid Cooler",
       id: uuid(),
       brand: "Corsair",
-      model: "iCUE H150i ELITE CAPELLIX",
+      model: "iCUE H150i ELITE CAPELLIX 2",
       color: "Black",
       socket: [
         "LGA2066",
@@ -1336,6 +1396,7 @@ export const data = {
       category: "CPU Cooler",
       price: 169.99,
       img: "iCUE-H150i-ELITE-CAPELLIX-2P-BLACK.png",
+      thumbnail: "thumbnail-iCUE-H150i-ELITE-CAPELLIX-2P-BLACK.png",
     },
     {
       type: "Liquid Cooler",
@@ -1368,12 +1429,13 @@ export const data = {
       category: "CPU Cooler",
       price: 99.99,
       img: "Hydro-Series-H100x.png",
+      thumbnail: "thumbnail-Hydro-Series-H100x.png",
     },
     {
       type: "Liquid Cooler",
       id: uuid(),
       brand: "Corsair",
-      model: "Hydro Series™ H100i",
+      model: "Hydro Series H100i",
       color: "Black",
       socket: [
         "LGA2066",
@@ -1400,6 +1462,7 @@ export const data = {
       category: "CPU Cooler",
       price: 169.99,
       img: "Hydro-Series-H100i.png",
+      thumbnail: "thumbnail-Hydro-Series-H100i.png",
     },
   ],
   Motherboard: [
@@ -1413,6 +1476,7 @@ export const data = {
       category: "Motherboard",
       price: 327,
       img: "x299-taichi-clx.png",
+      thumbnail: "thumbnail-x299-taichi-clx.png",
       cpuSupport: [
         "i9-10980XE",
         "i9-10940X",
@@ -1465,6 +1529,7 @@ export const data = {
       category: "Motherboard",
       price: 577,
       img: "x299-creator.png",
+      thumbnail: "thumbnail-x299-creator.png",
       cpuSupport: [
         "i9-10980XE",
         "i9-10940X",
@@ -1517,6 +1582,7 @@ export const data = {
       category: "Motherboard",
       price: 391,
       img: "x299-oc-formula.png",
+      thumbnail: "thumbnail-x299-oc-formula.png",
       cpuSupport: [
         "i9-10980XE",
         "i9-10940X",
@@ -1576,6 +1642,7 @@ export const data = {
       category: "Motherboard",
       price: 429,
       img: "z590-taichi.png",
+      thumbnail: "thumbnail-z590-taichi.png",
       cpuSupport: [
         "i9-10900K",
         "i9-10900KF",
@@ -1651,6 +1718,7 @@ export const data = {
       category: "Motherboard",
       price: 224,
       img: "z590-extreme-wifi-6e.png",
+      thumbnail: "thumbnail-z590-extreme-wifi-6e.png",
       cpuSupport: [
         "i9-10900K",
         "i9-10900KF",
@@ -1726,6 +1794,7 @@ export const data = {
       category: "Motherboard",
       price: 169,
       img: "z590-pro4.png",
+      thumbnail: "thumbnail-z590-pro4.png",
       cpuSupport: [
         "i9-10900K",
         "i9-10900KF",
@@ -1801,6 +1870,7 @@ export const data = {
       category: "Motherboard",
       price: 139,
       img: "z390-pro4.png",
+      thumbnail: "thumbnail-z390-pro4.png",
       cpuSupport: [
         "i9-9900KS",
         "i9-9900KF",
@@ -1909,6 +1979,7 @@ export const data = {
       category: "Motherboard",
       price: 145,
       img: "z390-steel-legend.png",
+      thumbnail: "thumbnail-z390-steel-legend.png",
       cpuSupport: [
         "i9-9900KS",
         "i9-9900KF",
@@ -2017,6 +2088,7 @@ export const data = {
       category: "Motherboard",
       price: 164,
       img: "z390-phantom-gaming-sli-ac.png",
+      thumbnail: "thumbnail-z390-phantom-gaming-sli-ac.png",
       cpuSupport: [
         "i9-9900KS",
         "i9-9900KF",
@@ -2126,6 +2198,7 @@ export const data = {
       category: "Motherboard",
       price: 503,
       img: "trx40-taichi.png",
+      thumbnail: "thumbnail-trx40-taichi.png",
       cpuSupport: ["3990X", "3970X", "3960X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -2167,6 +2240,7 @@ export const data = {
       category: "Motherboard",
       price: 595,
       img: "trx40-creator.png",
+      thumbnail: "thumbnail-trx40-creator.png",
       cpuSupport: ["3990X", "3970X", "3960X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -2208,6 +2282,7 @@ export const data = {
       category: "Motherboard",
       price: 249,
       img: "x399-phantom-gaming-6.png",
+      thumbnail: "thumbnail-x399-phantom-gaming-6.png",
       cpuSupport: ["2950X", "2920X", "1950X", "1920X", "1920", "1900X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -2235,6 +2310,7 @@ export const data = {
       category: "Motherboard",
       price: 480,
       img: "fatal1ty-x399-professional-gaming.png",
+      thumbnail: "thumbnail-fatal1ty-x399-professional-gaming.png",
       cpuSupport: [
         "2990WX",
         "2970WX",
@@ -2272,6 +2348,7 @@ export const data = {
       category: "Motherboard",
       price: 396,
       img: "x399-taichi.png",
+      thumbnail: "thumbnail-x399-taichi.png",
       cpuSupport: [
         "2990WX",
         "2970WX",
@@ -2309,6 +2386,7 @@ export const data = {
       category: "Motherboard",
       price: 989,
       img: "x570-aqua.png",
+      thumbnail: "thumbnail-x570-aqua.png",
       cpuSupport: [
         "5950X",
         "5900X",
@@ -2403,6 +2481,7 @@ export const data = {
       category: "Motherboard",
       price: 299,
       img: "x570-pro4.png",
+      thumbnail: "thumbnail-x570-pro4.png",
       cpuSupport: [
         "5950X",
         "5900X",
@@ -2492,6 +2571,7 @@ export const data = {
       category: "Motherboard",
       price: 399,
       img: "x570-taichi-razer-edition.png",
+      thumbnail: "thumbnail-x570-taichi-razer-edition.png",
       cpuSupport: [
         "5950X",
         "5900X",
@@ -2568,6 +2648,7 @@ export const data = {
       category: "Motherboard",
       price: 617,
       img: "ws-x299-sage.png",
+      thumbnail: "thumbnail-ws-x299-sage.png",
       cpuSupport: [
         "i5-7640X",
         "i7-7740X",
@@ -2622,6 +2703,7 @@ export const data = {
       category: "Motherboard",
       price: 749,
       img: "prime-x299-deluxe.png",
+      thumbnail: "thumbnail-prime-x299-deluxe.png",
       cpuSupport: [
         "i5-7640X",
         "i7-7740X",
@@ -2678,6 +2760,7 @@ export const data = {
       category: "Motherboard",
       price: 499,
       img: "rog-strix-x299-e-gaming-ii.png",
+      thumbnail: "thumbnail-rog-strix-x299-e-gaming-ii.png",
       cpuSupport: [
         "i5-7640X",
         "i7-7740X",
@@ -2733,6 +2816,7 @@ export const data = {
       category: "Motherboard",
       price: 305,
       img: "proart-z490-creator-10g.png",
+      thumbnail: "thumbnail-proart-z490-creator-10g.png",
       cpuSupport: [
         "G5905",
         "G5905T",
@@ -2807,6 +2891,7 @@ export const data = {
       category: "Motherboard",
       price: 273,
       img: "prime-z490-p.png",
+      thumbnail: "thumbnail-prime-z490-p.png",
       cpuSupport: [
         "G5900",
         "G5900T",
@@ -2883,6 +2968,7 @@ export const data = {
       category: "Motherboard",
       price: 119,
       img: "prime-b560-plus.png",
+      thumbnail: "thumbnail-prime-b560-plus.png",
       cpuSupport: [
         "G5900",
         "G5900T",
@@ -2957,6 +3043,7 @@ export const data = {
       category: "Motherboard",
       price: 134,
       img: "prime-z390-p.png",
+      thumbnail: "thumbnail-prime-z390-p.png",
       cpuSupport: [
         "G4900",
         "G4900T",
@@ -3055,6 +3142,7 @@ export const data = {
       category: "Motherboard",
       price: 180,
       img: "prime-b365-plus.png",
+      thumbnail: "thumbnail-prime-b365-plus.png",
       cpuSupport: [
         "G4900",
         "G4900T",
@@ -3138,6 +3226,7 @@ export const data = {
       category: "Motherboard",
       price: 183,
       img: "prime-h270-plus.png",
+      thumbnail: "thumbnail-prime-h270-plus.png",
       cpuSupport: [
         "G3900",
         "G3900T",
@@ -3208,6 +3297,7 @@ export const data = {
       category: "Motherboard",
       price: 139,
       img: "prime-b550-plus.png",
+      thumbnail: "thumbnail-prime-b550-plus.png",
       cpuSupport: [
         "3100",
         "3300X",
@@ -3268,6 +3358,7 @@ export const data = {
       category: "Motherboard",
       price: 156,
       img: "tuf-gaming-b550-plus.png",
+      thumbnail: "thumbnail-tuf-gaming-b550-plus.png",
       cpuSupport: [
         "3100",
         "3300X",
@@ -3328,6 +3419,7 @@ export const data = {
       category: "Motherboard",
       price: 119,
       img: "tuf-gaming-b450-plus-ii.png",
+      thumbnail: "thumbnail-tuf-gaming-b450-plus-ii.png",
       cpuSupport: [
         "200G",
         "200GE",
@@ -3429,6 +3521,7 @@ export const data = {
       category: "Motherboard",
       price: 449,
       img: "rog-strix-x399-e-gaming.png",
+      thumbnail: "thumbnail-rog-strix-x399-e-gaming.png",
       cpuSupport: [
         "2990WX",
         "2970WX",
@@ -3467,6 +3560,7 @@ export const data = {
       category: "Motherboard",
       price: 655,
       img: "rog-zenith-extreme-alpha.png",
+      thumbnail: "thumbnail-rog-zenith-extreme-alpha.png",
       cpuSupport: [
         "2990WX",
         "2970WX",
@@ -3505,6 +3599,7 @@ export const data = {
       category: "Motherboard",
       price: 555,
       img: "rog-zenith-extreme.png",
+      thumbnail: "thumbnail-rog-zenith-extreme.png",
       cpuSupport: [
         "2990WX",
         "2970WX",
@@ -3541,6 +3636,7 @@ export const data = {
       category: "Motherboard",
       price: 420,
       img: "prime-trx40-pro.png",
+      thumbnail: "thumbnail-prime-trx40-pro.png",
       cpuSupport: ["3960X", "3970X", "3990X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -3576,6 +3672,7 @@ export const data = {
       category: "Motherboard",
       price: 799,
       img: "rog-strix-trx40-e-gaming.png",
+      thumbnail: "thumbnail-rog-strix-trx40-e-gaming.png",
       cpuSupport: ["3960X", "3970X", "3990X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -3611,6 +3708,7 @@ export const data = {
       category: "Motherboard",
       price: 699,
       img: "rog-zenith-ii-extreme.png",
+      thumbnail: "thumbnail-rog-zenith-ii-extreme.png",
       cpuSupport: ["3960X", "3970X", "3990X"],
       slots: 8,
       ddrType: "DDR4 DIMM",
@@ -3654,6 +3752,7 @@ export const data = {
       category: "Graphic Card",
       price: 1949.99,
       img: "speedster-merc-319-amd-radeon-rx-6900-xt-black.png",
+      thumbnail: "thumbnail-speedster-merc-319-amd-radeon-rx-6900-xt-black.png",
     },
     {
       id: uuid(),
@@ -3670,6 +3769,7 @@ export const data = {
       category: "Graphic Card",
       price: 899.99,
       img: "speedster-merc-319-amd-radeon-rx-6800-xt-core.png",
+      thumbnail: "thumbnail-speedster-merc-319-amd-radeon-rx-6800-xt-core.png",
     },
     {
       id: uuid(),
@@ -3686,6 +3786,7 @@ export const data = {
       category: "Graphic Card",
       price: 599.99,
       img: "double-dissipation-amd-radeon-rx-5700-xt.png",
+      thumbnail: "thumbnail-double-dissipation-amd-radeon-rx-5700-xt.png",
     },
     {
       id: uuid(),
@@ -3702,6 +3803,7 @@ export const data = {
       category: "Graphic Card",
       price: 329.99,
       img: "amd-radeon-rx-5600-xt-thicc-iii-ultra.png",
+      thumbnail: "thumbnail-amd-radeon-rx-5600-xt-thicc-iii-ultra.png",
     },
     {
       id: uuid(),
@@ -3718,6 +3820,7 @@ export const data = {
       category: "Graphic Card",
       price: 229.99,
       img: "amd-radeon-rx-5500-xt-thicc-ii-pro.png",
+      thumbnail: "thumbnail-amd-radeon-rx-5500-xt-thicc-ii-pro.png",
     },
     {
       id: uuid(),
@@ -3734,6 +3837,7 @@ export const data = {
       category: "Graphic Card",
       price: 499.99,
       img: "xfx-amd-radeon-rx-590-fatboy-core-edition.png",
+      thumbnail: "thumbnail-xfx-amd-radeon-rx-590-fatboy-core-edition.png",
     },
     {
       id: uuid(),
@@ -3750,6 +3854,7 @@ export const data = {
       category: "Graphic Card",
       price: 399.99,
       img: "xfx-amd-radeon-rx-580-gtr-xxx-edition-crimson.png",
+      thumbnail: "thumbnail-xfx-amd-radeon-rx-580-gtr-xxx-edition-crimson.png",
     },
     {
       id: uuid(),
@@ -3766,6 +3871,7 @@ export const data = {
       category: "Graphic Card",
       price: 179.99,
       img: "xfx-amd-radeon-rx-570-rs-xxx-edition.png",
+      thumbnail: "thumbnail-xfx-amd-radeon-rx-570-rs-xxx-edition.png",
     },
     {
       id: uuid(),
@@ -3782,6 +3888,7 @@ export const data = {
       category: "Graphic Card",
       price: 99.99,
       img: "xfx-amd-radeon-rx-560-14cu-single-fan.png",
+      thumbnail: "thumbnail-xfx-amd-radeon-rx-560-14cu-single-fan.png",
     },
     {
       id: uuid(),
@@ -3798,6 +3905,7 @@ export const data = {
       category: "Graphic Card",
       price: 1699.99,
       img: "geForce-rtx-3090-xc3-ultra-hybrid-gaming.png",
+      thumbnail: "thumbnail-geForce-rtx-3090-xc3-ultra-hybrid-gaming.png",
     },
     {
       id: uuid(),
@@ -3814,6 +3922,7 @@ export const data = {
       category: "Graphic Card",
       price: 899.99,
       img: "geForce-rtx-3080-xc3-ultra-hydro-copper-gaming.png",
+      thumbnail: "thumbnail-geForce-rtx-3080-xc3-ultra-hydro-copper-gaming.png",
     },
     {
       id: uuid(),
@@ -3830,6 +3939,7 @@ export const data = {
       category: "Graphic Card",
       price: 629.99,
       img: "geForce-rtx-3070-xc3-ultra-gaming.png",
+      thumbnail: "thumbnail-geForce-rtx-3070-xc3-ultra-gaming.png",
     },
     {
       id: uuid(),
@@ -3846,6 +3956,7 @@ export const data = {
       category: "Graphic Card",
       price: 489.99,
       img: "geForce-rtx-3060-ti-ftw3-gaming.png",
+      thumbnail: "thumbnail-geForce-rtx-3060-ti-ftw3-gaming.png",
     },
     {
       id: uuid(),
@@ -3862,6 +3973,7 @@ export const data = {
       category: "Graphic Card",
       price: 329.99,
       img: "geForce-rtx-3060-xc-black-gaming.png",
+      thumbnail: "thumbnail-geForce-rtx-3060-xc-black-gaming.png",
     },
     {
       id: uuid(),
@@ -3878,6 +3990,7 @@ export const data = {
       category: "Graphic Card",
       price: 189.99,
       img: "geForce-gtx-1650-super-sc-ultra-gaming.png",
+      thumbnail: "thumbnail-geForce-gtx-1650-super-sc-ultra-gaming.png",
     },
     {
       id: uuid(),
@@ -3894,6 +4007,7 @@ export const data = {
       category: "Graphic Card",
       price: 109.99,
       img: "geForce-gt-1030-sc.png",
+      thumbnail: "thumbnail-geForce-gt-1030-sc.png",
     },
   ],
   "RAM Memory": [
@@ -3909,6 +4023,7 @@ export const data = {
       category: "RAM Memory",
       price: 179.99,
       img: "corsair-dominator-platinum-16bg.png",
+      thumbnail: "thumbnail-corsair-dominator-platinum-16bg.png",
     },
     {
       id: uuid(),
@@ -3922,6 +4037,7 @@ export const data = {
       category: "RAM Memory",
       price: 114.99,
       img: "corsair-vengeance-rgb-pro-16bg.png",
+      thumbnail: "thumbnail-corsair-vengeance-rgb-pro-16bg.png",
     },
     {
       id: uuid(),
@@ -3935,6 +4051,7 @@ export const data = {
       category: "RAM Memory",
       price: 219.99,
       img: "corsair-vengeance-rgb-pro-sl-white-16bg.png",
+      thumbnail: "thumbnail-corsair-vengeance-rgb-pro-sl-white-16bg.png",
     },
     {
       id: uuid(),
@@ -3948,6 +4065,7 @@ export const data = {
       category: "RAM Memory",
       price: 139.99,
       img: "corsair-dominator-platinum-rgb-white-8bg.png",
+      thumbnail: "thumbnail-corsair-dominator-platinum-rgb-white-8bg.png",
     },
     {
       id: uuid(),
@@ -3961,6 +4079,7 @@ export const data = {
       category: "RAM Memory",
       price: 79.99,
       img: "corsair-vengeance-rgb-pro-white-8bg.png",
+      thumbnail: "thumbnail-corsair-vengeance-rgb-pro-white-8bg.png",
     },
     {
       id: uuid(),
@@ -3974,6 +4093,7 @@ export const data = {
       category: "RAM Memory",
       price: 55.99,
       img: "corsair-vengeance-lpx-red-8bg.png",
+      thumbnail: "thumbnail-corsair-vengeance-lpx-red-8bg.png",
     },
     {
       id: uuid(),
@@ -3987,6 +4107,7 @@ export const data = {
       category: "RAM Memory",
       price: 133.99,
       img: "kingston-hyperx-fury-rgb-16bg.png",
+      thumbnail: "thumbnail-kingston-hyperx-fury-rgb-16bg.png",
     },
     {
       id: uuid(),
@@ -4000,6 +4121,7 @@ export const data = {
       category: "RAM Memory",
       price: 129.99,
       img: "kingston-hyperx-predator-black-16bg.png",
+      thumbnail: "thumbnail-kingston-hyperx-predator-black-16bg.png",
     },
     {
       id: uuid(),
@@ -4013,6 +4135,7 @@ export const data = {
       category: "RAM Memory",
       price: 112.99,
       img: "kingston-hyperx-fury-black-16bg.png",
+      thumbnail: "thumbnail-kingston-hyperx-fury-black-16bg.png",
     },
     {
       id: uuid(),
@@ -4026,6 +4149,7 @@ export const data = {
       category: "RAM Memory",
       price: 89.99,
       img: "kingston-value-ram-16bg.png",
+      thumbnail: "thumbnail-kingston-value-ram-16bg.png",
     },
     {
       id: uuid(),
@@ -4039,6 +4163,7 @@ export const data = {
       category: "RAM Memory",
       price: 52.99,
       img: "kingston-value-ram-8bg.png",
+      thumbnail: "thumbnail-kingston-value-ram-8bg.png",
     },
     {
       id: uuid(),
@@ -4052,6 +4177,7 @@ export const data = {
       category: "RAM Memory",
       price: 31.99,
       img: "kingston-value-ram-4bg.png",
+      thumbnail: "thumbnail-kingston-value-ram-4bg.png",
     },
     {
       id: uuid(),
@@ -4065,6 +4191,7 @@ export const data = {
       category: "RAM Memory",
       price: 169.99,
       img: "crucial-ballistix-max-16bg.png",
+      thumbnail: "thumbnail-crucial-ballistix-max-16bg.png",
     },
     {
       id: uuid(),
@@ -4078,6 +4205,7 @@ export const data = {
       category: "RAM Memory",
       price: 189.99,
       img: "crucial-ballistix-max-rgb-16bg.png",
+      thumbnail: "thumbnail-crucial-ballistix-max-rgb-16bg.png",
     },
     {
       id: uuid(),
@@ -4091,6 +4219,7 @@ export const data = {
       category: "RAM Memory",
       price: 84.99,
       img: "crucial-single-module-16gb.png",
+      thumbnail: "thumbnail-crucial-single-module-16gb.png",
     },
     {
       id: uuid(),
@@ -4104,6 +4233,7 @@ export const data = {
       category: "RAM Memory",
       price: 52.99,
       img: "crucial-single-module-8gb.png",
+      thumbnail: "thumbnail-crucial-single-module-8gb.png",
     },
     {
       id: uuid(),
@@ -4117,6 +4247,7 @@ export const data = {
       category: "RAM Memory",
       price: 32.99,
       img: "crucial-single-module-4gb.png",
+      thumbnail: "thumbnail-crucial-single-module-4gb.png",
     },
   ],
   SSD: [
@@ -4125,8 +4256,9 @@ export const data = {
       brand: "Kingston",
       model: "A2000 NVMe PCIe SSD – 250GB",
       img: "kingston-sa2000.jpg",
+      thumbnail: "thumbnail-kingston-sa2000.jpg",
       formFactor: "M.2 2280",
-      interface: "NVMe™ PCIe Gen 3.0 x 4 Lanes",
+      interface: "NVMe PCIe Gen 3.0 x 4 Lanes",
       capacity: "250GB",
       dataTransfer: "up to 2,000/1,100MB/s",
       warranty: "Limited 5-year warranty with free technical support",
@@ -4139,8 +4271,9 @@ export const data = {
       brand: "Kingston",
       model: "A2000 NVMe PCIe SSD – 500GB",
       img: "kingston-sa2000.jpg",
+      thumbnail: "thumbnail-kingston-sa2000.jpg",
       formFactor: "M.2 2280",
-      interface: "NVMe™ PCIe Gen 3.0 x 4 Lanes",
+      interface: "NVMe PCIe Gen 3.0 x 4 Lanes",
       capacity: "500GB",
       dataTransfer: "up to 2,200/2,000MB/s",
       warranty: "Limited 5-year warranty with free technical support",
@@ -4153,8 +4286,9 @@ export const data = {
       brand: "Kingston",
       model: "A2000 NVMe PCIe SSD – 1TB",
       img: "kingston-sa2000.jpg",
+      thumbnail: "thumbnail-kingston-sa2000.jpg",
       formFactor: "M.2 2280",
-      interface: "NVMe™ PCIe Gen 3.0 x 4 Lanes",
+      interface: "NVMe PCIe Gen 3.0 x 4 Lanes",
       capacity: "1TB",
       dataTransfer: "up to 2,200/2,000MB/s",
       warranty: "Limited 5-year warranty with free technical support",
@@ -4167,6 +4301,7 @@ export const data = {
       brand: "Kingston",
       model: "A400 SATA SSD - 120GB",
       img: "kingston-a400.jpg",
+      thumbnail: "thumbnail-kingston-a400.jpg",
       formFactor: `2.5" & M.2 2280`,
       interface: "SATA Rev. 3.0 (6Gb/s)",
       capacity: "120GB",
@@ -4181,6 +4316,7 @@ export const data = {
       brand: "Kingston",
       model: "A400 SATA SSD - 240GB",
       img: "kingston-a400.jpg",
+      thumbnail: "thumbnail-kingston-a400.jpg",
       formFactor: `2.5" & M.2 2280`,
       interface: "SATA Rev. 3.0 (6Gb/s)",
       capacity: "240GB",
@@ -4195,6 +4331,7 @@ export const data = {
       brand: "Kingston",
       model: "A400 SATA SSD - 480GB",
       img: "kingston-a400.jpg",
+      thumbnail: "thumbnail-kingston-a400.jpg",
       formFactor: `2.5" & M.2 2280`,
       interface: "SATA Rev. 3.0 (6Gb/s)",
       capacity: "480GB",
@@ -4209,6 +4346,7 @@ export const data = {
       brand: "Kingston",
       model: "A400 SATA SSD - 960GB",
       img: "kingston-a400.jpg",
+      thumbnail: "thumbnail-kingston-a400.jpg",
       formFactor: `2.5" & M.2 2280`,
       interface: "SATA Rev. 3.0 (6Gb/s)",
       capacity: "960GB",
@@ -4223,6 +4361,7 @@ export const data = {
       brand: "Kingston",
       model: "A400 SATA SSD - 1.92TB",
       img: "kingston-a400.jpg",
+      thumbnail: "thumbnail-kingston-a400.jpg",
       formFactor: `2.5" & M.2 2280`,
       interface: "SATA Rev. 3.0 (6Gb/s)",
       capacity: "1.92TB",
@@ -4237,8 +4376,9 @@ export const data = {
     {
       id: uuid(),
       brand: "Western Digital",
-      model: "WD_BLACK™ Performance (500GB)",
+      model: "WD_BLACK Performance (500GB)",
       img: "wd-black-desktop.jpg",
+      thumbnail: "thumbnail-wd-black-desktop.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "500GB",
@@ -4254,8 +4394,9 @@ export const data = {
     {
       id: uuid(),
       brand: "Western Digital",
-      model: "WD_BLACK™ Performance (1TB)",
+      model: "WD_BLACK Performance (1TB)",
       img: "wd-black-desktop.jpg",
+      thumbnail: "thumbnail-wd-black-desktop.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "1TB",
@@ -4270,8 +4411,9 @@ export const data = {
     {
       id: uuid(),
       brand: "Western Digital",
-      model: "WD_BLACK™ Performance (2TB)",
+      model: "WD_BLACK Performance (2TB)",
       img: "wd-black-desktop.jpg",
+      thumbnail: "thumbnail-wd-black-desktop.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "2TB",
@@ -4286,8 +4428,9 @@ export const data = {
     {
       id: uuid(),
       brand: "Western Digital",
-      model: "WD_BLACK™ Performance (4TB)",
+      model: "WD_BLACK Performance (4TB)",
       img: "wd-black-desktop.jpg",
+      thumbnail: "thumbnail-wd-black-desktop.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "4TB",
@@ -4302,8 +4445,9 @@ export const data = {
     {
       id: uuid(),
       brand: "Western Digital",
-      model: "WD_BLACK™ Performance (6TB)",
+      model: "WD_BLACK Performance (6TB)",
       img: "wd-black-desktop.jpg",
+      thumbnail: "thumbnail-wd-black-desktop.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "6TB",
@@ -4318,8 +4462,9 @@ export const data = {
     {
       id: uuid(),
       brand: "Western Digital",
-      model: "WD_BLACK™ Performance (8TB)",
+      model: "WD_BLACK Performance (8TB)",
       img: "wd-black-desktop.jpg",
+      thumbnail: "thumbnail-wd-black-desktop.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "8TB",
@@ -4334,8 +4479,9 @@ export const data = {
     {
       id: uuid(),
       brand: "Western Digital",
-      model: "WD_BLACK™ Performance (10TB)",
+      model: "WD_BLACK Performance (10TB)",
       img: "wd-black-desktop.jpg",
+      thumbnail: "thumbnail-wd-black-desktop.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "10TB",
@@ -4352,6 +4498,7 @@ export const data = {
       brand: "Western Digital",
       model: "WD Purple Surveillance (1TB)",
       img: "wd-purple-surveillance.jpg",
+      thumbnail: "thumbnail-wd-purple-surveillance.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "1TB",
@@ -4367,6 +4514,7 @@ export const data = {
       brand: "Western Digital",
       model: "WD Purple Surveillance (2TB)",
       img: "wd-purple-surveillance.jpg",
+      thumbnail: "thumbnail-wd-purple-surveillance.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "2TB",
@@ -4382,6 +4530,7 @@ export const data = {
       brand: "Western Digital",
       model: "WD Purple Surveillance (3TB)",
       img: "wd-purple-surveillance.jpg",
+      thumbnail: "thumbnail-wd-purple-surveillance.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "3TB",
@@ -4397,6 +4546,7 @@ export const data = {
       brand: "Western Digital",
       model: "WD Purple Surveillance (4TB)",
       img: "wd-purple-surveillance.jpg",
+      thumbnail: "thumbnail-wd-purple-surveillance.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "4TB",
@@ -4412,6 +4562,7 @@ export const data = {
       brand: "Western Digital",
       model: "WD Purple Surveillance (6TB)",
       img: "wd-purple-surveillance.jpg",
+      thumbnail: "thumbnail-wd-purple-surveillance.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "6TB",
@@ -4427,6 +4578,7 @@ export const data = {
       brand: "Western Digital",
       model: "WD Purple Surveillance (8TB)",
       img: "wd-purple-surveillance.jpg",
+      thumbnail: "thumbnail-wd-purple-surveillance.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "8TB",
@@ -4442,6 +4594,7 @@ export const data = {
       brand: "Western Digital",
       model: "WD Purple Surveillance (10TB)",
       img: "wd-purple-surveillance.jpg",
+      thumbnail: "thumbnail-wd-purple-surveillance.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "10TB",
@@ -4457,6 +4610,7 @@ export const data = {
       brand: "Western Digital",
       model: "WD Purple Surveillance (12TB)",
       img: "wd-purple-surveillance.jpg",
+      thumbnail: "thumbnail-wd-purple-surveillance.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "12TB",
@@ -4472,6 +4626,7 @@ export const data = {
       brand: "Western Digital",
       model: "WD Purple Surveillance (14TB)",
       img: "wd-purple-surveillance.jpg",
+      thumbnail: "thumbnail-wd-purple-surveillance.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "14TB",
@@ -4487,6 +4642,7 @@ export const data = {
       brand: "Western Digital",
       model: "WD Purple Surveillance (18TB)",
       img: "wd-purple-surveillance.jpg",
+      thumbnail: "thumbnail-wd-purple-surveillance.jpg",
       formFactor: `3.5"`,
       interface: "SATA",
       capacity: "18TB",
@@ -4506,6 +4662,7 @@ export const data = {
       color: "Black",
       model: "Asus DVD-Writer Drive-Black",
       img: "odd_asus.jpg",
+      thumbnail: "thumbnail-odd_asus.jpg",
       interface: "SATA",
       maxWriteSpeed: "48x",
       warranty: "1 year",
@@ -4519,6 +4676,7 @@ export const data = {
       color: "Black",
       model: "LG Super-Multi 24x Internal DVD-RW Drive-Black",
       img: "odd_lg.jpg",
+      thumbnail: "thumbnail-odd_lg.jpg",
       interface: "SATA",
       maxWriteSpeed: "24x",
       warranty: "1 year",
@@ -4558,6 +4716,7 @@ export const data = {
       category: "Case",
       price: 204.99,
       img: "iCUE-5000X.png",
+      thumbnail: "thumbnail-iCUE-5000X.jpg",
     },
     {
       type: "Mid-Tower",
@@ -4588,6 +4747,7 @@ export const data = {
       category: "Case",
       price: 134.99,
       img: "iCUE-4000X.png",
+      thumbnail: "thumbnail-iCUE-4000X.jpg",
     },
     {
       type: "Mid-Tower",
@@ -4616,12 +4776,13 @@ export const data = {
       category: "Case",
       price: 179.99,
       img: "Crystal-Series-570X.png",
+      thumbnail: "thumbnail-Crystal-Series-570X.jpg",
     },
     {
       type: "Mid-Tower",
       id: uuid(),
       brand: "Corsair",
-      model: "Crystal Series™ 460X",
+      model: "Crystal Series 460X",
       color: "Black",
       caseDimensions: "440mm x 220mm x 464mm",
       mbSupport: ["Mini-ITX", "Micro-ATX", "ATX", "E-ATX", "XL-ATX"],
@@ -4643,7 +4804,8 @@ export const data = {
       warranty: "2 years",
       category: "Case",
       price: 149.99,
-      img: "Crystal-Series™-460X.png",
+      img: "Crystal-Series-460X.png",
+      thumbnail: "thumbnail-Crystal-Series-460X.jpg",
     },
     {
       type: "Mid-Tower",
@@ -4671,12 +4833,13 @@ export const data = {
       category: "Case",
       price: 169.99,
       img: "H710i.jpg",
+      thumbnail: "thumbnail-H710i.jpg",
     },
     {
       type: "Full-Tower",
       id: uuid(),
       brand: "Corsair",
-      model: "Graphite Series™ 780T",
+      model: "Graphite Series 780T",
       color: "Black",
       caseDimensions: "637mm x 288mm x 602mm",
       mbSupport: ["Mini-ITX", "Micro-ATX", "ATX", "E-ATX", "XL-ATX"],
@@ -4699,13 +4862,14 @@ export const data = {
       category: "Case",
       warranty: "2 years",
       price: 189.99,
-      img: "Graphite-Series™-780T.png",
+      img: "Graphite-Series-780T.png",
+      thumbnail: "thumbnail-Graphite-Series-780T.jpg",
     },
     {
       type: "Full-Tower",
       id: uuid(),
       brand: "Corsair",
-      model: "Graphite Series™ 780T - White",
+      model: "Graphite Series 780T - White",
       color: "White",
       caseDimensions: "637mm x 288mm x 602mm",
       compatibleLiquidCoolers: [
@@ -4726,7 +4890,8 @@ export const data = {
       warranty: "2 years",
       category: "Case",
       price: 189.99,
-      img: "Graphite-Series™-780T-White.png",
+      img: "Graphite-Series-780T-White.png",
+      thumbnail: "thumbnail-Graphite-Series-780T-White.jpg",
     },
     {
       type: "Mid-Tower",
@@ -4755,6 +4920,7 @@ export const data = {
       category: "Case",
       price: 188.99,
       img: "MASTERBOX-K501L-&-K501L.png",
+      thumbnail: "thumbnail-MASTERBOX-K501L-&-K501L.jpg",
     },
     {
       type: "Mid-Tower",
@@ -4783,6 +4949,7 @@ export const data = {
       category: "Case",
       price: 188.99,
       img: "MASTERBOX-LITE-5-ARGB.png",
+      thumbnail: "thumbnail-MASTERBOX-LITE-5-ARGB.jpg",
     },
     {
       type: "Mid-Tower",
@@ -4811,6 +4978,7 @@ export const data = {
       category: "Case",
       price: 114.96,
       img: "MASTERBOX-LITE-5-ARGB.png",
+      thumbnail: "thumbnail-MASTERBOX-LITE-5-ARGB.jpg",
     },
     {
       type: "Mid-Tower",
@@ -4838,6 +5006,7 @@ export const data = {
       category: "Case",
       price: 149.99,
       img: "H510-Elite.jpg",
+      thumbnail: "thumbnail-H510-Elite.jpg",
     },
     {
       type: "Mid-Tower",
@@ -4866,6 +5035,7 @@ export const data = {
       category: "Case",
       price: 129.99,
       img: "MASTERBOX-H500P.png",
+      thumbnail: "thumbnail-MASTERBOX-H500P.jpg",
     },
     {
       type: "Mid-Tower",
@@ -4885,6 +5055,7 @@ export const data = {
       category: "Case",
       price: 79.9,
       img: "CM-FORCE-500.png",
+      thumbnail: "thumbnail-CM-FORCE-500.jpg",
     },
     {
       type: "Full-Tower",
@@ -4915,6 +5086,7 @@ export const data = {
       category: "Case",
       price: 471.19,
       img: "COSMOS-C700M.png",
+      thumbnail: "thumbnail-COSMOS-C700M.jpg",
     },
     {
       type: "Full-Tower",
@@ -4945,6 +5117,7 @@ export const data = {
       category: "Case",
       price: 466.12,
       img: "STRYKER-SE.png",
+      thumbnail: "thumbnail-STRYKER-SE.jpg",
     },
   ],
 };

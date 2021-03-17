@@ -1,41 +1,82 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 // npm imports
 import styled from "styled-components";
-import Slider, { Range, SliderTooltip } from "rc-slider";
-import "rc-slider/assets/index.css";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Slider from "@material-ui/core/Slider";
 
 // consts imports
 
 // context imports
+import { GlobalContext } from "../../../../Context/GlobalContext";
 
 // component imports
 
 // styled-components
-const PriceRangeWrapper = styled.div``;
+const PriceRangeWrapper = styled.div`
+  .MuiSlider-thumb {
+    width: 20px;
+    height: 20px;
+    margin-top: -9px;
+  }
+  .MuiSlider-rail,
+  .MuiSlider-rail {
+    height: 3px;
+  }
+`;
+const useStyles = makeStyles({
+  root: {
+    width: "100%",
+  },
+  slider: {
+    color: "#FD0405",
+  },
+  price: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+});
+
+function valuetext(value) {
+  return `${value}`;
+}
+
 // component
-
 const PriceRange = (props) => {
-  const [value, setValue] = useState("");
-  const { createSliderWithTooltip } = Slider;
-  //   const Range = createSliderWithTooltip(Slider.Range);
-  //   const { Handle } = Range;
+  const { mainData, route, handlePriceRange, currentPriceRange } = useContext(
+    GlobalContext
+  );
+  const classes = useStyles();
+  let maxVal = Math.round(
+    Math.max.apply(
+      Math,
+      mainData[route].map(function (o) {
+        return o.price;
+      })
+    )
+  );
 
-  useEffect(() => {
-    console.log(value);
-  }, [value]);
+  // const [value, setValue] = useState([0, maxVal]);
+  // const handleChange = (event, newValue) => {
+  //   setValue(newValue);
+  //   handlePriceRange(newValue);
+  // };
 
   return (
-    <PriceRangeWrapper>
-      <Range
-        min={0}
-        max={100}
-        marks={{
-          0: 0,
-          100: "asd",
-        }}
-        defaultValue={[3, 10]}
-        tipFormatter={(value) => setValue(value)}
+    <PriceRangeWrapper className={classes.root}>
+      <div className={classes.price}>
+        <p>${currentPriceRange[0]}</p>
+        <p>${currentPriceRange[1]}</p>
+      </div>
+      <Slider
+        className={classes.slider}
+        value={currentPriceRange}
+        max={maxVal}
+        onChange={handlePriceRange}
+        aria-labelledby="range-slider"
+        getAriaValueText={valuetext}
       />
     </PriceRangeWrapper>
   );

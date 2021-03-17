@@ -27,6 +27,7 @@ export const GlobalContextProvider = (props) => {
   const [myItemsInitial, setMyItemsInitial] = useState(myItemsData);
   const [myItems, setMyItems] = useState(myItemsData);
   const [currentObj, setCurrentObj] = useState({});
+  const [currentPriceRange, setCurrentPriceRange] = useState([]);
 
   let filtered = mainData[route];
 
@@ -42,12 +43,18 @@ export const GlobalContextProvider = (props) => {
         ) {
           return el;
         }
+        if (
+          key === "priceRange" &&
+          el.price >= currentObj[key][0] &&
+          el.price <= currentObj[key][1]
+        ) {
+          return el;
+        }
         if (currentObj[key] !== "query" && currentObj[key].includes(el[key])) {
           return el;
         }
       });
     }
-
     setFilteredData({ ...filteredData, [route]: filtered });
 
     currentObj.query === "" && delete currentObj.query;
@@ -57,6 +64,18 @@ export const GlobalContextProvider = (props) => {
   useEffect(() => {
     route &&
       setBrands([...new Set(initialData[route].map((item) => item.brand))]);
+
+    setCurrentPriceRange([
+      0,
+      Math.round(
+        Math.max.apply(
+          Math,
+          mainData[route].map(function (o) {
+            return o.price;
+          })
+        )
+      ),
+    ]);
   }, [route]);
 
   //Adding in a array all clicked brands
@@ -77,7 +96,10 @@ export const GlobalContextProvider = (props) => {
         brand: clickedBrands,
       });
 
-    clickedBrands.length === 0 && delete currentObj.brand;
+    if (clickedBrands.length === 0) {
+      const clone = (({ brand, ...o }) => o)(currentObj);
+      setCurrentObj(clone);
+    }
   }, [clickedBrands]);
 
   // Get current component from initialData
@@ -171,6 +193,15 @@ export const GlobalContextProvider = (props) => {
       query,
     });
   };
+
+  const handlePriceRange = (event, value) => {
+    setCurrentPriceRange(value);
+    setCurrentObj({
+      ...currentObj,
+      priceRange: value,
+    });
+  };
+
   const globalState = {
     mainData,
     initialData,
@@ -202,6 +233,9 @@ export const GlobalContextProvider = (props) => {
     deleteItem,
     handleItems,
     handleSearch,
+    handlePriceRange,
+    currentPriceRange,
+    setCurrentPriceRange,
   };
 
   return <Provider value={globalState}>{props.children}</Provider>;
