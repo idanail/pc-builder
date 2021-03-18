@@ -28,7 +28,6 @@ const MyItemsWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
-    /* padding-right: 34px; */
     .component-name-wrapper {
       display: flex;
       justify-content: space-between;

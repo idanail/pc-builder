@@ -146,16 +146,16 @@ const MainFilter = ({ open, handleClose, currentData }) => {
                     />
                   ))}
               </Accordion>
-              <Accordion className={classes.accordionStyle}>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel2a-content"
-                  id="panel2a-header"
-                  className={classes.accordionSummary}
-                >
-                  <Typography className={classes.heading}>Type</Typography>
-                </AccordionSummary>
-                {mainData[route][0].type && (
+              {mainData[route][0].type && (
+                <Accordion className={classes.accordionStyle}>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                    className={classes.accordionSummary}
+                  >
+                    <Typography className={classes.heading}>Type</Typography>
+                  </AccordionSummary>
                   <>
                     {type &&
                       type.map((el, i) => (
@@ -167,18 +167,18 @@ const MainFilter = ({ open, handleClose, currentData }) => {
                         />
                       ))}
                   </>
-                )}
-              </Accordion>
-              <Accordion className={classes.accordionStyle}>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel2a-content"
-                  id="panel2a-header"
-                  className={classes.accordionSummary}
-                >
-                  <Typography className={classes.heading}>Color</Typography>
-                </AccordionSummary>
-                {mainData[route][0].color && (
+                </Accordion>
+              )}
+              {mainData[route][0].color && (
+                <Accordion className={classes.accordionStyle}>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                    className={classes.accordionSummary}
+                  >
+                    <Typography className={classes.heading}>Color</Typography>
+                  </AccordionSummary>
                   <>
                     {color &&
                       color.map((el, i) => (
@@ -190,8 +190,8 @@ const MainFilter = ({ open, handleClose, currentData }) => {
                         />
                       ))}
                   </>
-                )}
-              </Accordion>
+                </Accordion>
+              )}
             </div>
 
             {/*  */}

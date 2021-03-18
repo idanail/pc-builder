@@ -14,7 +14,7 @@ import { Span22, Span14 } from "../../../../Assets/Text/Text";
 // component imports
 
 // styled-components
-const BrandsRenderWrapper = styled.span`
+const FilterRenderWrapper = styled.span`
   span {
     margin-right: 15px;
   }
@@ -32,12 +32,12 @@ const BrandsRenderWrapper = styled.span`
   }
 `;
 
-const BrandsRender = ({ element, clickedElement, filterType }) => {
+const FilterRender = ({ element, clickedElement, filterType }) => {
   const { findClickedElement } = useContext(GlobalContext);
 
   const [isActive, setIsActive] = useState(clickedElement.includes(element));
   return (
-    <BrandsRenderWrapper
+    <FilterRenderWrapper
       onClick={() => {
         findClickedElement(element, filterType);
         setIsActive(!isActive);
@@ -46,8 +46,8 @@ const BrandsRender = ({ element, clickedElement, filterType }) => {
       <span className={`rendered-element ${isActive ? "active" : ""}`}>
         <Span14 className={`${isActive ? "active" : ""}`}>{element}</Span14>
       </span>
-    </BrandsRenderWrapper>
+    </FilterRenderWrapper>
   );
 };
 
-export default BrandsRender;
+export default FilterRender;
