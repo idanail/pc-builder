@@ -24,21 +24,19 @@ const BrandsRenderWrapper = styled.span`
   }
 `;
 
-const BrandsRender = ({ brand }) => {
-  const { filterBrands, findeClickedBrand, clickedBrands } = useContext(
-    GlobalContext
-  );
+const BrandsRender = ({ element, clickedElement, filterType }) => {
+  const { findeClickedBrand } = useContext(GlobalContext);
 
-  const [isActive, setIsActive] = useState(clickedBrands.includes(brand));
+  const [isActive, setIsActive] = useState(clickedElement.includes(element));
   return (
     <BrandsRenderWrapper
       onClick={() => {
-        findeClickedBrand(brand);
+        findeClickedBrand(element, filterType);
         // filterBrands();
         setIsActive(!isActive);
       }}
     >
-      <Span22 className={isActive ? "active" : ""}>{brand} </Span22>
+      <Span22 className={isActive ? "active" : ""}>{element} </Span22>
     </BrandsRenderWrapper>
   );
 };

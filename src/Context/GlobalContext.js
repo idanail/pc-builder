@@ -21,6 +21,8 @@ export const GlobalContextProvider = (props) => {
   const [color, setColor] = useState([]);
   const [currentColor, setCurrentColor] = useState("");
   const [clickedBrands, setClickedBrands] = useState([]);
+  const [clickedTypes, setClickedTypes] = useState([]);
+  const [clickedColors, setClickedColors] = useState([]);
   const [currentComponentURL, setCurrentComponentURL] = useState("");
   const [currentPartURL, setCurrentPartURL] = useState("");
   const [details, setDetails] = useState([]);
@@ -65,6 +67,11 @@ export const GlobalContextProvider = (props) => {
     route &&
       setBrands([...new Set(initialData[route].map((item) => item.brand))]);
 
+    route && setType([...new Set(initialData[route].map((item) => item.type))]);
+
+    route &&
+      setColor([...new Set(initialData[route].map((item) => item.color))]);
+
     setCurrentPriceRange([
       0,
       Math.round(
@@ -79,11 +86,28 @@ export const GlobalContextProvider = (props) => {
   }, [route]);
 
   //Adding in a array all clicked brands
-  const findeClickedBrand = (brand) => {
-    if (clickedBrands.includes(brand)) {
-      setClickedBrands(clickedBrands.filter((el) => el !== brand));
-    } else {
-      setClickedBrands([...clickedBrands, brand]);
+  const findeClickedBrand = (element, filterType) => {
+    console.log(element);
+    if (filterType === "brand") {
+      if (clickedBrands.includes(element)) {
+        setClickedBrands(clickedBrands.filter((el) => el !== element));
+      } else {
+        setClickedBrands([...clickedBrands, element]);
+      }
+    }
+    if (filterType === "type") {
+      if (clickedTypes.includes(element)) {
+        setClickedTypes(clickedTypes.filter((el) => el !== element));
+      } else {
+        setClickedTypes([...clickedTypes, element]);
+      }
+    }
+    if (filterType === "color") {
+      if (clickedColors.includes(element)) {
+        setClickedColors(clickedColors.filter((el) => el !== element));
+      } else {
+        setClickedColors([...clickedColors, element]);
+      }
     }
   };
 
@@ -107,17 +131,6 @@ export const GlobalContextProvider = (props) => {
     setRoute(currentComponent);
     localStorage.setItem("route", currentComponent);
   };
-
-  //Filter by type
-  useEffect(() => {
-    route && setType([...new Set(initialData[route].map((item) => item.type))]);
-  }, [route]);
-
-  //Filter by color
-  useEffect(() => {
-    route &&
-      setColor([...new Set(initialData[route].map((item) => item.color))]);
-  }, [route]);
 
   const handleSelect = (value, title) => {
     if (title === "type") {
@@ -214,6 +227,8 @@ export const GlobalContextProvider = (props) => {
     // filterBrands,
     findeClickedBrand,
     clickedBrands,
+    clickedTypes,
+    clickedColors,
     route,
     type,
     color,

@@ -50,7 +50,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const MainFilter = ({ open, handleClose, currentData }) => {
-  const { mainData, brands, type, color } = useContext(GlobalContext);
+  const {
+    mainData,
+    brands,
+    type,
+    color,
+    clickedBrands,
+    clickedTypes,
+    clickedColors,
+  } = useContext(GlobalContext);
   const classes = useStyles();
   const route = localStorage.getItem("route");
 
@@ -77,12 +85,33 @@ const MainFilter = ({ open, handleClose, currentData }) => {
             <div className="brand">
               <Text22 className={classes.marginB}>Brand:</Text22>
               {brands &&
-                brands.map((el, i) => <BrandsRender key={i} brand={el} />)}
+                brands.map((el, i) => (
+                  <BrandsRender
+                    clickedElement={clickedBrands}
+                    filterType="brand"
+                    key={i}
+                    element={el}
+                  />
+                ))}
             </div>
             <div className={`filter-select ${classes.marginB}`}>
               {mainData[route][0].type && (
-                <FilterSelect query={type} title="Type" />
+                <>
+                  <Text22 className={classes.marginB}>Type:</Text22>
+                  {type &&
+                    type.map((el, i) => (
+                      <BrandsRender
+                        clickedElement={clickedTypes}
+                        filterType="type"
+                        key={i}
+                        element={el}
+                      />
+                    ))}
+                </>
               )}
+              {/* {mainData[route][0].type && (
+                <FilterSelect query={type} title="Type" />
+              )} */}
               {mainData[route][0].color && (
                 <FilterSelect query={color} title="Color" />
               )}
