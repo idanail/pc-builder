@@ -9,7 +9,7 @@ import { GlobalContext } from "../../../../Context/GlobalContext";
 // context imports
 
 // npm text imports
-import { Span22 } from "../../../../Assets/Text/Text";
+import { Span22, Span14 } from "../../../../Assets/Text/Text";
 
 // component imports
 
@@ -21,22 +21,31 @@ const BrandsRenderWrapper = styled.span`
 
   .active {
     color: ${(props) => props.theme.red};
+    background-color: ${(props) => props.theme.main_gray};
+  }
+
+  .rendered-element {
+    display: block;
+    width: 100% + 10px;
+    padding: 10px 10px;
+    margin: 0px -10px 3px;
   }
 `;
 
 const BrandsRender = ({ element, clickedElement, filterType }) => {
-  const { findeClickedBrand } = useContext(GlobalContext);
+  const { findClickedElement } = useContext(GlobalContext);
 
   const [isActive, setIsActive] = useState(clickedElement.includes(element));
   return (
     <BrandsRenderWrapper
       onClick={() => {
-        findeClickedBrand(element, filterType);
-        // filterBrands();
+        findClickedElement(element, filterType);
         setIsActive(!isActive);
       }}
     >
-      <Span22 className={isActive ? "active" : ""}>{element} </Span22>
+      <span className={`rendered-element ${isActive ? "active" : ""}`}>
+        <Span14 className={`${isActive ? "active" : ""}`}>{element}</Span14>
+      </span>
     </BrandsRenderWrapper>
   );
 };

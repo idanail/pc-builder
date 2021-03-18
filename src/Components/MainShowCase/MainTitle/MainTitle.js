@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 // npm text imports
-import { Heading35 } from "../../../Assets/Text/Text";
+import { Heading28 } from "../../../Assets/Text/Text";
 
 //styled-components
 const MainTitleWrapper = styled.div`
@@ -14,7 +14,7 @@ const MainTitleWrapper = styled.div`
 const MainTitle = ({ name }) => {
   return (
     <MainTitleWrapper className="MainTitle">
-      <Heading35>{name}</Heading35>
+      <Heading28>{name}</Heading28>
     </MainTitleWrapper>
   );
 };

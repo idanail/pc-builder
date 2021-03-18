@@ -85,9 +85,8 @@ export const GlobalContextProvider = (props) => {
     ]);
   }, [route]);
 
-  //Adding in a array all clicked brands
-  const findeClickedBrand = (element, filterType) => {
-    console.log(element);
+  // Handling clicked element in the appropriate array
+  const findClickedElement = (element, filterType) => {
     if (filterType === "brand") {
       if (clickedBrands.includes(element)) {
         setClickedBrands(clickedBrands.filter((el) => el !== element));
@@ -95,6 +94,7 @@ export const GlobalContextProvider = (props) => {
         setClickedBrands([...clickedBrands, element]);
       }
     }
+
     if (filterType === "type") {
       if (clickedTypes.includes(element)) {
         setClickedTypes(clickedTypes.filter((el) => el !== element));
@@ -102,6 +102,7 @@ export const GlobalContextProvider = (props) => {
         setClickedTypes([...clickedTypes, element]);
       }
     }
+
     if (filterType === "color") {
       if (clickedColors.includes(element)) {
         setClickedColors(clickedColors.filter((el) => el !== element));
@@ -111,7 +112,7 @@ export const GlobalContextProvider = (props) => {
     }
   };
 
-  // Handle brands in currentObj
+  // Handle filters in currentObj
 
   useEffect(() => {
     clickedBrands.length > 0 &&
@@ -125,6 +126,32 @@ export const GlobalContextProvider = (props) => {
       setCurrentObj(clone);
     }
   }, [clickedBrands]);
+
+  useEffect(() => {
+    clickedTypes.length > 0 &&
+      setCurrentObj({
+        ...currentObj,
+        type: clickedTypes,
+      });
+
+    if (clickedTypes.length === 0) {
+      const clone = (({ type, ...o }) => o)(currentObj);
+      setCurrentObj(clone);
+    }
+  }, [clickedTypes]);
+
+  useEffect(() => {
+    clickedColors.length > 0 &&
+      setCurrentObj({
+        ...currentObj,
+        color: clickedColors,
+      });
+
+    if (clickedColors.length === 0) {
+      const clone = (({ color, ...o }) => o)(currentObj);
+      setCurrentObj(clone);
+    }
+  }, [clickedColors]);
 
   // Get current component from initialData
   const getRoute = (currentComponent) => {
@@ -215,6 +242,24 @@ export const GlobalContextProvider = (props) => {
     });
   };
 
+  const handleReset = () => {
+    // setCurrentObj({});
+    setClickedBrands([]);
+    setClickedTypes([]);
+    setClickedColors([]);
+    setCurrentPriceRange([
+      0,
+      Math.round(
+        Math.max.apply(
+          Math,
+          mainData[route].map(function (o) {
+            return o.price;
+          })
+        )
+      ),
+    ]);
+  };
+
   const globalState = {
     mainData,
     initialData,
@@ -225,7 +270,7 @@ export const GlobalContextProvider = (props) => {
     getRoute,
     brands,
     // filterBrands,
-    findeClickedBrand,
+    findClickedElement,
     clickedBrands,
     clickedTypes,
     clickedColors,
@@ -251,6 +296,7 @@ export const GlobalContextProvider = (props) => {
     handlePriceRange,
     currentPriceRange,
     setCurrentPriceRange,
+    handleReset,
   };
 
   return <Provider value={globalState}>{props.children}</Provider>;

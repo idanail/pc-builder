@@ -13,7 +13,7 @@ import Footer from "../Footer/Footer";
 import MainFilter from "./MainFilter/MainFilter";
 
 // npm text imports
-import { Heading17 } from "../../Assets/Text/Text";
+import { Heading17, Text17 } from "../../Assets/Text/Text";
 // context imports
 import { GlobalContext } from "../../Context/GlobalContext";
 
@@ -94,7 +94,7 @@ const MainShowCase = () => {
       <NavBar />
       <MainTitle name={currentComponent} />
       <div className="filter-wrapper">
-        <Heading17 className="recomended">Recomended for you</Heading17>
+        <Text17 className="recomended">Recomended for you</Text17>
         <div onClick={handleOpen}>
           <TuneIcon />
         </div>

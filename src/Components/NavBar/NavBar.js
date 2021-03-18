@@ -6,7 +6,7 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Link } from "@reach/router";
 
 // npm text imports
-import { Heading17 } from "../../Assets/Text/Text";
+import { Heading17, Text17 } from "../../Assets/Text/Text";
 import { Paths } from "../../Consts/Paths";
 //Context imports
 import { GlobalContext } from "../../Context/GlobalContext";
@@ -45,7 +45,7 @@ const NavBar = () => {
           <ShoppingCartIcon />
         </Link>
         <div className="nav-bar-amount">
-          <Heading17>{Object.values(myItems).flat().length}</Heading17>
+          <Text17>{Object.values(myItems).flat().length}</Text17>
         </div>
       </div>
     </NavBarWrapper>

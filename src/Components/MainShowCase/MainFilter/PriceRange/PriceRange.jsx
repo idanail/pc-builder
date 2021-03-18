@@ -10,6 +10,7 @@ import Slider from "@material-ui/core/Slider";
 
 // context imports
 import { GlobalContext } from "../../../../Context/GlobalContext";
+import { Text14 } from "../../../../Assets/Text/Text";
 
 // component imports
 
@@ -28,6 +29,7 @@ const PriceRangeWrapper = styled.div`
 const useStyles = makeStyles({
   root: {
     width: "100%",
+    margin: "0 auto",
   },
   slider: {
     color: "#FD0405",
@@ -36,6 +38,9 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+  },
+  priceNumber: {
+    color: "#707070",
   },
 });
 
@@ -58,17 +63,11 @@ const PriceRange = (props) => {
     )
   );
 
-  // const [value, setValue] = useState([0, maxVal]);
-  // const handleChange = (event, newValue) => {
-  //   setValue(newValue);
-  //   handlePriceRange(newValue);
-  // };
-
   return (
     <PriceRangeWrapper className={classes.root}>
       <div className={classes.price}>
-        <p>${currentPriceRange[0]}</p>
-        <p>${currentPriceRange[1]}</p>
+        <Text14 className={classes.priceNumber}>${currentPriceRange[0]}</Text14>
+        <Text14 className={classes.priceNumber}>${currentPriceRange[1]}</Text14>
       </div>
       <Slider
         className={classes.slider}

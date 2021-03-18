@@ -92,6 +92,12 @@ export const Heading55 = styled.h5`
   font-family: SegoeBlack;
 `;
 //Span
+export const Span14 = styled.span`
+  font-size: ${(props) => props.theme.smallText};
+  line-height: ${(props) => props.theme.smallTextLineHeight};
+  color: ${(props) => props.theme.black};
+  font-family: SegoeRegular;
+`;
 export const Span22 = styled.span`
   font-size: ${(props) => props.theme.largeText};
   color: ${(props) => props.theme.black};

@@ -11,7 +11,13 @@ import { GlobalContext } from "../../../../Context/GlobalContext";
 // component imports
 
 // npm text imports
-import { Heading20, Text20, Heading17 } from "../../../../Assets/Text/Text";
+import {
+  Heading20,
+  Text20,
+  Heading17,
+  Text17,
+  Text14,
+} from "../../../../Assets/Text/Text";
 // styled-components
 const CardWrapper = styled.div`
   a {
@@ -75,7 +81,7 @@ const Card = ({ el, name }) => {
         }}
       >
         <div className="card-title">
-          <Heading17>{brand}</Heading17>
+          <Text14>{brand}</Text14>
         </div>
         <div className="card-img">
           <img
@@ -85,11 +91,11 @@ const Card = ({ el, name }) => {
         </div>
         <div className="card-body">
           <div className="model">
-            <Heading17>{model}</Heading17>
+            <Text14>{model}</Text14>
           </div>
 
           <div className="price">
-            <Text20>${price}</Text20>
+            <Text14>${price}</Text14>
           </div>
         </div>
       </Link>

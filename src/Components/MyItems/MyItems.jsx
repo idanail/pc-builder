@@ -5,7 +5,7 @@ import styled from "styled-components";
 import CheckIcon from "@material-ui/icons/Check";
 import DeleteIcon from "@material-ui/icons/Delete";
 // text inports
-import { Text20, Text22, Heading20 } from "../../Assets/Text/Text";
+import { Text20, Text22, Text14, Text17 } from "../../Assets/Text/Text";
 
 // consts imports
 
@@ -27,7 +27,8 @@ const MyItemsWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 40px 0;
+    margin: 10px 0;
+    /* padding-right: 34px; */
     .component-name-wrapper {
       display: flex;
       justify-content: space-between;
@@ -49,7 +50,7 @@ const MyItemsWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     .component-img {
       display: flex;
       justify-content: center;
@@ -105,7 +106,7 @@ const MyItems = (props) => {
   return (
     <MyItemsWrapper>
       <div className="my-items-navbar">
-        <Text20>save</Text20>
+        <Text17>SAVE</Text17>
       </div>
 
       <div className="my-component-wrapper">
@@ -120,7 +121,7 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text22>Processor</Text22>
+            <Text17>Processor</Text17>
           </div>
         </div>
         <hr />
@@ -136,9 +137,9 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-detail">
-            <Text22 className="my-item-brand">{el.brand}</Text22>
-            <Text22 className="my-item-model">{el.model}</Text22>
-            <Heading20 className="my-item-price">${el.price}</Heading20>
+            <Text14 className="my-item-brand">{el.brand}</Text14>
+            <Text14 className="my-item-model">{el.model}</Text14>
+            <Text14 className="my-item-price">${el.price}</Text14>
             <div className="delete-item">
               <button
                 onClick={() => {
@@ -165,7 +166,7 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text22>CPU&nbsp;Cooler</Text22>
+            <Text17>CPU&nbsp;Cooler</Text17>
           </div>
         </div>
 
@@ -182,9 +183,9 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-detail">
-            <Text22 className="my-item-brand">{el.brand}</Text22>
-            <Text22 className="my-item-model">{el.model}</Text22>
-            <Heading20 className="my-item-price">${el.price}</Heading20>
+            <Text14 className="my-item-brand">{el.brand}</Text14>
+            <Text14 className="my-item-model">{el.model}</Text14>
+            <Text14 className="my-item-price">${el.price}</Text14>
             <div className="delete-item">
               <button
                 onClick={() => {
@@ -209,7 +210,7 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text22>Motherboard</Text22>
+            <Text17>Motherboard</Text17>
           </div>
         </div>
         <hr />
@@ -225,9 +226,9 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-detail">
-            <Text22 className="my-item-brand">{el.brand}</Text22>
-            <Text22 className="my-item-model">{el.model}</Text22>
-            <Heading20 className="my-item-price">${el.price}</Heading20>
+            <Text14 className="my-item-brand">{el.brand}</Text14>
+            <Text14 className="my-item-model">{el.model}</Text14>
+            <Text14 className="my-item-price">${el.price}</Text14>
             <div className="delete-item">
               <button
                 onClick={() => {
@@ -254,7 +255,7 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text22>Graphic&nbsp;Card</Text22>
+            <Text17>Graphic&nbsp;Card</Text17>
           </div>
         </div>
         <hr />
@@ -270,9 +271,9 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-detail">
-            <Text22 className="my-item-brand">{el.brand}</Text22>
-            <Text22 className="my-item-model">{el.model}</Text22>
-            <Heading20 className="my-item-price">${el.price}</Heading20>
+            <Text14 className="my-item-brand">{el.brand}</Text14>
+            <Text14 className="my-item-model">{el.model}</Text14>
+            <Text14 className="my-item-price">${el.price}</Text14>
             <div className="delete-item">
               <button
                 onClick={() => {
@@ -297,7 +298,7 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text22>RAM&nbsp;Memory</Text22>
+            <Text17>RAM&nbsp;Memory</Text17>
           </div>
         </div>
 
@@ -314,9 +315,9 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-detail">
-            <Text22 className="my-item-brand">{el.brand}</Text22>
-            <Text22 className="my-item-model">{el.model}</Text22>
-            <Heading20 className="my-item-price">${el.price}</Heading20>
+            <Text14 className="my-item-brand">{el.brand}</Text14>
+            <Text14 className="my-item-model">{el.model}</Text14>
+            <Text14 className="my-item-price">${el.price}</Text14>
             <div className="delete-item">
               <button
                 onClick={() => {
@@ -341,7 +342,7 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text22>SSD</Text22>
+            <Text17>SSD</Text17>
           </div>
         </div>
         <hr />
@@ -357,9 +358,9 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-detail">
-            <Text22 className="my-item-brand">{el.brand}</Text22>
-            <Text22 className="my-item-model">{el.model}</Text22>
-            <Heading20 className="my-item-price">${el.price}</Heading20>
+            <Text14 className="my-item-brand">{el.brand}</Text14>
+            <Text14 className="my-item-model">{el.model}</Text14>
+            <Text14 className="my-item-price">${el.price}</Text14>
             <div className="delete-item">
               <button
                 onClick={() => {
@@ -384,7 +385,7 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text22>Hard&nbsp;Drive</Text22>
+            <Text17>Hard&nbsp;Drive</Text17>
           </div>
         </div>
         <hr />
@@ -400,9 +401,9 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-detail">
-            <Text22 className="my-item-brand">{el.brand}</Text22>
-            <Text22 className="my-item-model">{el.model}</Text22>
-            <Heading20 className="my-item-price">${el.price}</Heading20>
+            <Text14 className="my-item-brand">{el.brand}</Text14>
+            <Text14 className="my-item-model">{el.model}</Text14>
+            <Text14 className="my-item-price">${el.price}</Text14>
             <div className="delete-item">
               <button
                 onClick={() => {
@@ -427,7 +428,7 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text22>Optical&nbsp;Drive</Text22>
+            <Text17>Optical&nbsp;Drive</Text17>
           </div>
         </div>
 
@@ -444,9 +445,9 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-detail">
-            <Text22 className="my-item-brand">{el.brand}</Text22>
-            <Text22 className="my-item-model">{el.model}</Text22>
-            <Heading20 className="my-item-price">${el.price}</Heading20>
+            <Text14 className="my-item-brand">{el.brand}</Text14>
+            <Text14 className="my-item-model">{el.model}</Text14>
+            <Text14 className="my-item-price">${el.price}</Text14>
           </div>
         </div>
       ))}
@@ -462,7 +463,7 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text22>Power&nbsp;Supply</Text22>
+            <Text17>Power&nbsp;Supply</Text17>
           </div>
         </div>
         <hr />
@@ -478,9 +479,9 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-detail">
-            <Text22 className="my-item-brand">{el.brand}</Text22>
-            <Text22 className="my-item-model">{el.model}</Text22>
-            <Heading20 className="my-item-price">${el.price}</Heading20>
+            <Text14 className="my-item-brand">{el.brand}</Text14>
+            <Text14 className="my-item-model">{el.model}</Text14>
+            <Text14 className="my-item-price">${el.price}</Text14>
             <div className="delete-item">
               <button
                 onClick={() => {
@@ -505,7 +506,7 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text22>Case</Text22>
+            <Text17>Case</Text17>
           </div>
         </div>
         <hr />
@@ -521,9 +522,9 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-detail">
-            <Text22 className="my-item-brand">{el.brand}</Text22>
-            <Text22 className="my-item-model">{el.model}</Text22>
-            <Heading20 className="my-item-price">${el.price}</Heading20>
+            <Text14 className="my-item-brand">{el.brand}</Text14>
+            <Text14 className="my-item-model">{el.model}</Text14>
+            <Text14 className="my-item-price">${el.price}</Text14>
             <div className="delete-item">
               <button
                 onClick={() => {
