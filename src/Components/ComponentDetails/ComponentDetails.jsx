@@ -172,7 +172,7 @@ const ComponentDetails = (props) => {
     turboSpeed,
     cores,
     threads,
-    tdpTypical,
+    powerConsumption,
     type,
     color,
     fanQuantity,
@@ -290,7 +290,7 @@ const ComponentDetails = (props) => {
                 myItems["SSD"].length >= 1 &&
                 myItems["Hard Drive"].length >= 1 &&
                 myItems["Optical Drive"].length === 1 &&
-                myItems["Case"].length === 1
+                myItems["Power Supply"].length === 1
                 ? addItem(currentObj[0])
                 : handleOpen()
               : // Else
@@ -335,7 +335,7 @@ const ComponentDetails = (props) => {
               <Text17>Socket: {socket}</Text17>
               <Text17>Clock speed: {clockSpeed}</Text17>
               <Text17>Turbo speed: {turboSpeed}</Text17>
-              <Text17>Typical TDP: {tdpTypical} W &sup3;</Text17>
+              <Text17>Typical TDP: {powerConsumption} W &sup3;</Text17>
             </div>
           </div>
         </>

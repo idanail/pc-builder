@@ -29,9 +29,9 @@ const MainCardsWrapper = styled.div`
 const MainCards = ({ data, name }) => {
   return (
     <MainCardsWrapper>
-      {data.length === 0
+      {data && data.length === 0
         ? "No results found."
-        : data.map((el, i) => <Card key={i} el={el} name={name} />)}
+        : data && data.map((el, i) => <Card key={i} el={el} name={name} />)}
     </MainCardsWrapper>
   );
 };

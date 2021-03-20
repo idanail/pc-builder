@@ -7,14 +7,27 @@ import { Heading28 } from "../../../Assets/Text/Text";
 
 //styled-components
 const MainTitleWrapper = styled.div`
-  width: 90%;
-  margin: 30px auto 60px;
+  .MainTitle {
+    width: 90%;
+    margin: 30px auto 60px;
+  }
+  .MainTitleMyItems {
+    width: 100%;
+    margin: 30px auto 30px;
+  }
 `;
 
 const MainTitle = ({ name }) => {
+  const myItems = JSON.parse(localStorage.getItem("myItems"));
   return (
-    <MainTitleWrapper className="MainTitle">
-      <Heading28>{name}</Heading28>
+    <MainTitleWrapper>
+      <div
+        className={
+          Object.keys(myItems).includes(name) ? "MainTitle" : "MainTitleMyItems"
+        }
+      >
+        <Heading28>{name}</Heading28>
+      </div>
     </MainTitleWrapper>
   );
 };

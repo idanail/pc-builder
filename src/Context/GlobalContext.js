@@ -12,8 +12,8 @@ const { Provider } = GlobalContext;
 
 export const GlobalContextProvider = (props) => {
   const [initialData, setInitialData] = useState(data);
-  const [mainData, setMainData] = useState(initialData);
-  const [filteredData, setFilteredData] = useState(mainData);
+  const [mainData, setMainData] = useState({ ...initialData });
+  const [filteredData, setFilteredData] = useState({ ...mainData });
   const [route, setRoute] = useState("Processor");
   const [brands, setBrands] = useState([]);
   const [type, setType] = useState([]);
@@ -30,8 +30,11 @@ export const GlobalContextProvider = (props) => {
   const [myItems, setMyItems] = useState(myItemsData);
   const [currentObj, setCurrentObj] = useState({});
   const [currentPriceRange, setCurrentPriceRange] = useState([]);
+  const [filterSortDefaultValue, setFilterSortDefaultValue] = useState("");
+  const [wattageArray, setWattageArray] = useState([]);
+  const [totalPower, setTotalPower] = useState(0);
 
-  let filtered = mainData[route];
+  let filtered = [...mainData[route]];
 
   // Filter logic
   useEffect(() => {
@@ -52,6 +55,11 @@ export const GlobalContextProvider = (props) => {
         ) {
           return el;
         }
+        // if (key === "sortBy" && currentObj[key] === "Low to High") {
+        //   filteredData[route].sort(
+        //     (a, b) => parseFloat(a.price) - parseFloat(b.price)
+        //   );
+        // }
         if (currentObj[key] !== "query" && currentObj[key].includes(el[key])) {
           return el;
         }
@@ -83,6 +91,8 @@ export const GlobalContextProvider = (props) => {
         )
       ),
     ]);
+
+    setFilterSortDefaultValue("Featured");
   }, [route]);
 
   // Handling clicked element in the appropriate array
@@ -153,6 +163,33 @@ export const GlobalContextProvider = (props) => {
     }
   }, [clickedColors]);
 
+  // Handle sort
+
+  const handleSort = (value) => {
+    let sortType;
+    setFilterSortDefaultValue(value);
+
+    if (value === "Low to High") {
+      sortType = filteredData[route]
+        .slice()
+        .sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+    } else if (value === "High to Low") {
+      sortType = filteredData[route]
+        .slice()
+        .sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+    } else {
+      sortType = filteredData[route]
+        .slice()
+        .sort(
+          (a, b) =>
+            mainData[route].findIndex((el) => el.id === a.id) -
+            mainData[route].findIndex((el) => el.id === b.id)
+        );
+    }
+
+    setFilteredData({ ...filteredData, [route]: sortType });
+  };
+
   // Get current component from initialData
   const getRoute = (currentComponent) => {
     setRoute(currentComponent);
@@ -214,17 +251,32 @@ export const GlobalContextProvider = (props) => {
 
   // Delete items from myItems
   const deleteItem = (category, id) => {
-    const filtered = myItems[category].filter((el) => el.id !== id);
-    setMyItems({ ...myItems, [category]: filtered });
+    const filteredItems = myItems[category].filter((el) => el.id !== id);
+    setMyItems({ ...myItems, [category]: filteredItems });
 
     localStorage.setItem(
       "myItems",
       JSON.stringify({
         ...JSON.parse(localStorage.getItem("myItems")),
-        [category]: filtered,
+        [category]: filteredItems,
       })
     );
   };
+
+  useEffect(() => {
+    for (const key in myItems) {
+      if (myItems[key].length >= 1) {
+        myItems[key].forEach((el) =>
+          setWattageArray([...wattageArray, el.powerConsumption])
+        );
+      }
+    }
+  }, [myItems]);
+
+  useEffect(() => {
+    const reducer = (a, b) => a + b;
+    setTotalPower(Math.floor(wattageArray.reduce(reducer, 0)));
+  }, [wattageArray]);
 
   // Search logic
   const handleSearch = (query) => {
@@ -243,7 +295,6 @@ export const GlobalContextProvider = (props) => {
   };
 
   const handleReset = () => {
-    // setCurrentObj({});
     setClickedBrands([]);
     setClickedTypes([]);
     setClickedColors([]);
@@ -287,6 +338,7 @@ export const GlobalContextProvider = (props) => {
     currentComponentURL,
     setCurrentComponentURL,
     handleDetails,
+    handleSort,
     details,
     myItems,
     addItem,
@@ -297,6 +349,10 @@ export const GlobalContextProvider = (props) => {
     currentPriceRange,
     setCurrentPriceRange,
     handleReset,
+    filterSortDefaultValue,
+    setFilterSortDefaultValue,
+    totalPower,
+    wattageArray,
   };
 
   return <Provider value={globalState}>{props.children}</Provider>;

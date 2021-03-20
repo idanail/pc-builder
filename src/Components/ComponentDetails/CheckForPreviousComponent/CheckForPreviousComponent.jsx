@@ -1022,10 +1022,12 @@ const CheckForPreviousComponent = ({ open, handleClose, category }) => {
                         </li>
                       </ul>
                     </>
-                  ) : (
+                  ) : myItems["Power Supply"].length === 0 ? (
                     <Text20 className={classes.marginBSmall}>
                       Please add a Power Supply.
                     </Text20>
+                  ) : (
+                    ""
                   )
                 ) : (
                   // End

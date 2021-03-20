@@ -16,6 +16,7 @@ import MainFilter from "./MainFilter/MainFilter";
 import { Heading17, Text17 } from "../../Assets/Text/Text";
 // context imports
 import { GlobalContext } from "../../Context/GlobalContext";
+import FilterSelect from "./MainFilter/FilterSelect/FilterSelect";
 
 //styled-components
 const MainShowCaseWrapper = styled.div`
@@ -94,7 +95,9 @@ const MainShowCase = () => {
       <NavBar />
       <MainTitle name={currentComponent} />
       <div className="filter-wrapper">
-        <Text17 className="recomended">Recomended for you</Text17>
+        <Text17 className="recomended">
+          Sort by: <FilterSelect />
+        </Text17>
         <div onClick={handleOpen}>
           <TuneIcon />
         </div>

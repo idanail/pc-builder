@@ -12,7 +12,7 @@ const theme = {
   green: "#45BD62",
   black: "#050505",
   smallText: "14px",
-  normalText: "17px",
+  normalText: "16px",
   mediumText: "20px",
   largeText: "22px",
   iconSize: "32px",

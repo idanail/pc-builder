@@ -4,6 +4,8 @@ import React, { useState, useContext, useEffect } from "react";
 import styled from "styled-components";
 import CheckIcon from "@material-ui/icons/Check";
 import DeleteIcon from "@material-ui/icons/Delete";
+import PowerIcon from "@material-ui/icons/Power";
+
 // text inports
 import { Text20, Text22, Text14, Text17 } from "../../Assets/Text/Text";
 
@@ -12,6 +14,7 @@ import { Text20, Text22, Text14, Text17 } from "../../Assets/Text/Text";
 // context imports
 import { GlobalContext } from "../../Context/GlobalContext";
 import ItemDelete from "./ItemDelete/ItemDelete";
+import MainTitle from "../MainShowCase/MainTitle/MainTitle";
 
 // component imports
 
@@ -21,7 +24,7 @@ const MyItemsWrapper = styled.div`
   margin: 0 auto;
   .my-items-navbar {
     text-align: right;
-    padding: 18px 0px;
+    padding: 25px 0px;
   }
   .my-component-wrapper {
     display: flex;
@@ -86,20 +89,32 @@ const MyItemsWrapper = styled.div`
       }
     }
   }
+  .power-calculator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .total-wattage {
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
 `;
 // component
 
 const MyItems = (props) => {
-  const { deleteItem } = useContext(GlobalContext);
+  const { deleteItem, totalPower } = useContext(GlobalContext);
   const [clickedCategory, setClickedCategory] = useState("");
   const [clickedId, setClickedId] = useState("");
   const myItems = JSON.parse(localStorage.getItem("myItems"));
 
   //Model
   const [open, setOpen] = useState(false);
-
   const handleOpen = () => setOpen(true);
-
   const handleClose = () => setOpen(false);
 
   return (
@@ -107,7 +122,21 @@ const MyItems = (props) => {
       <div className="my-items-navbar">
         <Text17>SAVE</Text17>
       </div>
-
+      <div>
+        <MainTitle
+          name={`${Object.values(myItems).length}/${
+            Object.keys(myItems).flat().length
+          } 
+          parts piched`}
+        />
+        <div className="power-calculator">
+          <Text17>For this build you will need</Text17>
+          <div className="total-wattage">
+            <PowerIcon />
+            <Text17>{totalPower}W</Text17>
+          </div>
+        </div>
+      </div>
       <div className="my-component-wrapper">
         <div className="component-name-wrapper">
           <div className="checked checked-processor">
