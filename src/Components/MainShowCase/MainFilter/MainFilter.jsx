@@ -94,11 +94,12 @@ const MainFilter = ({ open, handleClose, currentData }) => {
     clickedBrands,
     clickedTypes,
     clickedColors,
+    clickedPurpose,
     handleReset,
+    purposeData,
   } = useContext(GlobalContext);
   const classes = useStyles();
   const route = localStorage.getItem("route");
-
   return (
     <MainFilterWrapper>
       <Modal
@@ -146,6 +147,28 @@ const MainFilter = ({ open, handleClose, currentData }) => {
                     />
                   ))}
               </Accordion>
+              {route === "Processor" && (
+                <Accordion className={classes.accordionStyle}>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                    className={classes.accordionSummary}
+                  >
+                    <Typography className={classes.heading}>Purpose</Typography>
+                  </AccordionSummary>
+                  <>
+                    {Object.keys(purposeData).map((el, i) => (
+                      <FilterRender
+                        clickedElement={clickedPurpose}
+                        filterType="purpose"
+                        key={i}
+                        element={el}
+                      />
+                    ))}
+                  </>
+                </Accordion>
+              )}
               {mainData[route][0].type && (
                 <Accordion className={classes.accordionStyle}>
                   <AccordionSummary

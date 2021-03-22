@@ -4,7 +4,7 @@ import React, { createContext, useState, useEffect } from "react";
 import { v4 as uuid } from "uuid";
 
 //data import
-import { data, myItems as myItemsData } from "../Data/data";
+import { data, myItems as myItemsData, purpose } from "../Data/data";
 
 export const GlobalContext = createContext({});
 
@@ -14,6 +14,7 @@ export const GlobalContextProvider = (props) => {
   const [initialData, setInitialData] = useState(data);
   const [mainData, setMainData] = useState({ ...initialData });
   const [filteredData, setFilteredData] = useState({ ...mainData });
+  const [purposeData, setPurposeData] = useState(purpose);
   const [route, setRoute] = useState("Processor");
   const [brands, setBrands] = useState([]);
   const [type, setType] = useState([]);
@@ -23,6 +24,7 @@ export const GlobalContextProvider = (props) => {
   const [clickedBrands, setClickedBrands] = useState([]);
   const [clickedTypes, setClickedTypes] = useState([]);
   const [clickedColors, setClickedColors] = useState([]);
+  const [clickedPurpose, setClickedPurpose] = useState([]);
   const [currentComponentURL, setCurrentComponentURL] = useState("");
   const [currentPartURL, setCurrentPartURL] = useState("");
   const [details, setDetails] = useState([]);
@@ -39,6 +41,7 @@ export const GlobalContextProvider = (props) => {
   // Filter logic
   useEffect(() => {
     for (const key in currentObj) {
+      console.log(purposeData[currentObj[key]]);
       filtered = filtered.filter((el) => {
         if (
           (key === "query" &&
@@ -55,11 +58,20 @@ export const GlobalContextProvider = (props) => {
         ) {
           return el;
         }
-        // if (key === "sortBy" && currentObj[key] === "Low to High") {
-        //   filteredData[route].sort(
-        //     (a, b) => parseFloat(a.price) - parseFloat(b.price)
-        //   );
-        // }
+        if (
+          route === "Processor" &&
+          key === "purpose" &&
+          el.rating >= purposeData[currentObj[key]][0]
+        ) {
+          return el;
+        }
+        if (
+          route === "Graphic Card" &&
+          key === "purpose" &&
+          el.rating >= purposeData[currentObj[key]][1]
+        ) {
+          return el;
+        }
         if (currentObj[key] !== "query" && currentObj[key].includes(el[key])) {
           return el;
         }
@@ -120,6 +132,9 @@ export const GlobalContextProvider = (props) => {
         setClickedColors([...clickedColors, element]);
       }
     }
+    if (filterType === "purpose") {
+      setClickedPurpose([element]);
+    }
   };
 
   // Handle filters in currentObj
@@ -136,6 +151,19 @@ export const GlobalContextProvider = (props) => {
       setCurrentObj(clone);
     }
   }, [clickedBrands]);
+
+  useEffect(() => {
+    clickedPurpose.length > 0 &&
+      setCurrentObj({
+        ...currentObj,
+        purpose: clickedPurpose,
+      });
+
+    if (clickedPurpose.length === 0) {
+      const clone = (({ purpose, ...o }) => o)(currentObj);
+      setCurrentObj(clone);
+    }
+  }, [clickedPurpose]);
 
   useEffect(() => {
     clickedTypes.length > 0 &&
@@ -262,15 +290,16 @@ export const GlobalContextProvider = (props) => {
       })
     );
   };
-
+  let wattageArr = [];
   useEffect(() => {
     for (const key in myItems) {
       if (myItems[key].length >= 1) {
-        myItems[key].forEach((el) =>
-          setWattageArray([...wattageArray, el.powerConsumption])
+        myItems[key].forEach(
+          (el) => (wattageArr = [...wattageArr, el.powerConsumption])
         );
       }
     }
+    setWattageArray(wattageArr);
   }, [myItems]);
 
   useEffect(() => {
@@ -315,6 +344,7 @@ export const GlobalContextProvider = (props) => {
     mainData,
     initialData,
     filteredData,
+    purposeData,
     filtered,
     currentObj,
     setCurrentObj,
@@ -325,6 +355,7 @@ export const GlobalContextProvider = (props) => {
     clickedBrands,
     clickedTypes,
     clickedColors,
+    clickedPurpose,
     route,
     type,
     color,
