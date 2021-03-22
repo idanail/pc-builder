@@ -124,7 +124,7 @@ const MyItems = (props) => {
       </div>
       <div>
         <MainTitle
-          name={`${Object.values(myItems).length}/${
+          name={`${Object.values(myItems).flat().length}/${
             Object.keys(myItems).flat().length
           } 
           parts piched`}
