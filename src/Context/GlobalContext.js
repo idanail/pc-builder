@@ -41,7 +41,6 @@ export const GlobalContextProvider = (props) => {
   // Filter logic
   useEffect(() => {
     for (const key in currentObj) {
-      console.log(purposeData[currentObj[key]]);
       filtered = filtered.filter((el) => {
         if (
           (key === "query" &&
@@ -72,6 +71,24 @@ export const GlobalContextProvider = (props) => {
         ) {
           return el;
         }
+        if (
+          route === "RAM Memory" &&
+          key === "purpose" &&
+          el.rating >= purposeData[currentObj[key]][2]
+        ) {
+          return el;
+        }
+        if (
+          (route === "CPU Cooler" && key === "purpose") ||
+          (route === "Motherboard" && key === "purpose") ||
+          (route === "SSD" && key === "purpose") ||
+          (route === "Hard Drive" && key === "purpose") ||
+          (route === "Optical Drive" && key === "purpose") ||
+          (route === "Power Supply" && key === "purpose") ||
+          (route === "Case" && key === "purpose")
+        ) {
+          return el;
+        }
         if (currentObj[key] !== "query" && currentObj[key].includes(el[key])) {
           return el;
         }
@@ -80,7 +97,7 @@ export const GlobalContextProvider = (props) => {
     setFilteredData({ ...filteredData, [route]: filtered });
 
     currentObj.query === "" && delete currentObj.query;
-  }, [currentObj]);
+  }, [currentObj, route]);
 
   //From initialData filtering brands Key
   useEffect(() => {
@@ -105,6 +122,10 @@ export const GlobalContextProvider = (props) => {
     ]);
 
     setFilterSortDefaultValue("Featured");
+
+    setClickedBrands([]);
+    setClickedTypes([]);
+    setClickedColors([]);
   }, [route]);
 
   // Handling clicked element in the appropriate array
@@ -338,6 +359,10 @@ export const GlobalContextProvider = (props) => {
         )
       ),
     ]);
+
+    clickedPurpose.length > 0
+      ? setCurrentObj({ purpose: clickedPurpose })
+      : setCurrentObj({});
   };
 
   const globalState = {

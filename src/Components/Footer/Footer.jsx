@@ -127,7 +127,7 @@ const FooterWrapper = styled.div`
 // component
 
 const Footer = (props) => {
-  const { mainData, setCurrentObj } = useContext(GlobalContext);
+  const { mainData, setCurrentObj, clickedPurpose } = useContext(GlobalContext);
 
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
@@ -149,7 +149,10 @@ const Footer = (props) => {
               <li key={i}>
                 <Link
                   onClick={() => {
-                    setCurrentObj({});
+                    clickedPurpose.length > 0
+                      ? setCurrentObj({ purpose: clickedPurpose })
+                      : setCurrentObj({});
+
                     setMobileMenuActive(false);
                   }}
                   to={Paths.paths.main.replace(
