@@ -31,6 +31,7 @@ const MyItemsWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
+    padding-right: 27px;
     .component-name-wrapper {
       display: flex;
       justify-content: space-between;
@@ -53,6 +54,7 @@ const MyItemsWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    padding-left: 27px;
     .component-img {
       display: flex;
       justify-content: center;
@@ -70,6 +72,7 @@ const MyItemsWrapper = styled.div`
     }
     .component-detail {
       flex-basis: 65%;
+      padding-right: 27px;
       .my-item-brand {
         color: ${(props) => props.theme.text_gray};
         margin-bottom: 10px;

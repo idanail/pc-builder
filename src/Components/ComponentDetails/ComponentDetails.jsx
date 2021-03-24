@@ -78,6 +78,9 @@ const ComponentDetailsWrapper = styled.div`
       position: absolute;
       bottom: -14%;
       right: 8%;
+      &:active {
+        box-shadow: inset 20px 20px 48px #d50304, inset -20px -20px 48px #fe0190;
+      }
       svg {
         font-size: ${(props) => props.theme.iconSize};
       }

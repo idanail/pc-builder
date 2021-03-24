@@ -28,8 +28,16 @@ const NavBarWrapper = styled.div`
     }
     .nav-bar-amount {
       position: absolute;
-      left: 100%;
+      background-color: #3b3b3b;
+      p {
+        color: white;
+        font-size: ${(props) => props.theme.extraSmallText};
+      }
+      opacity: 0.5;
+      padding: 0 4px;
+      left: 65%;
       top: -30%;
+      border-radius: 3px;
     }
   }
 `;
@@ -43,9 +51,11 @@ const NavBar = () => {
         <Link to={Paths.paths.myItems}>
           <ShoppingCartIcon />
         </Link>
-        <div className="nav-bar-amount">
-          <Text17>{Object.values(myItems).flat().length}</Text17>
-        </div>
+        {Object.values(myItems).flat().length > 0 && (
+          <div className="nav-bar-amount">
+            <Text17>{Object.values(myItems).flat().length}</Text17>
+          </div>
+        )}
       </div>
     </NavBarWrapper>
   );

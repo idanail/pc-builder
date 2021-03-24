@@ -15,6 +15,7 @@ import { Heading20 } from "../../Assets/Text/Text";
 import { GlobalContext } from "../../Context/GlobalContext";
 // component imports
 import SearchBar from "./SearchBar/SearchBar";
+import { useEffect } from "react";
 
 // styled-components
 const FooterWrapper = styled.div`
@@ -39,7 +40,6 @@ const FooterWrapper = styled.div`
     z-index: -1;
     opacity: ${(props) => (props.searchBarActive ? "1" : "0")};
     left: ${(props) => (props.searchBarActive ? "0" : "100%")};
-    // left: ${(props) => props.searchBarActive && "-100%"};
     input {
       width: 90%;
       padding: 8px;
@@ -127,11 +127,25 @@ const FooterWrapper = styled.div`
 // component
 
 const Footer = (props) => {
-  const { mainData, setCurrentObj, clickedPurpose } = useContext(GlobalContext);
+  const {
+    mainData,
+    setCurrentObj,
+    clickedPurpose,
+    scrollToTopActive,
+    setScrollToTopActive,
+    searchBarActive,
+    setSearchBarActive,
+    mobileMenuActive,
+    setMobileMenuActive,
+  } = useContext(GlobalContext);
 
-  const [mobileMenuActive, setMobileMenuActive] = useState(false);
+  // const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
-  const [searchBarActive, setSearchBarActive] = useState(false);
+  // const [searchBarActive, setSearchBarActive] = useState(false);
+
+  useEffect(() => {
+    mobileMenuActive && setSearchBarActive(false);
+  }, [mobileMenuActive]);
 
   return (
     <FooterWrapper
@@ -170,7 +184,15 @@ const Footer = (props) => {
         <div
           className="search-icon"
           onClick={() => {
-            setSearchBarActive(!searchBarActive);
+            if (mobileMenuActive) {
+              return;
+            } else {
+              setSearchBarActive(!searchBarActive);
+
+              // window.pageYOffset > 600
+              //   ? setScrollToTopActive(!scrollToTopActive)
+              //   : setScrollToTopActive(false);
+            }
           }}
         >
           <SearchIcon />

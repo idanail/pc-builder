@@ -1,7 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
+
 // npm imports
 import styled from "styled-components";
 import { Link } from "@reach/router";
+import Skeleton from "react-loading-skeleton";
+
 // consts imports
 import { Paths } from "../../../../Consts/Paths";
 
@@ -18,8 +21,12 @@ import {
   Text17,
   Text14,
 } from "../../../../Assets/Text/Text";
+import { indigo } from "@material-ui/core/colors";
 // styled-components
 const CardWrapper = styled.div`
+  .d-hide {
+    display: none;
+  }
   a {
     &:hover {
       text-decoration: none;
@@ -60,7 +67,13 @@ const CardWrapper = styled.div`
 
 const Card = ({ el, name }) => {
   const { route, handleDetails } = useContext(GlobalContext);
-  const { img, brand, model, price, thumbnail } = el;
+  const { brand, model, price, thumbnail } = el;
+  const [onLoaded, setOnLoaded] = useState(false);
+
+  const handleOnLoad = () => {
+    setOnLoaded(true);
+  };
+
   return (
     <CardWrapper>
       <Link
@@ -79,12 +92,14 @@ const Card = ({ el, name }) => {
               .toLowerCase()}`
           );
         }}
+        className={!onLoaded ? "d-hide" : ""}
       >
         <div className="card-title">
           <Text14>{brand}</Text14>
         </div>
         <div className="card-img">
           <img
+            onLoad={handleOnLoad}
             src={`/img/${name.replace(" ", "-").toLowerCase()}/${thumbnail}`}
             alt=""
           />
@@ -99,6 +114,7 @@ const Card = ({ el, name }) => {
           </div>
         </div>
       </Link>
+      {!onLoaded && <Skeleton />}
     </CardWrapper>
   );
 };

@@ -35,6 +35,9 @@ export const GlobalContextProvider = (props) => {
   const [filterSortDefaultValue, setFilterSortDefaultValue] = useState("");
   const [wattageArray, setWattageArray] = useState([]);
   const [totalPower, setTotalPower] = useState(0);
+  const [scrollToTopActive, setScrollToTopActive] = useState(false);
+  const [searchBarActive, setSearchBarActive] = useState(false);
+  const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
   let filtered = [...mainData[route]];
 
@@ -409,6 +412,12 @@ export const GlobalContextProvider = (props) => {
     setFilterSortDefaultValue,
     totalPower,
     wattageArray,
+    scrollToTopActive,
+    setScrollToTopActive,
+    searchBarActive,
+    setSearchBarActive,
+    mobileMenuActive,
+    setMobileMenuActive,
   };
 
   return <Provider value={globalState}>{props.children}</Provider>;

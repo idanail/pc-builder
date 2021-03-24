@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 // npm imports
 import styled from "styled-components";
 import { Link } from "@reach/router";
+import Skeleton from "react-loading-skeleton";
 
 //Const imports
 import { Paths } from "../../Consts/Paths";

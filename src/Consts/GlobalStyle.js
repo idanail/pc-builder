@@ -113,6 +113,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${(props) => props.theme.dark_gray3};
         color: ${(props) => props.theme.white};
         font-family: 'Segoe', sans-serif;
+        font-size: ${(props) => props.theme.smallText};
     }
 
     textarea {
