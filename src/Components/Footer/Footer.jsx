@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 // npm imports
 import styled, { css, withTheme } from "styled-components";
@@ -131,17 +131,11 @@ const Footer = (props) => {
     mainData,
     setCurrentObj,
     clickedPurpose,
-    scrollToTopActive,
-    setScrollToTopActive,
     searchBarActive,
     setSearchBarActive,
     mobileMenuActive,
     setMobileMenuActive,
   } = useContext(GlobalContext);
-
-  // const [mobileMenuActive, setMobileMenuActive] = useState(false);
-
-  // const [searchBarActive, setSearchBarActive] = useState(false);
 
   useEffect(() => {
     mobileMenuActive && setSearchBarActive(false);

@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 
 // npm imports
 import styled from "styled-components";
 import { Link } from "@reach/router";
-import Skeleton from "react-loading-skeleton";
 
 // consts imports
 import { Paths } from "../../../../Consts/Paths";
@@ -12,16 +11,11 @@ import { Paths } from "../../../../Consts/Paths";
 import { GlobalContext } from "../../../../Context/GlobalContext";
 
 // component imports
+import SkeletonCard from "../../../Skeleton/SkeletonCard";
 
 // npm text imports
-import {
-  Heading20,
-  Text20,
-  Heading17,
-  Text17,
-  Text14,
-} from "../../../../Assets/Text/Text";
-import { indigo } from "@material-ui/core/colors";
+import { Text14 } from "../../../../Assets/Text/Text";
+
 // styled-components
 const CardWrapper = styled.div`
   .d-hide {
@@ -34,7 +28,7 @@ const CardWrapper = styled.div`
   }
   .card-title {
     padding-left: 5px;
-    h5 {
+    p {
       color: ${(props) => props.theme.text_gray};
     }
   }
@@ -114,7 +108,7 @@ const Card = ({ el, name }) => {
           </div>
         </div>
       </Link>
-      {!onLoaded && <Skeleton />}
+      {!onLoaded && <SkeletonCard />}
     </CardWrapper>
   );
 };

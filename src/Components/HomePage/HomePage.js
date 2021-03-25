@@ -1,16 +1,14 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 
 // npm imports
 import styled from "styled-components";
 import { Link } from "@reach/router";
-import Skeleton from "react-loading-skeleton";
 
 //Const imports
 import { Paths } from "../../Consts/Paths";
-import { data, myItems as myItemsData } from "../../Data/data";
+import { myItems as myItemsData } from "../../Data/data";
 
 // context imports
-import { GlobalContext } from "../../Context/GlobalContext";
 
 // npm text imports
 import { Heading55, Text17, Heading22 } from "../../Assets/Text/Text";

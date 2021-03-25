@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 
 // npm imports
 import styled from "styled-components";
@@ -6,10 +6,11 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Link } from "@reach/router";
 
 // npm text imports
-import { Heading17, Text17 } from "../../Assets/Text/Text";
+import { Text17 } from "../../Assets/Text/Text";
 import { Paths } from "../../Consts/Paths";
+
 //Context imports
-import { GlobalContext } from "../../Context/GlobalContext";
+
 //Component imports
 
 //styled-components

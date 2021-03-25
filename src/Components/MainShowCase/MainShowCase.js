@@ -5,8 +5,6 @@ import styled from "styled-components";
 import TuneIcon from "@material-ui/icons/Tune";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import { useLocation } from "@reach/router";
-import axios from "axios";
-
 //Component imports
 import NavBar from "../NavBar/NavBar";
 import MainTitle from "./MainTitle/MainTitle";
@@ -15,7 +13,7 @@ import Footer from "../Footer/Footer";
 import MainFilter from "./MainFilter/MainFilter";
 
 // npm text imports
-import { Heading17, Text17 } from "../../Assets/Text/Text";
+import { Text17 } from "../../Assets/Text/Text";
 // context imports
 import { GlobalContext } from "../../Context/GlobalContext";
 import FilterSelect from "./MainFilter/FilterSelect/FilterSelect";
@@ -42,7 +40,7 @@ const MainShowCaseWrapper = styled.div`
     }
     svg {
       font-size: ${(props) => props.theme.iconSize};
-      color: ${(props) => props.theme.text_gray};
+      color: ${(props) => props.theme.black};
     }
   }
   hr {
@@ -87,10 +85,9 @@ const MainShowCase = () => {
     scrollToTopActive,
     setScrollToTopActive,
     searchBarActive,
-    setSearchBarActive,
     mobileMenuActive,
-    setMobileMenuActive,
   } = useContext(GlobalContext);
+
   const currentComponent = Object.keys(mainData)
     .filter(
       (el) =>
@@ -115,7 +112,7 @@ const MainShowCase = () => {
     );
   } else if (
     currentComponent === "RAM Memory" &&
-    myItems.Processor.length === 1
+    myItems.Motherboard.length === 1
   ) {
     currentData = filteredData[currentComponent].filter((el) =>
       myItems.Motherboard[0].support.includes(el.memorySpeed)
@@ -123,6 +120,7 @@ const MainShowCase = () => {
   } else {
     currentData = filteredData[currentComponent];
   }
+
   //Model
   const [open, setOpen] = useState(false);
 
@@ -130,17 +128,20 @@ const MainShowCase = () => {
 
   const handleClose = () => setOpen(false);
 
+  //Replace the filter with empty values from the previos component
   useEffect(() => {
     getRoute(currentComponent);
     setCurrentType("");
     setCurrentColor("");
   }, [currentComponent]);
 
+  //Back to top when the scroll button is clicked.
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setScrollToTopActive(false);
   };
 
+  //Show scroll to top button on scroll.
   const checkScrollTop = () => {
     if (window.pageYOffset > 600) {
       if (searchBarActive) {
@@ -155,6 +156,7 @@ const MainShowCase = () => {
 
   window.addEventListener("scroll", checkScrollTop);
 
+  //When search bar is clicked disable the scroll to top button.
   useEffect(() => {
     if (searchBarActive) {
       setScrollToTopActive(false);
@@ -170,6 +172,7 @@ const MainShowCase = () => {
     }
   }, [searchBarActive]);
 
+  //When burger menu is clicked disable the scroll to top button.
   useEffect(() => {
     if (mobileMenuActive) {
       setScrollToTopActive(false);

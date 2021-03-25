@@ -13,13 +13,14 @@ import Fade from "@material-ui/core/Fade";
 import { GlobalContext } from "../../../Context/GlobalContext";
 
 // npm text imports
-import { Text30, Text24, Text20 } from "../../../Assets/Text/Text";
+import { Text24, Text20 } from "../../../Assets/Text/Text";
 
 // component imports
 
 // styled-components
 const CheckForPreviousComponentWrapper = styled.div``;
 
+//Modal
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
@@ -60,8 +61,8 @@ const useStyles = makeStyles((theme) => ({
 
 // component
 const CheckForPreviousComponent = ({ open, handleClose, category }) => {
-  const { handleItems } = useContext(GlobalContext);
   const myItems = JSON.parse(localStorage.getItem("myItems"));
+
   const classes = useStyles();
 
   return (

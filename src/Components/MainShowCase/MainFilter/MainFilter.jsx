@@ -8,7 +8,6 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
-import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 // consts imports
@@ -21,8 +20,7 @@ import FilterRender from "./FilterRender/FilterRender";
 import PriceRange from "./PriceRange/PriceRange";
 
 // npm text imports
-import { Text30, Text17, Text14 } from "../../../Assets/Text/Text";
-import { red } from "@material-ui/core/colors";
+import { Text17, Text14 } from "../../../Assets/Text/Text";
 
 // styled-components
 const MainFilterWrapper = styled.div``;

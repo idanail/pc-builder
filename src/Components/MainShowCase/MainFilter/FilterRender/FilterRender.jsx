@@ -9,7 +9,7 @@ import { GlobalContext } from "../../../../Context/GlobalContext";
 // context imports
 
 // npm text imports
-import { Span22, Span14 } from "../../../../Assets/Text/Text";
+import { Span14 } from "../../../../Assets/Text/Text";
 
 // component imports
 

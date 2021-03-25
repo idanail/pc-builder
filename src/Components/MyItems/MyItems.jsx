@@ -1,15 +1,17 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 
 // npm imports
 import styled from "styled-components";
 import CheckIcon from "@material-ui/icons/Check";
 import DeleteIcon from "@material-ui/icons/Delete";
 import PowerIcon from "@material-ui/icons/Power";
+import { Link } from "@reach/router";
 
 // text inports
-import { Text20, Text22, Text14, Text17 } from "../../Assets/Text/Text";
+import { Text14, Text17 } from "../../Assets/Text/Text";
 
 // consts imports
+import { Paths } from "../../Consts/Paths";
 
 // context imports
 import { GlobalContext } from "../../Context/GlobalContext";
@@ -85,9 +87,6 @@ const MyItemsWrapper = styled.div`
         button {
           border: none;
           background: none;
-          svg {
-            font-size: 27px;
-          }
         }
       }
     }
@@ -152,7 +151,14 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text17>Processor</Text17>
+            <Link
+              to={Paths.paths.main.replace(
+                "{COMPONENT}",
+                Object.keys(myItems)[0].replace(" ", "_").toLocaleLowerCase()
+              )}
+            >
+              <Text17>Processor</Text17>
+            </Link>
           </div>
         </div>
         <hr />
@@ -197,7 +203,14 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text17>CPU&nbsp;Cooler</Text17>
+            <Link
+              to={Paths.paths.main.replace(
+                "{COMPONENT}",
+                Object.keys(myItems)[1].replace(" ", "_").toLocaleLowerCase()
+              )}
+            >
+              <Text17>CPU&nbsp;Cooler</Text17>
+            </Link>
           </div>
         </div>
 
@@ -241,7 +254,14 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text17>Motherboard</Text17>
+            <Link
+              to={Paths.paths.main.replace(
+                "{COMPONENT}",
+                Object.keys(myItems)[2].replace(" ", "_").toLocaleLowerCase()
+              )}
+            >
+              <Text17>Motherboard</Text17>
+            </Link>
           </div>
         </div>
         <hr />
@@ -286,7 +306,14 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text17>Graphic&nbsp;Card</Text17>
+            <Link
+              to={Paths.paths.main.replace(
+                "{COMPONENT}",
+                Object.keys(myItems)[3].replace(" ", "_").toLocaleLowerCase()
+              )}
+            >
+              <Text17>Graphic&nbsp;Card</Text17>
+            </Link>
           </div>
         </div>
         <hr />
@@ -329,7 +356,14 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text17>RAM&nbsp;Memory</Text17>
+            <Link
+              to={Paths.paths.main.replace(
+                "{COMPONENT}",
+                Object.keys(myItems)[4].replace(" ", "_").toLocaleLowerCase()
+              )}
+            >
+              <Text17>RAM&nbsp;Memory</Text17>
+            </Link>
           </div>
         </div>
 
@@ -373,7 +407,14 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text17>SSD</Text17>
+            <Link
+              to={Paths.paths.main.replace(
+                "{COMPONENT}",
+                Object.keys(myItems)[5].replace(" ", "_").toLocaleLowerCase()
+              )}
+            >
+              <Text17>SSD</Text17>
+            </Link>
           </div>
         </div>
         <hr />
@@ -416,7 +457,14 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text17>Hard&nbsp;Drive</Text17>
+            <Link
+              to={Paths.paths.main.replace(
+                "{COMPONENT}",
+                Object.keys(myItems)[6].replace(" ", "_").toLocaleLowerCase()
+              )}
+            >
+              <Text17>Hard&nbsp;Drive</Text17>
+            </Link>
           </div>
         </div>
         <hr />
@@ -459,7 +507,14 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text17>Optical&nbsp;Drive</Text17>
+            <Link
+              to={Paths.paths.main.replace(
+                "{COMPONENT}",
+                Object.keys(myItems)[7].replace(" ", "_").toLocaleLowerCase()
+              )}
+            >
+              <Text17>Optical&nbsp;Drive</Text17>
+            </Link>
           </div>
         </div>
 
@@ -494,7 +549,14 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text17>Power&nbsp;Supply</Text17>
+            <Link
+              to={Paths.paths.main.replace(
+                "{COMPONENT}",
+                Object.keys(myItems)[8].replace(" ", "_").toLocaleLowerCase()
+              )}
+            >
+              <Text17>Power&nbsp;Supply</Text17>
+            </Link>
           </div>
         </div>
         <hr />
@@ -537,7 +599,14 @@ const MyItems = (props) => {
             />
           </div>
           <div className="component-name">
-            <Text17>Case</Text17>
+            <Link
+              to={Paths.paths.main.replace(
+                "{COMPONENT}",
+                Object.keys(myItems)[9].replace(" ", "_").toLocaleLowerCase()
+              )}
+            >
+              <Text17>Case</Text17>
+            </Link>
           </div>
         </div>
         <hr />

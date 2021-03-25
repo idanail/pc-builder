@@ -370,9 +370,12 @@ export const GlobalContextProvider = (props) => {
 
   const globalState = {
     mainData,
+    setMainData,
     initialData,
+    setInitialData,
     filteredData,
     purposeData,
+    setPurposeData,
     filtered,
     currentObj,
     setCurrentObj,
@@ -400,6 +403,7 @@ export const GlobalContextProvider = (props) => {
     handleSort,
     details,
     myItems,
+    setMyItemsInitial,
     addItem,
     deleteItem,
     handleItems,

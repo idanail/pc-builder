@@ -15,18 +15,12 @@ import { GlobalContext } from "../../Context/GlobalContext";
 import Footer from "../Footer/Footer";
 
 // component imports
+import SkeletonDetails from "../Skeleton/SkeletonDetails";
 import NavBar from "../NavBar/NavBar";
 import CheckForPreviousComponent from "./CheckForPreviousComponent/CheckForPreviousComponent";
 
 // npm text imports
-import {
-  Heading20,
-  Heading22,
-  Heading17,
-  Heading28,
-  Text17,
-} from "../../Assets/Text/Text";
-import { useLocation } from "@reach/router";
+import { Text22, Text17 } from "../../Assets/Text/Text";
 
 // styled-components
 const ComponentDetailsWrapper = styled.div`
@@ -51,6 +45,9 @@ const ComponentDetailsWrapper = styled.div`
     p {
       margin-bottom: 4px;
     }
+  }
+  .d-hide {
+    display: none;
   }
   .details-img {
     position: relative;
@@ -119,7 +116,7 @@ const ComponentDetailsWrapper = styled.div`
       .progress-bar-wrapper {
         text-align: center;
         margin-right: 15px;
-        h5 {
+        p {
           margin-bottom: 3px;
           color: ${(props) => props.theme.text_gray};
         }
@@ -145,10 +142,9 @@ const ComponentDetailsWrapper = styled.div`
 // component
 
 const ComponentDetails = (props) => {
-  const { details, addItem, removeItem } = useContext(GlobalContext);
+  const { addItem, setSearchBarActive } = useContext(GlobalContext);
   const [prevUrl, setPrevUrl] = useState(useParams());
-
-  // console.log(`${prevUrl.currentComponent}/${prevUrl.componentDetails}`);
+  const [onLoaded, setOnLoaded] = useState(false);
 
   const currentCategory = Object.keys(data).filter(
     (el) => el.replace(/ /g, "_").toLowerCase() === prevUrl.currentComponent
@@ -184,26 +180,46 @@ const ComponentDetails = (props) => {
     warranty,
     formFactor,
     maxCapacity,
-    cpuSupport,
   } = currentObj[0];
-  const procentOfRating = Math.floor((rating / 70000) * 100);
+
+  //Rating
+  let procentOfRating;
+  if (currentCategory[0] === "Processor") {
+    procentOfRating = Math.floor((rating / 100000) * 100);
+  } else if (currentCategory[0] === "Graphic Card") {
+    procentOfRating = Math.floor((rating / 30000) * 100);
+  } else if (currentCategory[0] === "RAM Memory") {
+    procentOfRating = Math.floor((rating / 5000) * 100);
+  } else {
+  }
 
   //Modal
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  // console.log(myItems.Motherboard[0].slots);
+  //When component details is open disable the serach bar.
+  useEffect(() => {
+    if (currentObj) {
+      setSearchBarActive(false);
+    }
+  }, [currentObj]);
+
+  const handleOnLoad = () => {
+    setOnLoaded(true);
+  };
 
   return (
     <ComponentDetailsWrapper rating={procentOfRating}>
       <NavBar />
-      <div className="details-img">
+
+      {!onLoaded && <SkeletonDetails />}
+      <div className={!onLoaded ? "d-hide" : "details-img"}>
         <img
+          onLoad={handleOnLoad}
           src={`/img/${route.replace(" ", "-").toLowerCase()}/${img}`}
           alt=""
         />
-
         <button
           className="add-to-cart"
           disabled={
@@ -304,22 +320,22 @@ const ComponentDetails = (props) => {
         </button>
       </div>
       <div className="details-model">
-        <Heading17 className="brand-detail">{brand}</Heading17>
-        <Heading22>{model}</Heading22>
+        <Text17 className="brand-detail">{brand}</Text17>
+        <Text22>{model}</Text22>
       </div>
       <div className="price-and-rating">
         <div className="price">
-          <Heading17>${price}</Heading17>
+          <Text17>${price}</Text17>
         </div>
         <div className="rating">
           <div className="progress-bar-wrapper">
-            <Heading17>Rating</Heading17>
+            <Text17>Rating</Text17>
             <div className="progress-bar">
               <div className="progress"></div>
             </div>
           </div>
           <div className="rating-num">
-            <Heading17>{rating}</Heading17>
+            <Text17>{rating}</Text17>
           </div>
         </div>
       </div>
@@ -328,18 +344,17 @@ const ComponentDetails = (props) => {
           <div className="cores-details">
             <div className="left">
               <Text17>Cores: {cores}</Text17>
+              <Text17>Socket: {socket}</Text17>
+              <Text17>Clock speed: {clockSpeed}</Text17>
             </div>
             <div>
               <Text17>Threads: {threads}</Text17>
-            </div>
-          </div>
-          <div className="more-details">
-            <div>
-              <Text17>Socket: {socket}</Text17>
-              <Text17>Clock speed: {clockSpeed}</Text17>
               <Text17>Turbo speed: {turboSpeed}</Text17>
               <Text17>Typical TDP: {powerConsumption} W &sup3;</Text17>
             </div>
+          </div>
+          <div className="more-details">
+            <div></div>
           </div>
         </>
       ) : route === "CPU Cooler" ? (

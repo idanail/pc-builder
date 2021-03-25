@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
 
 // component
 const ItemDelete = ({ open, handleClose, category, id }) => {
-  const { deleteItem, handleItems } = useContext(GlobalContext);
+  const { handleItems } = useContext(GlobalContext);
   const classes = useStyles();
   return (
     <ItemDeleteWrapper>

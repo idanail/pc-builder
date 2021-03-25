@@ -18,7 +18,7 @@ const FilterSelectWrapper = styled.select`
   padding: 5px 5px 5px 0px;
   /* width: 120px; */
   &:focus {
-    outline: 2px solid ${(props) => props.theme.text_gray};
+    outline: 2px solid #d6d6d6;
   }
 `;
 // component
