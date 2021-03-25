@@ -65,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
         -webkit-overflow-scrolling: touch;
         -webkit-tap-highlight-color: transparent;
         min-height: 100%;
-        font-family: 'Segoe', sans-serif;
+        font-family: 'Segoe';
     }
 
     a {
@@ -138,6 +138,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h5, p, a{
+        font-family: 'Segoe UI';
         color: ${(props) => props.theme.text_gray};
     }
 }

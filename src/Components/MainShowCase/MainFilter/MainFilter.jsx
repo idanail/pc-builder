@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 // npm imports
-import styled from "styled-components";
+import styled, { withTheme } from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
@@ -23,7 +23,11 @@ import PriceRange from "./PriceRange/PriceRange";
 import { Text17, Text14 } from "../../../Assets/Text/Text";
 
 // styled-components
-const MainFilterWrapper = styled.div``;
+const MainFilterWrapper = styled.div`
+  .modal {
+    background-color: ${(props) => props.theme.main_gray};
+  }
+`;
 
 const useStyles = makeStyles((theme) => ({
   // Accordion
@@ -54,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: theme.main_gray,
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
@@ -83,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MainFilter = ({ open, handleClose, currentData }) => {
+const MainFilter = ({ open, handleClose, theme }) => {
   const {
     mainData,
     brands,
@@ -114,7 +119,10 @@ const MainFilter = ({ open, handleClose, currentData }) => {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper}>
+          <div
+            className={` modal ${classes.paper}`}
+            style={{ backgroundColor: theme.gray3 }}
+          >
             <Text17
               className={`${classes.modalTitle} ${classes.marginB20}`}
               id="transition-modal-title"
@@ -237,4 +245,4 @@ const MainFilter = ({ open, handleClose, currentData }) => {
   );
 };
 
-export default MainFilter;
+export default withTheme(MainFilter);

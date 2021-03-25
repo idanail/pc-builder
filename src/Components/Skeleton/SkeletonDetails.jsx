@@ -6,28 +6,29 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 // styled-components
 const SkeletonDetailsWrapper = styled.div`
+  position: relative;
   .skeleton-details {
-    color: black;
     height: 250px;
   }
   .skeleton-btn {
     width: 70px;
-    height: 35px;
-    border-bottom-left-radius: 150px;
-    border-bottom-right-radius: 150px;
-    margin-left: calc(92% - 70px);
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -14%;
+    right: 8%;
   }
 `;
 // component
 
 const SkeletonDetails = (props) => {
   return (
-    <SkeletonTheme>
-      <SkeletonDetailsWrapper>
+    <SkeletonDetailsWrapper>
+      <SkeletonTheme color={"white"}>
         <Skeleton className="skeleton-details" />
-        <Skeleton className="skeleton-btn" />
-      </SkeletonDetailsWrapper>
-    </SkeletonTheme>
+      </SkeletonTheme>
+      <Skeleton className="skeleton-btn" />
+    </SkeletonDetailsWrapper>
   );
 };
 

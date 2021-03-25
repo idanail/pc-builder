@@ -38,6 +38,7 @@ export const GlobalContextProvider = (props) => {
   const [scrollToTopActive, setScrollToTopActive] = useState(false);
   const [searchBarActive, setSearchBarActive] = useState(false);
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   let filtered = [...mainData[route]];
 
@@ -422,6 +423,8 @@ export const GlobalContextProvider = (props) => {
     setSearchBarActive,
     mobileMenuActive,
     setMobileMenuActive,
+    darkMode,
+    setDarkMode,
   };
 
   return <Provider value={globalState}>{props.children}</Provider>;

@@ -4684,8 +4684,8 @@ export const data = {
       powerConsumption: 4.5,
       warranty: "Limited 5-year warranty with free technical support",
       category: "SSD",
+      rating: 14089,
       price: 44.52,
-      rating: 5,
     },
     {
       id: uuid(),
@@ -4700,8 +4700,8 @@ export const data = {
       powerConsumption: 4.5,
       warranty: "Limited 5-year warranty with free technical support",
       category: "SSD",
+      rating: 14089,
       price: 59.98,
-      rating: 7,
     },
     {
       id: uuid(),
@@ -4716,8 +4716,8 @@ export const data = {
       powerConsumption: 4.5,
       warranty: "Limited 5-year warranty with free technical support",
       category: "SSD",
+      rating: 14089,
       price: 114.7,
-      rating: 9,
     },
     {
       id: uuid(),
@@ -4732,8 +4732,8 @@ export const data = {
       powerConsumption: 1.535,
       warranty: "Limited 3-year warranty with free technical support",
       category: "SSD",
+      rating: 4424,
       price: 30.55,
-      rating: 2,
     },
     {
       id: uuid(),
@@ -4748,8 +4748,8 @@ export const data = {
       powerConsumption: 1.535,
       warranty: "Limited 3-year warranty with free technical support",
       category: "SSD",
+      rating: 4424,
       price: 42.99,
-      rating: 4,
     },
     {
       id: uuid(),
@@ -4764,8 +4764,8 @@ export const data = {
       powerConsumption: 1.535,
       warranty: "Limited 3-year warranty with free technical support",
       category: "SSD",
+      rating: 4424,
       price: 58.8,
-      rating: 6,
     },
     {
       id: uuid(),
@@ -4781,7 +4781,7 @@ export const data = {
       warranty: "Limited 3-year warranty with free technical support",
       category: "SSD",
       price: 153.78,
-      rating: 8,
+      rating: 4424,
     },
     {
       id: uuid(),
@@ -4796,8 +4796,8 @@ export const data = {
       powerConsumption: 1.535,
       warranty: "Limited 3-year warranty with free technical support",
       category: "SSD",
+      rating: 4424,
       price: 225.19,
-      rating: 10,
     },
   ],
   "Hard Drive": [
@@ -4816,8 +4816,8 @@ export const data = {
       warranty: "Limited 5-year warranty",
       class: "Performance",
       category: "Hard Drive",
+      rating: 1031,
       price: 55.99,
-      rating: 7,
     },
     {
       id: uuid(),
@@ -4834,8 +4834,8 @@ export const data = {
       warranty: "Limited 5-year warranty",
       class: "Performance",
       category: "Hard Drive",
+      rating: 1018,
       price: 69.99,
-      rating: 7,
     },
     {
       id: uuid(),
@@ -4852,8 +4852,8 @@ export const data = {
       warranty: "Limited 5-year warranty",
       class: "Performance",
       category: "Hard Drive",
+      rating: 1173,
       price: 99.99,
-      rating: 7,
     },
     {
       id: uuid(),
@@ -4870,8 +4870,8 @@ export const data = {
       warranty: "Limited 5-year warranty",
       class: "Performance",
       category: "Hard Drive",
+      rating: 1581,
       price: 149.99,
-      rating: 8,
     },
     {
       id: uuid(),
@@ -4888,8 +4888,8 @@ export const data = {
       warranty: "Limited 5-year warranty",
       class: "Performance",
       category: "Hard Drive",
+      rating: 1632,
       price: 189.99,
-      rating: 8,
     },
     {
       id: uuid(),
@@ -4906,8 +4906,8 @@ export const data = {
       warranty: "Limited 5-year warranty",
       class: "Performance",
       category: "Hard Drive",
+      rating: 1436,
       price: 249.99,
-      rating: 9,
     },
     {
       id: uuid(),
@@ -4924,8 +4924,8 @@ export const data = {
       warranty: "Limited 5-year warranty",
       class: "Performance",
       category: "Hard Drive",
+      rating: 1491,
       price: 329.99,
-      rating: 10,
     },
     {
       id: uuid(),
@@ -4941,6 +4941,7 @@ export const data = {
       powerConsumption: 4.4,
       warranty: "Limited 3-year warranty",
       class: "Storage",
+      rating: 875,
       category: "Hard Drive",
       price: 52.99,
     },
@@ -4958,6 +4959,7 @@ export const data = {
       powerConsumption: 4.4,
       warranty: "Limited 3-year warranty",
       class: "Storage",
+      rating: 881,
       category: "Hard Drive",
       price: 73.99,
     },
@@ -4975,6 +4977,7 @@ export const data = {
       powerConsumption: 4.4,
       warranty: "Limited 3-year warranty",
       class: "Storage",
+      rating: 942,
       category: "Hard Drive",
       price: 97.99,
     },
@@ -4993,6 +4996,7 @@ export const data = {
       warranty: "Limited 3-year warranty",
       class: "Storage",
       category: "Hard Drive",
+      rating: 1184,
       price: 123.99,
     },
     {
@@ -5010,6 +5014,7 @@ export const data = {
       warranty: "Limited 3-year warranty",
       class: "Storage",
       category: "Hard Drive",
+      rating: 1465,
       price: 199.99,
     },
     {
@@ -5027,6 +5032,7 @@ export const data = {
       warranty: "Limited 3-year warranty",
       class: "Storage",
       category: "Hard Drive",
+      rating: 1766,
       price: 244.99,
     },
     {
@@ -5044,6 +5050,7 @@ export const data = {
       warranty: "Limited 3-year warranty",
       class: "Storage",
       category: "Hard Drive",
+      rating: 1892,
       price: 339.99,
     },
     {
@@ -5060,6 +5067,7 @@ export const data = {
       powerConsumption: 6.4,
       warranty: "Limited 3-year warranty",
       class: "Storage",
+      rating: 1983,
       category: "Hard Drive",
       price: 408.99,
     },
@@ -5077,6 +5085,7 @@ export const data = {
       powerConsumption: 6.6,
       warranty: "Limited 3-year warranty",
       class: "Storage",
+      rating: 2061,
       category: "Hard Drive",
       price: 499.99,
     },
@@ -5095,8 +5104,8 @@ export const data = {
       warranty: "Limited 3-year warranty",
       class: "Storage",
       category: "Hard Drive",
+      rating: 2184,
       price: 599.99,
-      rating: "",
     },
   ],
   "Optical Drive": [
@@ -5113,7 +5122,6 @@ export const data = {
       warranty: "1 year",
       category: "Optical Drive",
       price: 29.99,
-      rating: 10,
     },
     {
       id: uuid(),
@@ -5128,7 +5136,6 @@ export const data = {
       warranty: "1 year",
       category: "Optical Drive",
       price: 22.99,
-      rating: 5,
     },
   ],
   "Power Supply": [

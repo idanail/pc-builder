@@ -190,7 +190,12 @@ const ComponentDetails = (props) => {
     procentOfRating = Math.floor((rating / 30000) * 100);
   } else if (currentCategory[0] === "RAM Memory") {
     procentOfRating = Math.floor((rating / 5000) * 100);
+  } else if (currentCategory[0] === "SSD") {
+    procentOfRating = Math.floor((rating / 20000) * 100);
+  } else if (currentCategory[0] === "Hard Drive") {
+    procentOfRating = Math.floor((rating / 3000) * 100);
   } else {
+    procentOfRating = Math.floor((rating / 5000) * 100);
   }
 
   //Modal
@@ -327,17 +332,19 @@ const ComponentDetails = (props) => {
         <div className="price">
           <Text17>${price}</Text17>
         </div>
-        <div className="rating">
-          <div className="progress-bar-wrapper">
-            <Text17>Rating</Text17>
-            <div className="progress-bar">
-              <div className="progress"></div>
+        {rating && (
+          <div className="rating">
+            <div className="progress-bar-wrapper">
+              <Text17>Rating</Text17>
+              <div className="progress-bar">
+                <div className="progress"></div>
+              </div>
+            </div>
+            <div className="rating-num">
+              <Text17>{rating}</Text17>
             </div>
           </div>
-          <div className="rating-num">
-            <Text17>{rating}</Text17>
-          </div>
-        </div>
+        )}
       </div>
       {route === "Processor" ? (
         <>

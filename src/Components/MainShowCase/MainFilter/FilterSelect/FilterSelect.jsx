@@ -16,7 +16,14 @@ const FilterSelectWrapper = styled.select`
   border: none;
   background: unset;
   padding: 5px 5px 5px 0px;
+  color: ${(props) => props.theme.black};
   /* width: 120px; */
+  &::after {
+    color: ${(props) => props.theme.black};
+  }
+  &::before {
+    color: ${(props) => props.theme.black};
+  }
   &:focus {
     outline: 2px solid #d6d6d6;
   }

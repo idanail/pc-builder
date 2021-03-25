@@ -4,7 +4,8 @@ import React, { useContext } from "react";
 import styled, { css, withTheme } from "styled-components";
 import { Link } from "@reach/router";
 import SearchIcon from "@material-ui/icons/Search";
-import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
+import Brightness3Icon from "@material-ui/icons/Brightness3";
+import Brightness7Icon from "@material-ui/icons/Brightness7";
 // consts imports
 import { Paths } from "../../Consts/Paths";
 
@@ -135,6 +136,8 @@ const Footer = (props) => {
     setSearchBarActive,
     mobileMenuActive,
     setMobileMenuActive,
+    darkMode,
+    setDarkMode,
   } = useContext(GlobalContext);
 
   useEffect(() => {
@@ -191,8 +194,13 @@ const Footer = (props) => {
         >
           <SearchIcon />
         </div>
-        <div className="info">
-          <HelpOutlineIcon />
+        <div
+          className="info"
+          onClick={() => {
+            setDarkMode(!darkMode);
+          }}
+        >
+          {darkMode ? <Brightness7Icon /> : <Brightness3Icon />}
         </div>
         <div
           className="burger-menu"
