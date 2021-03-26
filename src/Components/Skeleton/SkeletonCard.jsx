@@ -35,7 +35,10 @@ const SkeletonCard = (props) => {
   const { darkMode } = useContext(GlobalContext);
   return (
     <SkeletonCardWrapper>
-      <SkeletonTheme color={darkMode ? "#3A3B3C" : ""}>
+      <SkeletonTheme
+        color={darkMode ? "#3A3B3C" : ""}
+        highlightColor={darkMode ? "#56585A" : "#F7F7F7"}
+      >
         <Skeleton className="skeleton-brand" />
         <Skeleton className="skeleton-img" />
         <Skeleton className="skeleton-model" />

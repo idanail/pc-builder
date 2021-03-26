@@ -28,10 +28,16 @@ const SkeletonDetails = (props) => {
   const { darkMode } = useContext(GlobalContext);
   return (
     <SkeletonDetailsWrapper>
-      <SkeletonTheme color={darkMode ? "#3A3B3C" : "white"}>
+      <SkeletonTheme
+        color={darkMode ? "#3A3B3C" : "white"}
+        highlightColor={darkMode ? "#56585A" : "#F7F7F7"}
+      >
         <Skeleton className="skeleton-details" />
       </SkeletonTheme>
-      <SkeletonTheme color={darkMode ? "#56585A" : ""}>
+      <SkeletonTheme
+        color={darkMode ? "#56585A" : ""}
+        highlightColor={darkMode ? "#3A3B3C" : "#F7F7F7"}
+      >
         <Skeleton className="skeleton-btn" />
       </SkeletonTheme>
     </SkeletonDetailsWrapper>
