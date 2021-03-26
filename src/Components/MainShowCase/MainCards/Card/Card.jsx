@@ -33,7 +33,7 @@ const CardWrapper = styled.div`
     }
   }
   .card-img {
-    background: ${(props) => props.theme.white};
+    background: ${(props) => props.theme.gray3};
     border-radius: 16px;
     border: none;
     padding: 15px;

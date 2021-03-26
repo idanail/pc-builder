@@ -25,13 +25,13 @@ const NavBarWrapper = styled.div`
     position: relative;
     svg {
       font-size: ${(props) => props.theme.iconSize};
-      color: ${(props) => props.theme.red};
+      color: ${(props) => props.theme.shoppingCard};
     }
     .nav-bar-amount {
       position: absolute;
-      background-color: #3b3b3b;
+      background-color: ${(props) => props.theme.amount};
       p {
-        color: white;
+        color: ${(props) => props.theme.amountText};
         font-size: ${(props) => props.theme.extraSmallText};
       }
       opacity: 0.5;

@@ -24,8 +24,12 @@ import { Text17, Text14 } from "../../../Assets/Text/Text";
 
 // styled-components
 const MainFilterWrapper = styled.div`
-  .modal {
-    background-color: ${(props) => props.theme.main_gray};
+  .MuiButtonBase-root {
+    .MuiIconButton-label {
+      svg.MuiSvgIcon-root {
+        color: ${(props) => props.theme.black};
+      }
+    }
   }
 `;
 
@@ -132,6 +136,7 @@ const MainFilter = ({ open, handleClose, theme }) => {
             <div className={classes.root}>
               <Accordion
                 className={`${classes.accordionStyle} ${classes.borderTop}`}
+                style={{ backgroundColor: theme.gray3 }}
               >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
@@ -139,7 +144,10 @@ const MainFilter = ({ open, handleClose, theme }) => {
                   id="panel1a-header"
                   className={classes.accordionSummary}
                 >
-                  <Typography className={`${classes.heading} brand`}>
+                  <Typography
+                    className={`${classes.heading} brand`}
+                    style={{ color: theme.black }}
+                  >
                     Brand
                   </Typography>
                 </AccordionSummary>
@@ -154,14 +162,22 @@ const MainFilter = ({ open, handleClose, theme }) => {
                   ))}
               </Accordion>
               {route === "Processor" && (
-                <Accordion className={classes.accordionStyle}>
+                <Accordion
+                  className={classes.accordionStyle}
+                  style={{ backgroundColor: theme.gray3 }}
+                >
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     className={classes.accordionSummary}
                   >
-                    <Typography className={classes.heading}>Purpose</Typography>
+                    <Typography
+                      className={classes.heading}
+                      style={{ color: theme.black }}
+                    >
+                      Purpose
+                    </Typography>
                   </AccordionSummary>
                   <>
                     {Object.keys(purposeData).map((el, i) => (
@@ -176,14 +192,22 @@ const MainFilter = ({ open, handleClose, theme }) => {
                 </Accordion>
               )}
               {mainData[route][0].type && (
-                <Accordion className={classes.accordionStyle}>
+                <Accordion
+                  className={classes.accordionStyle}
+                  style={{ backgroundColor: theme.gray3 }}
+                >
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     className={classes.accordionSummary}
                   >
-                    <Typography className={classes.heading}>Type</Typography>
+                    <Typography
+                      className={classes.heading}
+                      style={{ color: theme.black }}
+                    >
+                      Type
+                    </Typography>
                   </AccordionSummary>
                   <>
                     {type &&
@@ -199,14 +223,22 @@ const MainFilter = ({ open, handleClose, theme }) => {
                 </Accordion>
               )}
               {mainData[route][0].color && (
-                <Accordion className={classes.accordionStyle}>
+                <Accordion
+                  className={classes.accordionStyle}
+                  style={{ backgroundColor: theme.gray3 }}
+                >
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     className={classes.accordionSummary}
                   >
-                    <Typography className={classes.heading}>Color</Typography>
+                    <Typography
+                      className={classes.heading}
+                      style={{ color: theme.black }}
+                    >
+                      Color
+                    </Typography>
                   </AccordionSummary>
                   <>
                     {color &&

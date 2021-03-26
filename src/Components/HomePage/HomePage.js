@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 // npm imports
 import styled from "styled-components";
@@ -9,23 +9,32 @@ import { Paths } from "../../Consts/Paths";
 import { myItems as myItemsData } from "../../Data/data";
 
 // context imports
+import { GlobalContext } from "../../Context/GlobalContext";
 
 // npm text imports
 import { Heading55, Text17, Heading22 } from "../../Assets/Text/Text";
 
 // npm images impoirts
-import HomePageBackgroundImg from "../../Assets/Images/HomeBg-Black.png";
-
+import HomePageBackgroundImgBlack from "../../Assets/Images/HomeBg-Black.png";
+import HomePageBackgroundImgWhite from "../../Assets/Images/HomeBg-White.png";
 //styled-components
+const lightBg = `linear-gradient(
+  rgba(255, 255, 255, 0.7),
+  rgba(255, 255, 255, 0.8),
+  rgba(255, 255, 255, 0.8),
+  rgba(255, 255, 255, 0.7)
+),url(${HomePageBackgroundImgBlack})`;
+
+const darkBg = `linear-gradient(
+  rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.8),
+  rgba(0, 0, 0, 0.8),
+  rgba(0, 0, 0, 0.7)
+),url(${HomePageBackgroundImgWhite})`;
+
 const HomePageWrapper = styled.div`
   background-color: ${(props) => props.theme.main_gray2};
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.7)
-    ),
-    url(${HomePageBackgroundImg});
+  background: ${(props) => (props.darkMode === false ? lightBg : darkBg)};
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 77% 15%;
@@ -64,13 +73,15 @@ const HomePageWrapper = styled.div`
 `;
 
 const HomePage = () => {
+  const { darkMode } = useContext(GlobalContext);
+
   useEffect(() => {
     localStorage.setItem("route", "Processor");
     localStorage.setItem("myItems", JSON.stringify(myItemsData));
   }, []);
 
   return (
-    <HomePageWrapper className="home-page">
+    <HomePageWrapper darkMode={darkMode} className="home-page">
       <div className="home-page-info">
         <Heading55 className="home-info-title">PC Builder</Heading55>
         <Text17 className="home-info-paragraph">

@@ -61,7 +61,7 @@ const MyItemsWrapper = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      background: ${(props) => props.theme.white};
+      background: ${(props) => props.theme.gray3};
       border-radius: 15px;
       padding: 0 10px;
       height: 120px;
@@ -87,6 +87,7 @@ const MyItemsWrapper = styled.div`
         button {
           border: none;
           background: none;
+          color: ${(props) => props.theme.black};
         }
       }
     }
@@ -102,6 +103,7 @@ const MyItemsWrapper = styled.div`
       align-items: center;
       svg {
         margin-right: 5px;
+        color: ${(props) => props.theme.black};
       }
     }
   }

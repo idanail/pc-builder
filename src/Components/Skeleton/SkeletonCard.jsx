@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 
 // npm imports
 import styled, { withTheme } from "styled-components";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+
+// context imports
+import { GlobalContext } from "../../Context/GlobalContext";
 
 // styled-components
 const SkeletonCardWrapper = styled.div`
@@ -29,15 +32,16 @@ const SkeletonCardWrapper = styled.div`
 // component
 
 const SkeletonCard = (props) => {
+  const { darkMode } = useContext(GlobalContext);
   return (
-    <SkeletonTheme>
-      <SkeletonCardWrapper>
+    <SkeletonCardWrapper>
+      <SkeletonTheme color={darkMode ? "#3A3B3C" : ""}>
         <Skeleton className="skeleton-brand" />
         <Skeleton className="skeleton-img" />
         <Skeleton className="skeleton-model" />
         <Skeleton className="skeleton-price" />
-      </SkeletonCardWrapper>
-    </SkeletonTheme>
+      </SkeletonTheme>
+    </SkeletonCardWrapper>
   );
 };
 

@@ -53,7 +53,7 @@ const ComponentDetailsWrapper = styled.div`
     position: relative;
     width: 100%;
     height: 250px;
-    background: ${(props) => props.theme.white};
+    background: ${(props) => props.theme.gray3};
     display: flex;
     align-items: center;
     justify-content: center;

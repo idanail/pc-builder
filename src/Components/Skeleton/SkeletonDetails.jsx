@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 
 // npm imports
 import styled, { withTheme } from "styled-components";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+
+// context imports
+import { GlobalContext } from "../../Context/GlobalContext";
 
 // styled-components
 const SkeletonDetailsWrapper = styled.div`
@@ -22,12 +25,15 @@ const SkeletonDetailsWrapper = styled.div`
 // component
 
 const SkeletonDetails = (props) => {
+  const { darkMode } = useContext(GlobalContext);
   return (
     <SkeletonDetailsWrapper>
-      <SkeletonTheme color={"white"}>
+      <SkeletonTheme color={darkMode ? "#3A3B3C" : "white"}>
         <Skeleton className="skeleton-details" />
       </SkeletonTheme>
-      <Skeleton className="skeleton-btn" />
+      <SkeletonTheme color={darkMode ? "#56585A" : ""}>
+        <Skeleton className="skeleton-btn" />
+      </SkeletonTheme>
     </SkeletonDetailsWrapper>
   );
 };

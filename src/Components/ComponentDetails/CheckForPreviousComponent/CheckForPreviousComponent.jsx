@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 // npm imports
-import styled from "styled-components";
+import styled, { withTheme } from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // component
-const CheckForPreviousComponent = ({ open, handleClose, category }) => {
+const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
   const myItems = JSON.parse(localStorage.getItem("myItems"));
 
   const classes = useStyles();
@@ -81,7 +81,10 @@ const CheckForPreviousComponent = ({ open, handleClose, category }) => {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper}>
+          <div
+            className={classes.paper}
+            style={{ backgroundColor: theme.gray3 }}
+          >
             <Text24 className={classes.modalTitle} id="transition-modal-title">
               Note:
             </Text24>
@@ -1048,4 +1051,4 @@ const CheckForPreviousComponent = ({ open, handleClose, category }) => {
   );
 };
 
-export default CheckForPreviousComponent;
+export default withTheme(CheckForPreviousComponent);
