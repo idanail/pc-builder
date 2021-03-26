@@ -42,6 +42,9 @@ const MyItemsWrapper = styled.div`
       .checked {
         flex-basis: 20%;
         margin-right: 10px;
+        svg {
+          color: ${(props) => props.theme.black};
+        }
       }
       .component-name {
         flex-basis: 80%;
