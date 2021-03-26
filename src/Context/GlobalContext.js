@@ -38,7 +38,16 @@ export const GlobalContextProvider = (props) => {
   const [scrollToTopActive, setScrollToTopActive] = useState(false);
   const [searchBarActive, setSearchBarActive] = useState(false);
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(getMode);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+  }, [darkMode]);
+
+  function getMode() {
+    const savedMode = JSON.parse(localStorage.getItem("darkMode"));
+    return savedMode || false;
+  }
 
   let filtered = [...mainData[route]];
 
@@ -368,6 +377,15 @@ export const GlobalContextProvider = (props) => {
       ? setCurrentObj({ purpose: clickedPurpose })
       : setCurrentObj({});
   };
+
+  // useEffect(() => {
+  //   if (localStorage.getItem("darkMode")) {
+  //     setDarkMode(localStorage.getItem("darkMode"));
+  //   } else {
+  //     localStorage.setItem("darkMode", false);
+  //     setDarkMode(false);
+  //   }
+  // }, [darkMode]);
 
   const globalState = {
     mainData,

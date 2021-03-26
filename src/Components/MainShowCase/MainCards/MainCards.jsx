@@ -2,6 +2,7 @@ import React from "react";
 
 // npm imports
 import styled from "styled-components";
+import { Text17 } from "../../../Assets/Text/Text";
 
 // consts imports
 
@@ -12,11 +13,9 @@ import Card from "./Card/Card";
 // styled-components
 const MainCardsWrapper = styled.div`
   width: 90%;
+  color: ${(props) => props.theme.black};
   padding: 30px 0 80px;
   margin: 0 auto;
-  // display: flex;
-  // flex-wrap: wrap;
-  // flex-direction: row;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 40px 20px;
@@ -29,9 +28,11 @@ const MainCardsWrapper = styled.div`
 const MainCards = ({ data, name }) => {
   return (
     <MainCardsWrapper>
-      {data && data.length === 0
-        ? "No results found."
-        : data && data.map((el, i) => <Card key={i} el={el} name={name} />)}
+      {data && data.length === 0 ? (
+        <Text17>No results found.</Text17>
+      ) : (
+        data && data.map((el, i) => <Card key={i} el={el} name={name} />)
+      )}
     </MainCardsWrapper>
   );
 };

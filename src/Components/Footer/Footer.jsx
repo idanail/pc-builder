@@ -95,17 +95,25 @@ const FooterWrapper = styled.div`
     position: relative;
     transition: 0.2s ease-in;
     .search-icon {
+      display: flex;
+      align-items: center;
       svg {
         font-size: 27px;
       }
     }
     .info {
+      display: flex;
+      align-items: center;
       svg {
         font-size: 27px;
+      }
+      .moon-icon {
+        transform: rotate(30deg);
       }
     }
     .burger-menu {
       display: flex;
+      align-items: center;
       flex-direction: column;
       span {
         width: 26px;
@@ -136,8 +144,8 @@ const Footer = (props) => {
     setSearchBarActive,
     mobileMenuActive,
     setMobileMenuActive,
-    darkMode,
     setDarkMode,
+    darkMode,
   } = useContext(GlobalContext);
 
   useEffect(() => {
@@ -200,7 +208,11 @@ const Footer = (props) => {
             setDarkMode(!darkMode);
           }}
         >
-          {darkMode ? <Brightness7Icon /> : <Brightness3Icon />}
+          {darkMode ? (
+            <Brightness7Icon />
+          ) : (
+            <Brightness3Icon className="moon-icon" />
+          )}
         </div>
         <div
           className="burger-menu"

@@ -49,7 +49,7 @@ const MainShowCaseWrapper = styled.div`
   .scroll-to-top {
     position: fixed;
     left: 22%;
-    bottom: 8px;
+    bottom: 6px;
     transform: translateX(-25%);
     width: 50px;
     height: 50px;
@@ -63,9 +63,9 @@ const MainShowCaseWrapper = styled.div`
     border-radius: 50%;
     color: ${(props) => props.theme.white};
     background-color: ${(props) => props.theme.red};
-    -webkit-box-shadow: 0px 0px 57px -1px rgba(255, 255, 255, 1);
+    /* -webkit-box-shadow: 0px 0px 57px -1px rgba(255, 255, 255, 1);
     -moz-box-shadow: 0px 0px 57px -1px rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 57px -1px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 57px -1px rgba(255, 255, 255, 1); */
 
     svg {
       color: ${(props) => props.theme.white};

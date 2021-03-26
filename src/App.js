@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 //Npm imports
 import { Router, LocationProvider } from "@reach/router";
@@ -23,6 +23,7 @@ import { dark } from "@material-ui/core/styles/createPalette";
 
 function App() {
   const { darkMode } = useContext(GlobalContext);
+
   return (
     <div className="App">
       <LocationProvider>

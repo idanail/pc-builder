@@ -34,7 +34,6 @@ const NavBarWrapper = styled.div`
         color: ${(props) => props.theme.amountText};
         font-size: ${(props) => props.theme.extraSmallText};
       }
-      opacity: 0.5;
       padding: 0 4px;
       left: 65%;
       top: -30%;

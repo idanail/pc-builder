@@ -8,12 +8,14 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 
 // consts imports
+import { Paths } from "../../../Consts/Paths";
 
 // context imports
 import { GlobalContext } from "../../../Context/GlobalContext";
 
 // npm text imports
 import { Text24, Text20 } from "../../../Assets/Text/Text";
+import { Link } from "@reach/router";
 
 // component imports
 
@@ -93,9 +95,18 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                 // CPU Cooler
                 category === "CPU Cooler" ? (
                   myItems["Processor"].length === 0 ? (
-                    <Text20 className={classes.marginBSmall}>
-                      Please add a Processor.
-                    </Text20>
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[0]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Processor.
+                      </Text20>
+                    </Link>
                   ) : (
                     ""
                   )
@@ -109,10 +120,28 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Processor</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[0]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Processor</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -132,13 +161,40 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Processor</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[0]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Processor</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -150,17 +206,57 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
+                  ) : myItems["CPU Cooler"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[1]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a CPU Cooler.
+                      </Text20>
+                    </Link>
                   ) : (
-                    <Text20 className={classes.marginBSmall}>
-                      Please add a Motherboard.
-                    </Text20>
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[2]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Motherboard.
+                      </Text20>
+                    </Link>
                   )
                 ) : // RAM Memory
                 category === "RAM Memory" ? (
@@ -174,16 +270,52 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Processor</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[0]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Processor</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -196,13 +328,40 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -214,17 +373,90 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[1]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a CPU Cooler.
+                      </Text20>
+                    </Link>
                   ) : (
-                    <Text20 className={classes.marginBSmall}>
-                      Please add a Graphic Card.
-                    </Text20>
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[3]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Graphic Card.
+                      </Text20>
+                    </Link>
                   )
                 ) : // SSD
                 category === "SSD" ? (
@@ -239,19 +471,64 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Processor</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[0]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Processor</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -265,16 +542,52 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -287,13 +600,152 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -305,17 +757,70 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
+                  ) : myItems["CPU Cooler"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[1]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a CPU Cooler.
+                      </Text20>
+                    </Link>
+                  ) : myItems["Graphic Card"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[3]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Graphic Card.
+                      </Text20>
+                    </Link>
                   ) : (
-                    <Text20 className={classes.marginBSmall}>
-                      Please add a RAM Memory.
-                    </Text20>
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[4]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a RAM Memory.
+                      </Text20>
+                    </Link>
                   )
                 ) : // Hard Drive
                 category === "Hard Drive" ? (
@@ -331,22 +836,76 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Processor</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[0]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Processor</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -361,19 +920,64 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -387,16 +991,203 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -409,13 +1200,139 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -427,13 +1344,136 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[1]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a CPU Cooler.
+                      </Text20>
+                    </Link>
+                  ) : myItems["Graphic Card"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[3]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Graphic Card.
+                      </Text20>
+                    </Link>
+                  ) : myItems["RAM Memory"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[4]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a RAM Memory.
+                      </Text20>
+                    </Link>
                   ) : (
                     <Text20 className={classes.marginBSmall}>
                       Please add an SSD.
@@ -454,25 +1494,88 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Processor</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[0]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Processor</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -488,22 +1591,76 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -518,19 +1675,372 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -544,16 +2054,466 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -566,13 +2526,337 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -584,17 +2868,96 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
+                  ) : myItems["CPU Cooler"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[1]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a CPU Cooler.
+                      </Text20>
+                    </Link>
+                  ) : myItems["Graphic Card"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[3]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Graphic Card.
+                      </Text20>
+                    </Link>
+                  ) : myItems["RAM Memory"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[4]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a RAM Memory.
+                      </Text20>
+                    </Link>
+                  ) : myItems["SSD"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[5]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a SSD.
+                      </Text20>
+                    </Link>
                   ) : (
-                    <Text20 className={classes.marginBSmall}>
-                      Please add a Hard Drive.
-                    </Text20>
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[6]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Hard Drive.
+                      </Text20>
+                    </Link>
                   )
                 ) : // Power Supply
                 category === "Power Supply" ? (
@@ -612,28 +2975,100 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Processor</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[0]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Processor</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -650,25 +3085,88 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -684,22 +3182,521 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -714,19 +3711,890 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -740,16 +4608,926 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -762,13 +5540,502 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -780,17 +6047,109 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
+                  ) : myItems["CPU Cooler"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[1]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a CPU Cooler.
+                      </Text20>
+                    </Link>
+                  ) : myItems["Graphic Card"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[3]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Graphic Card.
+                      </Text20>
+                    </Link>
+                  ) : myItems["RAM Memory"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[4]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a RAM Memory.
+                      </Text20>
+                    </Link>
+                  ) : myItems["SSD"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[5]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a SSD.
+                      </Text20>
+                    </Link>
+                  ) : myItems["Hard Drive"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[6]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Hard Drive.
+                      </Text20>
+                    </Link>
                   ) : (
-                    <Text20 className={classes.marginBSmall}>
-                      Please add an Optical Drive.
-                    </Text20>
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[7]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add an Optical Drive.
+                      </Text20>
+                    </Link>
                   )
                 ) : // Case
                 category === "Case" ? (
@@ -809,31 +6168,112 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Processor</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[0]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Processor</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Power Supply</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -851,28 +6291,793 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>CPU Cooler</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Power Supply</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -889,25 +7094,88 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Motherboard</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[2]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Motherboard</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Power Supply</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -923,22 +7191,1516 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Graphic Card</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Power Supply</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -953,19 +8715,2070 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>RAM Memory</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Power Supply</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -979,16 +10792,1616 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>SSD</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Power Supply</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -1001,13 +12414,700 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Hard Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Power Supply</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>CPU Cooler</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Graphic Card</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>RAM Memory</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["SSD"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["SSD"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>SSD</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Hard Drive"].length === 0 &&
+                    myItems["Optical Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Hard Drive</Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
@@ -1019,17 +13119,122 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </Text20>
                       <ul className="modal-ul">
                         <li>
-                          <Text20>Optical Drive</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[7]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Optical Drive</Text20>
+                          </Link>
                         </li>
                         <li>
-                          <Text20>Power Supply</Text20>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20>Power Supply</Text20>
+                          </Link>
                         </li>
                       </ul>
                     </>
+                  ) : myItems["CPU Cooler"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[1]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a CPU Cooler.
+                      </Text20>
+                    </Link>
+                  ) : myItems["Graphic Card"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[3]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Graphic Card.
+                      </Text20>
+                    </Link>
+                  ) : myItems["RAM Memory"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[4]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a RAM Memory.
+                      </Text20>
+                    </Link>
+                  ) : myItems["SSD"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[5]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a SSD.
+                      </Text20>
+                    </Link>
+                  ) : myItems["Hard Drive"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[6]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Hard Drive.
+                      </Text20>
+                    </Link>
+                  ) : myItems["Optical Drive"].length === 0 ? (
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[7]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add an Optical Drive.
+                      </Text20>
+                    </Link>
                   ) : (
-                    <Text20 className={classes.marginBSmall}>
-                      Please add a Power Supply.
-                    </Text20>
+                    <Link
+                      to={Paths.paths.main.replace(
+                        "{COMPONENT}",
+                        Object.keys(myItems)[8]
+                          .replace(" ", "_")
+                          .toLocaleLowerCase()
+                      )}
+                    >
+                      <Text20 className={classes.marginBSmall}>
+                        Please add a Power Supply.
+                      </Text20>
+                    </Link>
                   )
                 ) : (
                   // End
