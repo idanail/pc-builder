@@ -5,6 +5,8 @@ import styled from "styled-components";
 import TuneIcon from "@material-ui/icons/Tune";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import { useLocation } from "@reach/router";
+import SearchIcon from "@material-ui/icons/Search";
+
 //Component imports
 import NavBar from "../NavBar/NavBar";
 import MainTitle from "./MainTitle/MainTitle";
@@ -17,15 +19,20 @@ import { Text17 } from "../../Assets/Text/Text";
 // context imports
 import { GlobalContext } from "../../Context/GlobalContext";
 import FilterSelect from "./MainFilter/FilterSelect/FilterSelect";
+import SearchBar from "../Footer/SearchBar/SearchBar";
 
 //styled-components
 const MainShowCaseWrapper = styled.div`
   .sticky-wrapper {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: -1px;
     background-color: ${(props) => props.theme.main_gray};
     padding-top: 10px;
+    /* z-index: 5; */
+    .search-bar-wrapper {
+      display: none;
+    }
   }
 
   .filter-wrapper {
@@ -34,6 +41,14 @@ const MainShowCaseWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .filter-icon-wrapper {
+      display: flex;
+      align-items: center;
+      .filter-text {
+        margin-left: 10px;
+      }
+    }
 
     .recomended {
       color: ${(props) => props.theme.text_gray};
@@ -70,6 +85,32 @@ const MainShowCaseWrapper = styled.div`
     svg {
       color: ${(props) => props.theme.white};
       font-size: ${(props) => props.theme.iconSize};
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .main-title-wrapper {
+      display: none;
+    }
+    .sticky-wrapper {
+      .search-bar-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 40%;
+        .search-icon {
+          position: absolute;
+          right: 2px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+          svg {
+            color: #d6d6d6;
+            font-size: ${(props) => props.theme.iconSmallSize};
+          }
+        }
+      }
     }
   }
 `;
@@ -190,16 +231,25 @@ const MainShowCase = () => {
 
   return (
     <MainShowCaseWrapper scrollToTopActive={scrollToTopActive}>
-      <NavBar />
-      <MainTitle name={currentComponent} />
+      <NavBar currentComponent={currentComponent} />
+      <div className="main-title-wrapper">
+        <MainTitle name={currentComponent} />
+      </div>
       <div className="sticky-wrapper">
         <div className="filter-wrapper">
+          <div className="filter-icon-wrapper" onClick={handleOpen}>
+            <TuneIcon />
+            <Text17 className="filter-text">Filter</Text17>
+          </div>
+          <div className="search-bar-wrapper">
+            <SearchBar />
+            <div className="search-icon">
+              <SearchIcon />
+            </div>
+          </div>
           <Text17 className="recomended">
             Sort by: <FilterSelect />
           </Text17>
-          <div onClick={handleOpen}>
-            <TuneIcon />
-          </div>
         </div>
         <hr />
       </div>

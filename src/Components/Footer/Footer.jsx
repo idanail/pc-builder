@@ -4,8 +4,7 @@ import React, { useContext } from "react";
 import styled, { css, withTheme } from "styled-components";
 import { Link } from "@reach/router";
 import SearchIcon from "@material-ui/icons/Search";
-import Brightness3Icon from "@material-ui/icons/Brightness3";
-import Brightness7Icon from "@material-ui/icons/Brightness7";
+
 // consts imports
 import { Paths } from "../../Consts/Paths";
 
@@ -14,9 +13,12 @@ import { Heading20 } from "../../Assets/Text/Text";
 
 // context imports
 import { GlobalContext } from "../../Context/GlobalContext";
+
 // component imports
 import SearchBar from "./SearchBar/SearchBar";
 import { useEffect } from "react";
+import MobileMenu from "./MobileMenu/MobileMenu";
+import DarkModeIcon from "./DarkModeIcon/DarkModeIcon";
 
 // styled-components
 const FooterWrapper = styled.div`
@@ -50,38 +52,6 @@ const FooterWrapper = styled.div`
     }
   }
 
-  .mobile-menu {
-    z-index: -1;
-    .navigation-links {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 50px;
-      width: 100%;
-      height: 100vh;
-      position: fixed;
-      left: 0;
-      bottom: ${(props) => (props.mobileMenuActive ? "0%" : "-110%")};
-      background-color: ${(props) => props.theme.main_gray};
-      ${(props) =>
-        props.mobileMenuActive &&
-        css`
-          transition: bottom 0.3s ease-in-out;
-        `}
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-center;
-      text-align: center;
-      li {
-        margin-bottom: 15px;
-      }
-      h5 {
-        padding: ${(props) => (props.mobileMenuActive ? "8px 15px" : "15px 0")};
-      }
-    }
-  }
-
   .right-wrapper {
     display: flex;
     align-items: center;
@@ -107,9 +77,6 @@ const FooterWrapper = styled.div`
       svg {
         font-size: 27px;
       }
-      .moon-icon {
-        transform: rotate(30deg);
-      }
     }
     .burger-menu {
       display: flex;
@@ -132,20 +99,19 @@ const FooterWrapper = styled.div`
       }
     }
   }
+
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
 `;
 // component
 
 const Footer = (props) => {
   const {
-    mainData,
-    setCurrentObj,
-    clickedPurpose,
     searchBarActive,
     setSearchBarActive,
     mobileMenuActive,
     setMobileMenuActive,
-    setDarkMode,
-    darkMode,
   } = useContext(GlobalContext);
 
   useEffect(() => {
@@ -153,38 +119,11 @@ const Footer = (props) => {
   }, [mobileMenuActive]);
 
   return (
-    <FooterWrapper
-      mobileMenuActive={mobileMenuActive}
-      searchBarActive={searchBarActive}
-      className="footer"
-    >
+    <FooterWrapper searchBarActive={searchBarActive} className="footer">
       <div className="search-bar">
         <SearchBar />
       </div>
-      <div className="mobile-menu">
-        <ul className="navigation-links">
-          {mainData &&
-            Object.keys(mainData).map((el, i) => (
-              <li key={i}>
-                <Link
-                  onClick={() => {
-                    clickedPurpose.length > 0
-                      ? setCurrentObj({ purpose: clickedPurpose })
-                      : setCurrentObj({});
-
-                    setMobileMenuActive(false);
-                  }}
-                  to={Paths.paths.main.replace(
-                    "{COMPONENT}",
-                    el.replace(" ", "_").toLocaleLowerCase()
-                  )}
-                >
-                  <Heading20>{el.toUpperCase()}</Heading20>
-                </Link>
-              </li>
-            ))}
-        </ul>
-      </div>
+      <MobileMenu />
       <div className="right-wrapper">
         <div
           className="search-icon"
@@ -193,27 +132,12 @@ const Footer = (props) => {
               return;
             } else {
               setSearchBarActive(!searchBarActive);
-
-              // window.pageYOffset > 600
-              //   ? setScrollToTopActive(!scrollToTopActive)
-              //   : setScrollToTopActive(false);
             }
           }}
         >
           <SearchIcon />
         </div>
-        <div
-          className="info"
-          onClick={() => {
-            setDarkMode(!darkMode);
-          }}
-        >
-          {darkMode ? (
-            <Brightness7Icon />
-          ) : (
-            <Brightness3Icon className="moon-icon" />
-          )}
-        </div>
+        <DarkModeIcon />
         <div
           className="burger-menu"
           onClick={() => {
