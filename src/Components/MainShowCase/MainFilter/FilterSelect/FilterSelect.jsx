@@ -12,6 +12,7 @@ import { GlobalContext } from "../../../../Context/GlobalContext";
 
 // styled-components
 const FilterSelectWrapper = styled.select`
+  cursor: pointer;
   font-size: ${(props) => props.theme.normalText};
   border: none;
   background: unset;

@@ -20,7 +20,11 @@ const MainCardsWrapper = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 40px 20px;
   @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  @media (min-width: 1024px) {
+    width: calc(95% - 238px);
+    margin: 0 auto;
   }
 `;
 // component

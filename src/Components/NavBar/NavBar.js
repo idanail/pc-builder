@@ -52,13 +52,17 @@ const NavBarWrapper = styled.div`
   }
 
   @media only screen and (min-width: 1024px) {
+    width: 95%;
     .nav-bar {
       width: 100%;
+      margin: 10px auto 40px;
       display: flex;
-      justify-content: space-between;
+      justify-content: ${(props) =>
+        props.componentSelectorActive ? " space-between" : "flex-end"};
       align-items: center;
       .main-title-wrapper {
-        display: flex;
+        display: ${(props) =>
+          props.componentSelectorActive ? "flex" : "none"};
         justify-content: space-between;
         width: 240px;
         cursor: pointer;
@@ -82,11 +86,16 @@ const NavBarWrapper = styled.div`
       }
       .icons-wrapper {
         display: flex;
+        .nav-bar-amount {
+          left: 99%;
+          top: -30%;
+        }
       }
-      svg {
+      /* svg {
         margin: 10px auto 40px;
-      }
+      } */
       .dark-mode-icon {
+        cursor: pointer;
         display: flex;
         margin-right: 20px;
       }
@@ -101,6 +110,7 @@ const NavBar = ({ currentComponent }) => {
     setSearchBarActive,
     mobileMenuActive,
     setMobileMenuActive,
+    componentSelectorActive,
   } = useContext(GlobalContext);
 
   useEffect(() => {
@@ -108,7 +118,7 @@ const NavBar = ({ currentComponent }) => {
   }, [mobileMenuActive]);
 
   return (
-    <NavBarWrapper>
+    <NavBarWrapper componentSelectorActive={componentSelectorActive}>
       <div className="nav-bar">
         <div
           className="main-title-wrapper"
@@ -130,12 +140,12 @@ const NavBar = ({ currentComponent }) => {
           <Link to={Paths.paths.myItems}>
             <ShoppingCartIcon />
           </Link>
+          {Object.values(myItems).flat().length > 0 && (
+            <div className="nav-bar-amount">
+              <Text17>{Object.values(myItems).flat().length}</Text17>
+            </div>
+          )}
         </div>
-        {Object.values(myItems).flat().length > 0 && (
-          <div className="nav-bar-amount">
-            <Text17>{Object.values(myItems).flat().length}</Text17>
-          </div>
-        )}
       </div>
     </NavBarWrapper>
   );

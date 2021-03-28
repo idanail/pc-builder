@@ -138,11 +138,52 @@ const ComponentDetailsWrapper = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1024px) {
+    .img-and-details-wrapper {
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .details-img-wrapper {
+        flex: 1;
+        height: 350px;
+        .details-img {
+          .add-to-cart {
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            bottom: -8%;
+          }
+          box-shadow: 0 5.4px 5.3px rgba(0, 0, 0, 0.024),
+            0 18.1px 17.9px rgba(0, 0, 0, 0.036),
+            0 81px 80px rgba(0, 0, 0, 0.06);
+
+          height: 100%;
+          border-radius: 15px;
+          img {
+            width: 85%;
+            object-fit: contain;
+          }
+        }
+      }
+      .details {
+        flex: 1;
+        .details-wrapper {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
 `;
 // component
 
 const ComponentDetails = (props) => {
-  const { addItem, setSearchBarActive } = useContext(GlobalContext);
+  const {
+    addItem,
+    setSearchBarActive,
+    setComponentSelectorActive,
+  } = useContext(GlobalContext);
   const [prevUrl, setPrevUrl] = useState(useParams());
   const [onLoaded, setOnLoaded] = useState(false);
 
@@ -207,6 +248,7 @@ const ComponentDetails = (props) => {
   useEffect(() => {
     if (currentObj) {
       setSearchBarActive(false);
+      setComponentSelectorActive(false);
     }
   }, [currentObj]);
 
@@ -219,173 +261,182 @@ const ComponentDetails = (props) => {
       <NavBar />
 
       {!onLoaded && <SkeletonDetails />}
-      <div className={!onLoaded ? "d-hide" : "details-img"}>
-        <img
-          onLoad={handleOnLoad}
-          src={`/img/${route.replace(" ", "-").toLowerCase()}/${img}`}
-          alt=""
-        />
-        <button
-          className="add-to-cart"
-          disabled={
-            route === "RAM Memory"
-              ? myItems["Motherboard"].length === 1 &&
-                myItems[route].length >= myItems.Motherboard[0].slots
-              : route === "SSD" || route === "Hard Drive"
-              ? myItems[route].length >= 2
-              : myItems[route].length >= 1
-          }
-          onClick={() => {
-            // CPU Cooler
-            route === "CPU Cooler"
-              ? myItems["Processor"].length === 1
-                ? addItem(currentObj[0])
-                : handleOpen()
-              : // Motherboard
-              route === "Motherboard"
-              ? myItems["Processor"].length === 1 &&
-                myItems["CPU Cooler"].length === 1
-                ? addItem(currentObj[0])
-                : handleOpen()
-              : // Graphic Card
-              route === "Graphic Card"
-              ? myItems["Processor"].length === 1 &&
-                myItems["CPU Cooler"].length === 1 &&
-                myItems["Motherboard"].length === 1
-                ? addItem(currentObj[0])
-                : handleOpen()
-              : // RAM Memory
-              route === "RAM Memory"
-              ? myItems["Processor"].length === 1 &&
-                myItems["CPU Cooler"].length === 1 &&
-                myItems["Motherboard"].length === 1 &&
-                myItems["Graphic Card"].length === 1
-                ? addItem(currentObj[0])
-                : handleOpen()
-              : // SSD
-              route === "SSD"
-              ? myItems["Processor"].length === 1 &&
-                myItems["CPU Cooler"].length === 1 &&
-                myItems["Motherboard"].length === 1 &&
-                myItems["Graphic Card"].length === 1 &&
-                myItems["RAM Memory"].length >= 1
-                ? addItem(currentObj[0])
-                : handleOpen()
-              : // Hard Drive
-              route === "Hard Drive"
-              ? myItems["Processor"].length === 1 &&
-                myItems["CPU Cooler"].length === 1 &&
-                myItems["Motherboard"].length === 1 &&
-                myItems["Graphic Card"].length === 1 &&
-                myItems["RAM Memory"].length >= 1 &&
-                myItems["SSD"].length >= 1
-                ? addItem(currentObj[0])
-                : handleOpen()
-              : // Optical Drive
-              route === "Optical Drive"
-              ? myItems["Processor"].length === 1 &&
-                myItems["CPU Cooler"].length === 1 &&
-                myItems["Motherboard"].length === 1 &&
-                myItems["Graphic Card"].length === 1 &&
-                myItems["RAM Memory"].length >= 1 &&
-                myItems["SSD"].length >= 1 &&
-                myItems["Hard Drive"].length >= 1
-                ? addItem(currentObj[0])
-                : handleOpen()
-              : // Power Supply
-              route === "Power Supply"
-              ? myItems["Processor"].length === 1 &&
-                myItems["CPU Cooler"].length === 1 &&
-                myItems["Motherboard"].length === 1 &&
-                myItems["Graphic Card"].length === 1 &&
-                myItems["RAM Memory"].length >= 1 &&
-                myItems["SSD"].length >= 1 &&
-                myItems["Hard Drive"].length >= 1 &&
-                myItems["Optical Drive"].length === 1
-                ? addItem(currentObj[0])
-                : handleOpen()
-              : // Case
-              route === "Case"
-              ? myItems["Processor"].length === 1 &&
-                myItems["CPU Cooler"].length === 1 &&
-                myItems["Motherboard"].length === 1 &&
-                myItems["Graphic Card"].length === 1 &&
-                myItems["RAM Memory"].length >= 1 &&
-                myItems["SSD"].length >= 1 &&
-                myItems["Hard Drive"].length >= 1 &&
-                myItems["Optical Drive"].length === 1 &&
-                myItems["Power Supply"].length === 1
-                ? addItem(currentObj[0])
-                : handleOpen()
-              : // Else
-                addItem(currentObj[0]);
-          }}
-        >
-          <AddShoppingCartIcon />
-        </button>
-      </div>
-      <div className="details-model">
-        <Text17 className="brand-detail">{brand}</Text17>
-        <Text22>{model}</Text22>
-      </div>
-      <div className="price-and-rating">
-        <div className="price">
-          <Text17>${price}</Text17>
+      <div className="img-and-details-wrapper">
+        <div className="details-img-wrapper">
+          <div className={!onLoaded ? "d-hide" : "details-img"}>
+            <img
+              onLoad={handleOnLoad}
+              src={`/img/${route.replace(" ", "-").toLowerCase()}/${img}`}
+              alt=""
+            />
+            <button
+              className="add-to-cart"
+              disabled={
+                route === "RAM Memory"
+                  ? myItems["Motherboard"].length === 1 &&
+                    myItems[route].length >= myItems.Motherboard[0].slots
+                  : route === "SSD" || route === "Hard Drive"
+                  ? myItems[route].length >= 2
+                  : myItems[route].length >= 1
+              }
+              onClick={() => {
+                // CPU Cooler
+                route === "CPU Cooler"
+                  ? myItems["Processor"].length === 1
+                    ? addItem(currentObj[0])
+                    : handleOpen()
+                  : // Motherboard
+                  route === "Motherboard"
+                  ? myItems["Processor"].length === 1 &&
+                    myItems["CPU Cooler"].length === 1
+                    ? addItem(currentObj[0])
+                    : handleOpen()
+                  : // Graphic Card
+                  route === "Graphic Card"
+                  ? myItems["Processor"].length === 1 &&
+                    myItems["CPU Cooler"].length === 1 &&
+                    myItems["Motherboard"].length === 1
+                    ? addItem(currentObj[0])
+                    : handleOpen()
+                  : // RAM Memory
+                  route === "RAM Memory"
+                  ? myItems["Processor"].length === 1 &&
+                    myItems["CPU Cooler"].length === 1 &&
+                    myItems["Motherboard"].length === 1 &&
+                    myItems["Graphic Card"].length === 1
+                    ? addItem(currentObj[0])
+                    : handleOpen()
+                  : // SSD
+                  route === "SSD"
+                  ? myItems["Processor"].length === 1 &&
+                    myItems["CPU Cooler"].length === 1 &&
+                    myItems["Motherboard"].length === 1 &&
+                    myItems["Graphic Card"].length === 1 &&
+                    myItems["RAM Memory"].length >= 1
+                    ? addItem(currentObj[0])
+                    : handleOpen()
+                  : // Hard Drive
+                  route === "Hard Drive"
+                  ? myItems["Processor"].length === 1 &&
+                    myItems["CPU Cooler"].length === 1 &&
+                    myItems["Motherboard"].length === 1 &&
+                    myItems["Graphic Card"].length === 1 &&
+                    myItems["RAM Memory"].length >= 1 &&
+                    myItems["SSD"].length >= 1
+                    ? addItem(currentObj[0])
+                    : handleOpen()
+                  : // Optical Drive
+                  route === "Optical Drive"
+                  ? myItems["Processor"].length === 1 &&
+                    myItems["CPU Cooler"].length === 1 &&
+                    myItems["Motherboard"].length === 1 &&
+                    myItems["Graphic Card"].length === 1 &&
+                    myItems["RAM Memory"].length >= 1 &&
+                    myItems["SSD"].length >= 1 &&
+                    myItems["Hard Drive"].length >= 1
+                    ? addItem(currentObj[0])
+                    : handleOpen()
+                  : // Power Supply
+                  route === "Power Supply"
+                  ? myItems["Processor"].length === 1 &&
+                    myItems["CPU Cooler"].length === 1 &&
+                    myItems["Motherboard"].length === 1 &&
+                    myItems["Graphic Card"].length === 1 &&
+                    myItems["RAM Memory"].length >= 1 &&
+                    myItems["SSD"].length >= 1 &&
+                    myItems["Hard Drive"].length >= 1 &&
+                    myItems["Optical Drive"].length === 1
+                    ? addItem(currentObj[0])
+                    : handleOpen()
+                  : // Case
+                  route === "Case"
+                  ? myItems["Processor"].length === 1 &&
+                    myItems["CPU Cooler"].length === 1 &&
+                    myItems["Motherboard"].length === 1 &&
+                    myItems["Graphic Card"].length === 1 &&
+                    myItems["RAM Memory"].length >= 1 &&
+                    myItems["SSD"].length >= 1 &&
+                    myItems["Hard Drive"].length >= 1 &&
+                    myItems["Optical Drive"].length === 1 &&
+                    myItems["Power Supply"].length === 1
+                    ? addItem(currentObj[0])
+                    : handleOpen()
+                  : // Else
+                    addItem(currentObj[0]);
+              }}
+            >
+              <AddShoppingCartIcon />
+            </button>
+          </div>
         </div>
-        {rating && (
-          <div className="rating">
-            <div className="progress-bar-wrapper">
-              <Text17>Rating</Text17>
-              <div className="progress-bar">
-                <div className="progress"></div>
+        <div className="details">
+          <div className="details-wrapper">
+            <div className="details-model">
+              <Text17 className="brand-detail">{brand}</Text17>
+              <Text22>{model}</Text22>
+            </div>
+            <div className="price-and-rating">
+              <div className="price">
+                <Text17>${price}</Text17>
               </div>
+              {rating && (
+                <div className="rating">
+                  <div className="progress-bar-wrapper">
+                    <Text17>Rating</Text17>
+                    <div className="progress-bar">
+                      <div className="progress"></div>
+                    </div>
+                  </div>
+                  <div className="rating-num">
+                    <Text17>{rating}</Text17>
+                  </div>
+                </div>
+              )}
             </div>
-            <div className="rating-num">
-              <Text17>{rating}</Text17>
-            </div>
+            {route === "Processor" ? (
+              <>
+                <div className="cores-details">
+                  <div className="left">
+                    <Text17>Cores: {cores}</Text17>
+                    <Text17>Socket: {socket}</Text17>
+                    <Text17>Clock speed: {clockSpeed}</Text17>
+                  </div>
+                  <div>
+                    <Text17>Threads: {threads}</Text17>
+                    <Text17>Turbo speed: {turboSpeed}</Text17>
+                    <Text17>Typical TDP: {powerConsumption} W &sup3;</Text17>
+                  </div>
+                </div>
+                <div className="more-details">
+                  <div></div>
+                </div>
+              </>
+            ) : route === "CPU Cooler" ? (
+              <div className="more-details">
+                <Text17>Type: {type}</Text17>
+                <Text17>Color: {color}</Text17>
+                <Text17>Fan quantity: {fanQuantity}</Text17>
+                <Text17>Fan speed: {fanSpeed}</Text17>
+                <Text17>Fan noise level: {fanNoiseLevel}</Text17>
+                <Text17>Warranty: {warranty}</Text17>
+                <Text17 className="socket">
+                  Sockets:
+                  {socket &&
+                    socket.map((el, i) => <span key={i}> {el}, </span>)}
+                </Text17>
+              </div>
+            ) : route === "Motherboard" ? (
+              <div className="more-details">
+                <Text17>Socket: {socket}</Text17>
+                <Text17>Form factor: {formFactor}</Text17>
+                <Text17>Max capacity: {maxCapacity}</Text17>
+              </div>
+            ) : (
+              <div className=""></div>
+            )}
           </div>
-        )}
+        </div>
       </div>
-      {route === "Processor" ? (
-        <>
-          <div className="cores-details">
-            <div className="left">
-              <Text17>Cores: {cores}</Text17>
-              <Text17>Socket: {socket}</Text17>
-              <Text17>Clock speed: {clockSpeed}</Text17>
-            </div>
-            <div>
-              <Text17>Threads: {threads}</Text17>
-              <Text17>Turbo speed: {turboSpeed}</Text17>
-              <Text17>Typical TDP: {powerConsumption} W &sup3;</Text17>
-            </div>
-          </div>
-          <div className="more-details">
-            <div></div>
-          </div>
-        </>
-      ) : route === "CPU Cooler" ? (
-        <div className="more-details">
-          <Text17>Type: {type}</Text17>
-          <Text17>Color: {color}</Text17>
-          <Text17>Fan quantity: {fanQuantity}</Text17>
-          <Text17>Fan speed: {fanSpeed}</Text17>
-          <Text17>Fan noise level: {fanNoiseLevel}</Text17>
-          <Text17>Warranty: {warranty}</Text17>
-          <Text17 className="socket">
-            Sockets:
-            {socket && socket.map((el, i) => <span key={i}> {el}, </span>)}
-          </Text17>
-        </div>
-      ) : route === "Motherboard" ? (
-        <div className="more-details">
-          <Text17>Socket: {socket}</Text17>
-          <Text17>Form factor: {formFactor}</Text17>
-          <Text17>Max capacity: {maxCapacity}</Text17>
-        </div>
-      ) : (
-        <div className=""></div>
-      )}
       <Footer />
       <CheckForPreviousComponent
         open={open}

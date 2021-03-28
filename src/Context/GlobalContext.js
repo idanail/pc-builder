@@ -39,6 +39,7 @@ export const GlobalContextProvider = (props) => {
   const [searchBarActive, setSearchBarActive] = useState(false);
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
   const [darkMode, setDarkMode] = useState(getMode);
+  const [componentSelectorActive, setComponentSelectorActive] = useState(true);
 
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
@@ -443,6 +444,8 @@ export const GlobalContextProvider = (props) => {
     setMobileMenuActive,
     darkMode,
     setDarkMode,
+    componentSelectorActive,
+    setComponentSelectorActive,
   };
 
   return <Provider value={globalState}>{props.children}</Provider>;

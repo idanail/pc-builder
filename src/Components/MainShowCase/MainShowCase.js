@@ -13,13 +13,14 @@ import MainTitle from "./MainTitle/MainTitle";
 import MainCards from "./MainCards/MainCards";
 import Footer from "../Footer/Footer";
 import MainFilter from "./MainFilter/MainFilter";
-
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
 // npm text imports
 import { Text17 } from "../../Assets/Text/Text";
 // context imports
 import { GlobalContext } from "../../Context/GlobalContext";
 import FilterSelect from "./MainFilter/FilterSelect/FilterSelect";
 import SearchBar from "../Footer/SearchBar/SearchBar";
+import MainFilterInner from "./MainFilter/MainFilterInner/MainFilterInner";
 
 //styled-components
 const MainShowCaseWrapper = styled.div`
@@ -45,12 +46,14 @@ const MainShowCaseWrapper = styled.div`
     .filter-icon-wrapper {
       display: flex;
       align-items: center;
+      cursor: pointer;
       .filter-text {
         margin-left: 10px;
       }
     }
 
     .recomended {
+      /* cursor: pointer; */
       color: ${(props) => props.theme.text_gray};
     }
     svg {
@@ -60,6 +63,7 @@ const MainShowCaseWrapper = styled.div`
   }
   hr {
     border: 1px solid #d6d6d6;
+    margin-bottom: 0;
   }
   .scroll-to-top {
     position: fixed;
@@ -87,12 +91,21 @@ const MainShowCaseWrapper = styled.div`
       font-size: ${(props) => props.theme.iconSize};
     }
   }
+  .filter-content-and-cards-wrapper {
+    .filter-content {
+      display: none;
+    }
+  }
 
   @media only screen and (min-width: 1024px) {
     .main-title-wrapper {
       display: none;
     }
+    .filter-wrapper {
+      width: 95%;
+    }
     .sticky-wrapper {
+      z-index: 2;
       .search-bar-wrapper {
         position: relative;
         display: flex;
@@ -112,6 +125,38 @@ const MainShowCaseWrapper = styled.div`
         }
       }
     }
+    .filter-content-and-cards-wrapper {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-left: ${(props) => (props.filterActive ? "0px" : "-238px")};
+      transition: 0.3s ease-in-out;
+      .filter-content {
+        transition: 0.3s ease-in-out;
+        border-right: 1px solid #d6d6d6;
+        position: sticky;
+
+        height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 25px 26px 0 26px;
+        width: 238px;
+        top: 50px;
+        left: ${(props) => (props.filterActive ? "0" : "-238px")};
+      }
+    }
+    .scroll-to-top {
+      cursor: pointer;
+      left: unset;
+      right: 10%;
+      transform: translateX(-10%);
+      width: 40px;
+      height: 40px;
+      svg {
+        font-size: 25px;
+      }
+    }
   }
 `;
 
@@ -127,7 +172,11 @@ const MainShowCase = () => {
     setScrollToTopActive,
     searchBarActive,
     mobileMenuActive,
+    setComponentSelectorActive,
   } = useContext(GlobalContext);
+
+  const { width } = useWindowDimensions();
+  const [filterActive, setFilterActive] = useState(true);
 
   const currentComponent = Object.keys(mainData)
     .filter(
@@ -135,7 +184,7 @@ const MainShowCase = () => {
         el.replace(" ", "_").toLowerCase() === location.pathname.split("/")[2]
     )
     .toString();
-
+  console.log(currentComponent);
   const myItems = JSON.parse(localStorage.getItem("myItems"));
 
   let currentData;
@@ -174,6 +223,7 @@ const MainShowCase = () => {
     getRoute(currentComponent);
     setCurrentType("");
     setCurrentColor("");
+    setComponentSelectorActive(true);
   }, [currentComponent]);
 
   //Back to top when the scroll button is clicked.
@@ -230,14 +280,23 @@ const MainShowCase = () => {
   }, [mobileMenuActive]);
 
   return (
-    <MainShowCaseWrapper scrollToTopActive={scrollToTopActive}>
+    <MainShowCaseWrapper
+      scrollToTopActive={scrollToTopActive}
+      filterActive={filterActive}
+    >
       <NavBar currentComponent={currentComponent} />
       <div className="main-title-wrapper">
         <MainTitle name={currentComponent} />
       </div>
       <div className="sticky-wrapper">
         <div className="filter-wrapper">
-          <div className="filter-icon-wrapper" onClick={handleOpen}>
+          <div
+            className="filter-icon-wrapper"
+            onClick={() => {
+              setFilterActive(!filterActive);
+              width < 1024 && handleOpen();
+            }}
+          >
             <TuneIcon />
             <Text17 className="filter-text">Filter</Text17>
           </div>
@@ -253,7 +312,13 @@ const MainShowCase = () => {
         </div>
         <hr />
       </div>
-      <MainCards data={currentData} name={currentComponent} />
+      <div className="filter-content-and-cards-wrapper">
+        <div className="filter-content">
+          <MainFilterInner />
+        </div>
+
+        <MainCards data={currentData} name={currentComponent} />
+      </div>
       <Footer />
       <MainFilter
         open={open}

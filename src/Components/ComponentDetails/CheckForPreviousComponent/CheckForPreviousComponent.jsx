@@ -18,9 +18,13 @@ import { Text24, Text20 } from "../../../Assets/Text/Text";
 import { Link } from "@reach/router";
 
 // component imports
-
+import useWindowDimensions from "../../../Hooks/useWindowDimensions";
 // styled-components
-const CheckForPreviousComponentWrapper = styled.div``;
+const CheckForPreviousComponentWrapper = styled.div`
+  .modal-btn {
+    border: 1px solid gray;
+  }
+`;
 
 //Modal
 const useStyles = makeStyles((theme) => ({
@@ -36,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "8px",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    width: "90%",
+    // width: "90%",
   },
   modalTitle: {
     marginTop: "10px",
@@ -59,11 +63,57 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "2px",
     width: "92px",
   },
+  buttons2Light: {
+    background: "none",
+    border: "1px solid #d6d6d6",
+    borderRadius: "25px",
+    marginLeft: "2px",
+    padding: "0",
+    width: "92px",
+    cursor: "pointer",
+    "&:hover": {
+      background: "#F7F7F7",
+      color: "#FD0405",
+      transition: "0.2s ease-in-out",
+    },
+  },
+  buttons2Dark: {
+    background: "none",
+    border: "1px solid #242526",
+    borderRadius: "25px",
+    marginLeft: "2px",
+    padding: "0",
+    width: "92px",
+    cursor: "pointer",
+    "&:hover": {
+      background: "#242526",
+      color: "#FD0405",
+      transition: "0.2s ease-in-out",
+    },
+  },
+  componentText: {
+    marginBottom: "7px",
+    "&:hover": {
+      color: "rgba(29,29,31,.6)",
+      transition: "0.2s ease-in-out",
+    },
+  },
+  buttons2Text: {
+    width: "100%",
+    padding: "3px 15px",
+    "&:hover": {
+      color: "#FD0405",
+      transition: "0.2s ease-in-out",
+    },
+  },
 }));
 
 // component
 const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
+  const { darkMode } = useContext(GlobalContext);
   const myItems = JSON.parse(localStorage.getItem("myItems"));
+
+  const { width } = useWindowDimensions();
 
   const classes = useStyles();
 
@@ -85,7 +135,10 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
         <Fade in={open}>
           <div
             className={classes.paper}
-            style={{ backgroundColor: theme.gray3 }}
+            style={{
+              backgroundColor: theme.gray3,
+              width: width < 1024 ? "90%" : "30%",
+            }}
           >
             <Text24 className={classes.modalTitle} id="transition-modal-title">
               Note:
@@ -128,7 +181,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Processor</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Processor
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -140,7 +197,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -169,7 +230,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Processor</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Processor
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -181,7 +246,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -193,7 +262,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -214,7 +287,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -226,7 +303,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -278,7 +359,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Processor</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Processor
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -290,7 +375,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -302,7 +391,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -314,7 +407,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -336,7 +433,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -348,7 +449,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -360,7 +465,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -381,7 +490,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -393,7 +506,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -414,7 +531,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -426,7 +547,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -479,7 +604,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Processor</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Processor
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -491,7 +620,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -503,7 +636,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -515,7 +652,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -527,7 +668,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -550,7 +695,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -562,7 +711,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -574,7 +727,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -586,7 +743,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -608,7 +769,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -620,7 +785,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -632,7 +801,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -654,7 +827,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -666,7 +843,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -678,7 +859,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -699,7 +884,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -711,7 +900,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -732,7 +925,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -744,7 +941,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -765,7 +966,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -777,7 +982,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -844,7 +1053,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Processor</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Processor
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -856,7 +1069,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -868,7 +1085,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -880,7 +1101,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -892,7 +1117,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -904,7 +1133,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -928,7 +1161,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -940,7 +1177,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -952,7 +1193,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -964,7 +1209,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -976,7 +1225,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -999,7 +1252,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1011,7 +1268,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1023,7 +1284,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1035,7 +1300,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1058,7 +1327,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1070,7 +1343,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1082,7 +1359,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1094,7 +1375,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1116,7 +1401,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1128,7 +1417,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1140,7 +1433,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1162,7 +1459,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1174,7 +1475,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1186,7 +1491,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1208,7 +1517,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1220,7 +1533,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1232,7 +1549,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1253,7 +1574,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1265,7 +1590,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1286,7 +1615,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1298,7 +1631,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1319,7 +1656,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1331,7 +1672,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1352,7 +1697,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1364,7 +1713,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1385,7 +1738,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1397,7 +1754,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1418,7 +1779,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1430,7 +1795,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1502,7 +1871,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Processor</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Processor
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1514,7 +1887,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1526,7 +1903,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1538,7 +1919,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1550,7 +1935,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1562,7 +1951,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1574,7 +1967,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1599,7 +1996,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1611,7 +2012,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1623,7 +2028,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1635,7 +2044,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1647,7 +2060,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1659,7 +2076,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1683,7 +2104,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1695,7 +2120,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1707,7 +2136,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1719,7 +2152,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1731,7 +2168,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1755,7 +2196,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1767,7 +2212,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1779,7 +2228,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1791,7 +2244,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1803,7 +2260,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1826,7 +2287,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1838,7 +2303,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1850,7 +2319,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1862,7 +2335,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1885,7 +2362,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1897,7 +2378,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1909,7 +2394,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1921,7 +2410,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -1944,7 +2437,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1956,7 +2453,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1968,7 +2469,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -1980,7 +2485,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2003,7 +2512,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2015,7 +2528,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2027,7 +2544,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2039,7 +2560,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2062,7 +2587,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2074,7 +2603,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2086,7 +2619,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2098,7 +2635,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2120,7 +2661,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2132,7 +2677,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2144,7 +2693,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2166,7 +2719,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2178,7 +2735,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2190,7 +2751,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2212,7 +2777,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2224,7 +2793,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2236,7 +2809,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2258,7 +2835,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2270,7 +2851,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2282,7 +2867,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2304,7 +2893,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2316,7 +2909,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2328,7 +2925,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2350,7 +2951,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2362,7 +2967,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2374,7 +2983,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2396,7 +3009,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2408,7 +3025,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2420,7 +3041,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2442,7 +3067,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2454,7 +3083,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2466,7 +3099,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2488,7 +3125,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2500,7 +3141,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2512,7 +3157,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2534,7 +3183,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2546,7 +3199,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2558,7 +3215,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2579,7 +3240,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2591,7 +3256,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2612,7 +3281,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2624,7 +3297,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2645,7 +3322,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2657,7 +3338,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2678,7 +3363,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2690,7 +3379,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2711,7 +3404,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2723,7 +3420,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2744,7 +3445,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2756,7 +3461,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2777,7 +3486,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2789,7 +3502,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2810,7 +3527,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2822,7 +3543,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2843,7 +3568,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2855,7 +3584,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2876,7 +3609,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2888,7 +3625,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -2983,7 +3724,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Processor</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Processor
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -2995,7 +3740,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3007,7 +3756,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3019,7 +3772,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3031,7 +3788,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3043,7 +3804,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3055,7 +3820,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3067,7 +3836,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3093,7 +3866,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3105,7 +3882,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3117,7 +3898,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3129,7 +3914,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3141,7 +3930,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3153,7 +3946,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3165,7 +3962,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3190,7 +3991,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3202,7 +4007,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3214,7 +4023,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3226,7 +4039,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3238,7 +4055,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3250,7 +4071,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3275,7 +4100,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3287,7 +4116,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3299,7 +4132,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3311,7 +4148,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3323,7 +4164,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3335,7 +4180,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3359,7 +4208,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3371,7 +4224,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3383,7 +4240,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3395,7 +4256,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3407,7 +4272,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3431,7 +4300,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3443,7 +4316,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3455,7 +4332,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3467,7 +4348,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3479,7 +4364,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3503,7 +4392,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3515,7 +4408,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3527,7 +4424,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3539,7 +4440,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3551,7 +4456,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3575,7 +4484,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3587,7 +4500,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3599,7 +4516,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3611,7 +4532,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3623,7 +4548,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3647,7 +4576,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3659,7 +4592,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3671,7 +4608,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3683,7 +4624,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3695,7 +4640,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3719,7 +4668,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3731,7 +4684,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3743,7 +4700,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3755,7 +4716,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3767,7 +4732,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3790,7 +4759,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3802,7 +4775,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3814,7 +4791,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3826,7 +4807,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3849,7 +4834,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3861,7 +4850,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3873,7 +4866,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3885,7 +4882,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3908,7 +4909,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3920,7 +4925,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3932,7 +4941,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3944,7 +4957,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -3967,7 +4984,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3979,7 +5000,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -3991,7 +5016,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4003,7 +5032,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4026,7 +5059,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4038,7 +5075,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4050,7 +5091,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4062,7 +5107,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4085,7 +5134,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4097,7 +5150,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4109,7 +5166,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4121,7 +5182,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4144,7 +5209,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4156,7 +5225,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4168,7 +5241,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4180,7 +5257,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4203,7 +5284,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4215,7 +5300,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4227,7 +5316,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4239,7 +5332,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4262,7 +5359,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4274,7 +5375,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4286,7 +5391,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4298,7 +5407,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4321,7 +5434,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4333,7 +5450,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4345,7 +5466,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4357,7 +5482,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4380,7 +5509,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4392,7 +5525,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4404,7 +5541,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4416,7 +5557,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4439,7 +5584,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4451,7 +5600,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4463,7 +5616,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4475,7 +5632,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4498,7 +5659,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4510,7 +5675,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4522,7 +5691,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4534,7 +5707,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4557,7 +5734,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4569,7 +5750,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4581,7 +5766,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4593,7 +5782,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4616,7 +5809,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4628,7 +5825,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4640,7 +5841,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4652,7 +5857,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4674,7 +5883,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4686,7 +5899,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4698,7 +5915,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4720,7 +5941,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4732,7 +5957,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4744,7 +5973,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4766,7 +5999,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4778,7 +6015,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4790,7 +6031,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4812,7 +6057,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4824,7 +6073,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4836,7 +6089,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4858,7 +6115,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4870,7 +6131,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4882,7 +6147,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4904,7 +6173,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4916,7 +6189,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4928,7 +6205,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4950,7 +6231,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4962,7 +6247,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -4974,7 +6263,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -4996,7 +6289,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5008,7 +6305,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5020,7 +6321,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5042,7 +6347,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5054,7 +6363,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5066,7 +6379,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5088,7 +6405,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5100,7 +6421,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5112,7 +6437,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5134,7 +6463,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5146,7 +6479,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5158,7 +6495,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5180,7 +6521,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5192,7 +6537,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5204,7 +6553,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5226,7 +6579,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5238,7 +6595,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5250,7 +6611,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5272,7 +6637,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5284,7 +6653,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5296,7 +6669,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5318,7 +6695,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5330,7 +6711,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5342,7 +6727,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5364,7 +6753,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5376,7 +6769,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5388,7 +6785,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5410,7 +6811,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5422,7 +6827,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5434,7 +6843,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5456,7 +6869,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5468,7 +6885,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5480,7 +6901,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5502,7 +6927,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5514,7 +6943,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5526,7 +6959,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5548,7 +6985,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5560,7 +7001,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5572,7 +7017,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5593,7 +7042,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5605,7 +7058,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5626,7 +7083,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5638,7 +7099,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5659,7 +7124,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5671,7 +7140,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5692,7 +7165,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5704,7 +7181,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5725,7 +7206,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5737,7 +7222,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5758,7 +7247,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5770,7 +7263,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5791,7 +7288,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5803,7 +7304,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5824,7 +7329,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5836,7 +7345,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5857,7 +7370,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5869,7 +7386,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5890,7 +7411,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5902,7 +7427,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5923,7 +7452,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5935,7 +7468,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5956,7 +7493,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -5968,7 +7509,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -5989,7 +7534,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6001,7 +7550,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -6022,7 +7575,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6034,7 +7591,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -6055,7 +7616,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6067,7 +7632,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -6176,7 +7745,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Processor</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Processor
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6188,7 +7761,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6200,7 +7777,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6212,7 +7793,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6224,7 +7809,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6236,7 +7825,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6248,7 +7841,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6260,7 +7857,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6272,7 +7873,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -6299,7 +7904,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6311,7 +7920,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6323,7 +7936,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6335,7 +7952,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6347,7 +7968,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6359,7 +7984,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6371,7 +8000,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6383,7 +8016,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -6409,7 +8046,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6421,7 +8062,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6433,7 +8078,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6445,7 +8094,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6457,7 +8110,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6469,7 +8126,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6481,7 +8142,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -6506,7 +8171,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6518,7 +8187,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6530,7 +8203,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6542,7 +8219,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6554,7 +8235,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6566,7 +8251,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -6591,7 +8280,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6603,7 +8296,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6615,7 +8312,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6627,7 +8328,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6639,7 +8344,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6651,7 +8360,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -6676,7 +8389,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6688,7 +8405,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6700,7 +8421,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6712,7 +8437,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6724,7 +8453,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6736,7 +8469,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -6761,7 +8498,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6773,7 +8514,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6785,7 +8530,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6797,7 +8546,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6809,7 +8562,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6821,7 +8578,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -6846,7 +8607,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6858,7 +8623,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6870,7 +8639,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6882,7 +8655,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6894,7 +8671,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6906,7 +8687,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -6931,7 +8716,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6943,7 +8732,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6955,7 +8748,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6967,7 +8764,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6979,7 +8780,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -6991,7 +8796,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7016,7 +8825,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7028,7 +8841,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7040,7 +8857,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7052,7 +8873,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7064,7 +8889,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7076,7 +8905,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7102,7 +8935,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Motherboard</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Motherboard
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7114,7 +8951,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7126,7 +8967,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7138,7 +8983,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7150,7 +8999,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7162,7 +9015,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7174,7 +9031,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7199,7 +9060,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7211,7 +9076,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7223,7 +9092,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7235,7 +9108,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7247,7 +9124,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7259,7 +9140,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7283,7 +9168,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7295,7 +9184,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7307,7 +9200,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7319,7 +9216,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7331,7 +9232,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7355,7 +9260,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7367,7 +9276,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7379,7 +9292,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7391,7 +9308,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7403,7 +9324,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7427,7 +9352,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7439,7 +9368,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7451,7 +9384,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7463,7 +9400,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7475,7 +9416,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7499,7 +9444,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7511,7 +9460,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7523,7 +9476,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7535,7 +9492,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7547,7 +9508,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7571,7 +9536,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7583,7 +9552,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7595,7 +9568,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7607,7 +9584,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7619,7 +9600,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7643,7 +9628,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7655,7 +9644,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7667,7 +9660,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7679,7 +9676,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7691,7 +9692,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7715,7 +9720,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7727,7 +9736,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7739,7 +9752,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7751,7 +9768,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7763,7 +9784,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7787,7 +9812,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7799,7 +9828,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7811,7 +9844,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7823,7 +9860,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7835,7 +9876,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7859,7 +9904,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7871,7 +9920,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7883,7 +9936,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7895,7 +9952,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7907,7 +9968,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -7931,7 +9996,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7943,7 +10012,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7955,7 +10028,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7967,7 +10044,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -7979,7 +10060,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8003,7 +10088,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8015,7 +10104,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8027,7 +10120,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8039,7 +10136,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8051,7 +10152,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8075,7 +10180,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8087,7 +10196,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8099,7 +10212,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8111,7 +10228,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8123,7 +10244,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8147,7 +10272,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8159,7 +10288,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8171,7 +10304,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8183,7 +10320,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8195,7 +10336,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8219,7 +10364,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8231,7 +10380,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8243,7 +10396,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8255,7 +10412,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8267,7 +10428,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8291,7 +10456,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8303,7 +10472,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8315,7 +10488,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8327,7 +10504,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8339,7 +10520,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8363,7 +10548,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8375,7 +10564,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8387,7 +10580,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8399,7 +10596,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8411,7 +10612,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8435,7 +10640,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8447,7 +10656,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8459,7 +10672,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8471,7 +10688,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8483,7 +10704,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8507,7 +10732,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8519,7 +10748,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8531,7 +10764,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8543,7 +10780,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8555,7 +10796,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8579,7 +10824,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8591,7 +10840,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8603,7 +10856,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8615,7 +10872,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8627,7 +10888,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8651,7 +10916,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8663,7 +10932,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8675,7 +10948,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8687,7 +10964,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8699,7 +10980,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8723,7 +11008,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8735,7 +11024,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8747,7 +11040,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8759,7 +11056,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8771,7 +11072,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8794,7 +11099,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8806,7 +11115,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8818,7 +11131,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8830,7 +11147,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8853,7 +11174,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8865,7 +11190,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8877,7 +11206,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8889,7 +11222,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8912,7 +11249,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8924,7 +11265,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8936,7 +11281,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8948,7 +11297,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -8971,7 +11324,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8983,7 +11340,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -8995,7 +11356,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9007,7 +11372,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9030,7 +11399,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9042,7 +11415,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9054,7 +11431,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9066,7 +11447,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9089,7 +11474,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9101,7 +11490,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9113,7 +11506,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9125,7 +11522,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9148,7 +11549,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9160,7 +11565,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9172,7 +11581,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9184,7 +11597,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9207,7 +11624,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9219,7 +11640,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9231,7 +11656,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9243,7 +11672,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9266,7 +11699,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9278,7 +11715,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9290,7 +11731,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9302,7 +11747,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9325,7 +11774,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9337,7 +11790,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9349,7 +11806,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9361,7 +11822,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9384,7 +11849,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9396,7 +11865,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9408,7 +11881,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9420,7 +11897,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9443,7 +11924,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9455,7 +11940,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9467,7 +11956,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9479,7 +11972,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9502,7 +11999,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9514,7 +12015,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9526,7 +12031,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9538,7 +12047,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9561,7 +12074,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9573,7 +12090,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9585,7 +12106,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9597,7 +12122,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9620,7 +12149,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9632,7 +12165,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9644,7 +12181,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9656,7 +12197,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9679,7 +12224,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9691,7 +12240,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9703,7 +12256,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9715,7 +12272,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9738,7 +12299,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9750,7 +12315,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9762,7 +12331,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9774,7 +12347,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9797,7 +12374,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9809,7 +12390,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9821,7 +12406,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9833,7 +12422,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9856,7 +12449,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9868,7 +12465,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9880,7 +12481,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9892,7 +12497,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9915,7 +12524,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9927,7 +12540,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9939,7 +12556,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9951,7 +12572,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -9974,7 +12599,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9986,7 +12615,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -9998,7 +12631,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10010,7 +12647,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10033,7 +12674,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10045,7 +12690,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10057,7 +12706,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10069,7 +12722,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10092,7 +12749,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10104,7 +12765,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10116,7 +12781,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10128,7 +12797,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10151,7 +12824,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10163,7 +12840,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10175,7 +12856,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10187,7 +12872,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10210,7 +12899,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10222,7 +12915,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10234,7 +12931,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10246,7 +12947,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10269,7 +12974,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10281,7 +12990,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10293,7 +13006,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10305,7 +13022,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10328,7 +13049,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10340,7 +13065,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10352,7 +13081,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10364,7 +13097,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10387,7 +13124,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10399,7 +13140,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10411,7 +13156,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10423,7 +13172,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10446,7 +13199,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10458,7 +13215,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10470,7 +13231,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10482,7 +13247,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10505,7 +13274,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10517,7 +13290,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10529,7 +13306,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10541,7 +13322,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10564,7 +13349,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10576,7 +13365,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10588,7 +13381,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10600,7 +13397,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10623,7 +13424,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10635,7 +13440,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10647,7 +13456,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10659,7 +13472,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10682,7 +13499,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10694,7 +13515,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10706,7 +13531,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10718,7 +13547,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10741,7 +13574,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10753,7 +13590,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10765,7 +13606,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10777,7 +13622,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10800,7 +13649,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10812,7 +13665,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10824,7 +13681,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10836,7 +13697,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10858,7 +13723,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10870,7 +13739,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10882,7 +13755,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10904,7 +13781,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10916,7 +13797,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10928,7 +13813,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10950,7 +13839,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10962,7 +13855,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -10974,7 +13871,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -10996,7 +13897,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11008,7 +13913,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11020,7 +13929,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11042,7 +13955,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11054,7 +13971,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11066,7 +13987,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11088,7 +14013,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11100,7 +14029,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11112,7 +14045,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11134,7 +14071,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11146,7 +14087,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11158,7 +14103,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11180,7 +14129,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11192,7 +14145,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11204,7 +14161,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11226,7 +14187,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11238,7 +14203,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11250,7 +14219,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11272,7 +14245,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11284,7 +14261,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11296,7 +14277,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11318,7 +14303,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11330,7 +14319,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11342,7 +14335,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11364,7 +14361,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11376,7 +14377,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11388,7 +14393,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11410,7 +14419,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11422,7 +14435,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11434,7 +14451,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11456,7 +14477,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11468,7 +14493,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11480,7 +14509,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11502,7 +14535,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11514,7 +14551,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11526,7 +14567,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11548,7 +14593,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11560,7 +14609,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11572,7 +14625,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11594,7 +14651,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11606,7 +14667,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11618,7 +14683,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11640,7 +14709,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11652,7 +14725,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11664,7 +14741,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11686,7 +14767,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11698,7 +14783,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11710,7 +14799,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11732,7 +14825,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11744,7 +14841,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11756,7 +14857,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11778,7 +14883,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11790,7 +14899,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11802,7 +14915,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11824,7 +14941,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11836,7 +14957,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11848,7 +14973,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11870,7 +14999,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11882,7 +15015,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11894,7 +15031,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11916,7 +15057,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11928,7 +15073,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11940,7 +15089,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -11962,7 +15115,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11974,7 +15131,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -11986,7 +15147,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12008,7 +15173,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12020,7 +15189,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12032,7 +15205,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12054,7 +15231,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12066,7 +15247,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12078,7 +15263,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12100,7 +15289,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12112,7 +15305,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12124,7 +15321,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12146,7 +15347,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12158,7 +15363,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12170,7 +15379,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12192,7 +15405,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12204,7 +15421,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12216,7 +15437,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12238,7 +15463,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12250,7 +15479,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12262,7 +15495,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12284,7 +15521,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12296,7 +15537,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12308,7 +15553,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12330,7 +15579,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12342,7 +15595,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12354,7 +15611,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12376,7 +15637,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12388,7 +15653,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12400,7 +15669,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12422,7 +15695,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12434,7 +15711,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12446,7 +15727,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12467,7 +15752,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12479,7 +15768,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12500,7 +15793,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12512,7 +15809,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12533,7 +15834,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12545,7 +15850,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12566,7 +15875,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12578,7 +15891,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12599,7 +15916,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12611,7 +15932,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12632,7 +15957,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>CPU Cooler</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              CPU Cooler
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12644,7 +15973,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12665,7 +15998,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12677,7 +16014,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12698,7 +16039,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12710,7 +16055,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12731,7 +16080,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12743,7 +16096,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12764,7 +16121,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12776,7 +16137,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12797,7 +16162,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Graphic Card</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Graphic Card
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12809,7 +16178,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12830,7 +16203,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12842,7 +16219,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12863,7 +16244,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12875,7 +16260,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12896,7 +16285,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12908,7 +16301,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12929,7 +16326,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>RAM Memory</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              RAM Memory
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12941,7 +16342,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12962,7 +16367,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -12974,7 +16383,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -12995,7 +16408,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -13007,7 +16424,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -13028,7 +16449,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>SSD</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              SSD
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -13040,7 +16465,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -13061,7 +16490,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -13073,7 +16506,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -13094,7 +16531,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Hard Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Hard Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -13106,7 +16547,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -13127,7 +16572,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Optical Drive</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Optical Drive
+                            </Text20>
                           </Link>
                         </li>
                         <li>
@@ -13139,7 +16588,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                                 .toLocaleLowerCase()
                             )}
                           >
-                            <Text20>Power Supply</Text20>
+                            <Text20
+                              className={width >= 1024 && classes.componentText}
+                            >
+                              Power Supply
+                            </Text20>
                           </Link>
                         </li>
                       </ul>
@@ -13245,8 +16698,19 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
               {/* Removing the {category} will reset all components. */}
             </div>
             <div className={classes.wrapper}>
-              <button className={classes.buttons} onClick={() => handleClose()}>
-                <Text20>OK</Text20>
+              <button
+                className={
+                  width < 1024
+                    ? classes.buttons
+                    : darkMode
+                    ? classes.buttons2Dark
+                    : classes.buttons2Light
+                }
+                onClick={() => handleClose()}
+              >
+                <Text20 className={width >= 1024 && classes.buttons2Text}>
+                  OK
+                </Text20>
               </button>
             </div>
           </div>

@@ -28,7 +28,7 @@ const MainTitleWrapper = styled.div`
     }
     .MainTitle,
     .MainTitleMyItems {
-      margin: 10px auto 40px;
+      margin: 0;
     }
   }
 `;

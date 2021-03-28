@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 
 // npm imports
 import styled, { withTheme } from "styled-components";
@@ -6,21 +6,16 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import Accordion from "@material-ui/core/Accordion";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
-import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 // consts imports
 
 // context imports
-import { GlobalContext } from "../../../Context/GlobalContext";
 
 // component imports
-import FilterRender from "./FilterRender/FilterRender";
-import PriceRange from "./PriceRange/PriceRange";
+// import FilterRender from "./FilterRender/FilterRender";
+// import PriceRange from "./PriceRange/PriceRange";
+import MainFilterInner from "./MainFilterInner/MainFilterInner";
 
 // npm text imports
-import { Text17, Text14 } from "../../../Assets/Text/Text";
 
 // styled-components
 const MainFilterWrapper = styled.div`
@@ -93,18 +88,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const MainFilter = ({ open, handleClose, theme }) => {
-  const {
-    mainData,
-    brands,
-    type,
-    color,
-    clickedBrands,
-    clickedTypes,
-    clickedColors,
-    clickedPurpose,
-    handleReset,
-    purposeData,
-  } = useContext(GlobalContext);
   const classes = useStyles();
   const route = localStorage.getItem("route");
   return (
@@ -127,149 +110,7 @@ const MainFilter = ({ open, handleClose, theme }) => {
             className={` modal ${classes.paper}`}
             style={{ backgroundColor: theme.gray3 }}
           >
-            <Text17
-              className={`${classes.modalTitle} ${classes.marginB20}`}
-              id="transition-modal-title"
-            >
-              Filter by:
-            </Text17>
-            <div className={classes.root}>
-              <Accordion
-                className={`${classes.accordionStyle} ${classes.borderTop}`}
-                style={{ backgroundColor: theme.gray3 }}
-              >
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                  className={classes.accordionSummary}
-                >
-                  <Typography
-                    className={`${classes.heading} brand`}
-                    style={{ color: theme.black }}
-                  >
-                    Brand
-                  </Typography>
-                </AccordionSummary>
-                {brands &&
-                  brands.map((el, i) => (
-                    <FilterRender
-                      clickedElement={clickedBrands}
-                      filterType="brand"
-                      key={i}
-                      element={el}
-                    />
-                  ))}
-              </Accordion>
-              {route === "Processor" && (
-                <Accordion
-                  className={classes.accordionStyle}
-                  style={{ backgroundColor: theme.gray3 }}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
-                    className={classes.accordionSummary}
-                  >
-                    <Typography
-                      className={classes.heading}
-                      style={{ color: theme.black }}
-                    >
-                      Purpose
-                    </Typography>
-                  </AccordionSummary>
-                  <>
-                    {Object.keys(purposeData).map((el, i) => (
-                      <FilterRender
-                        clickedElement={clickedPurpose}
-                        filterType="purpose"
-                        key={i}
-                        element={el}
-                      />
-                    ))}
-                  </>
-                </Accordion>
-              )}
-              {mainData[route][0].type && (
-                <Accordion
-                  className={classes.accordionStyle}
-                  style={{ backgroundColor: theme.gray3 }}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
-                    className={classes.accordionSummary}
-                  >
-                    <Typography
-                      className={classes.heading}
-                      style={{ color: theme.black }}
-                    >
-                      Type
-                    </Typography>
-                  </AccordionSummary>
-                  <>
-                    {type &&
-                      type.map((el, i) => (
-                        <FilterRender
-                          clickedElement={clickedTypes}
-                          filterType="type"
-                          key={i}
-                          element={el}
-                        />
-                      ))}
-                  </>
-                </Accordion>
-              )}
-              {mainData[route][0].color && (
-                <Accordion
-                  className={classes.accordionStyle}
-                  style={{ backgroundColor: theme.gray3 }}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
-                    className={classes.accordionSummary}
-                  >
-                    <Typography
-                      className={classes.heading}
-                      style={{ color: theme.black }}
-                    >
-                      Color
-                    </Typography>
-                  </AccordionSummary>
-                  <>
-                    {color &&
-                      color.map((el, i) => (
-                        <FilterRender
-                          clickedElement={clickedColors}
-                          filterType="color"
-                          key={i}
-                          element={el}
-                        />
-                      ))}
-                  </>
-                </Accordion>
-              )}
-            </div>
-
-            {/*  */}
-            <div className={`price-range ${classes.marginT}`}>
-              <Text14 className={classes.marginB}>Price range</Text14>
-              <PriceRange />
-            </div>
-            <div className={classes.resetButton}>
-              <Text17
-                onClick={() => {
-                  handleClose();
-                  handleReset();
-                }}
-              >
-                Reset
-              </Text17>
-            </div>
+            <MainFilterInner handleClose={handleClose} />
           </div>
         </Fade>
       </Modal>

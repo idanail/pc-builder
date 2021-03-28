@@ -30,6 +30,17 @@ const FilterRenderWrapper = styled.span`
     padding: 10px 10px;
     margin: 0px -10px 3px;
   }
+  @media only screen and (min-width: 1024px) {
+    .rendered-element {
+      cursor: pointer;
+      span {
+        &:hover {
+          color: ${(props) => props.theme.red};
+          background-color: ${(props) => props.theme.main_gray};
+        }
+      }
+    }
+  }
 `;
 
 const FilterRender = ({ element, clickedElement, filterType }) => {

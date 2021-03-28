@@ -42,9 +42,6 @@ const CardWrapper = styled.div`
       display: block;
       width: 100%;
       height: 150px;
-      @media (min-width: 768px) {
-        height: 300px;
-      }
     }
   }
   .card-body {
@@ -54,6 +51,15 @@ const CardWrapper = styled.div`
     text-align: center;
     .model {
       margin-bottom: 15px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .card-img {
+      img {
+        height: 220px;
+        width: unset;
+        margin: 0 auto;
+      }
     }
   }
 `;

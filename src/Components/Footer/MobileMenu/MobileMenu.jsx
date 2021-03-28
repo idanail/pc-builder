@@ -52,10 +52,10 @@ const MobileMenuWrapper = styled.div`
 
   @media only screen and (min-width: 1024px) {
     position: absolute;
-    top: 60%;
+    top: 100%;
     left: -37px;
     /* height: 50vh; */
-    z-index: 1;
+    z-index: 3;
 
     .mobile-menu {
       display: ${(props) => (props.mobileMenuActive ? "flex" : "none")};

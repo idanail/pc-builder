@@ -11,6 +11,9 @@ import Fade from "@material-ui/core/Fade";
 // context imports
 import { GlobalContext } from "../../../Context/GlobalContext";
 
+// component imports
+import useWindowDimensions from "../../../Hooks/useWindowDimensions";
+
 // npm text imports
 import { Text24, Text20 } from "../../../Assets/Text/Text";
 // component imports
@@ -51,11 +54,36 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "2px",
     width: "92px",
   },
+  buttons2: {
+    background: "none",
+    border: "1px solid #d6d6d6",
+    borderRadius: "25px",
+    marginLeft: "5px",
+    padding: "0",
+    // width: "95px",
+    cursor: "pointer",
+    "&:hover": {
+      background: "#F7F7F7",
+      color: "#FD0405",
+      transition: "0.2s ease-in-out",
+    },
+  },
+  buttons2Text: {
+    width: "100%",
+    padding: "3px 15px",
+    "&:hover": {
+      color: "#FD0405",
+      transition: "0.2s ease-in-out",
+    },
+  },
 }));
 
 // component
 const ItemDelete = ({ open, handleClose, category, theme }) => {
   const { handleItems } = useContext(GlobalContext);
+
+  const { width } = useWindowDimensions();
+
   const classes = useStyles();
   return (
     <ItemDeleteWrapper>
@@ -75,7 +103,10 @@ const ItemDelete = ({ open, handleClose, category, theme }) => {
         <Fade in={open}>
           <div
             className={classes.paper}
-            style={{ backgroundColor: theme.gray3 }}
+            style={{
+              backgroundColor: theme.gray3,
+              width: width < 1024 ? "90%" : "30%",
+            }}
           >
             <Text24 className={classes.modalTitle} id="transition-modal-title">
               Warning
@@ -84,17 +115,24 @@ const ItemDelete = ({ open, handleClose, category, theme }) => {
               Removing the {category} will reset all components.
             </Text20>
             <div className={classes.wrapper}>
-              <button className={classes.buttons} onClick={() => handleClose()}>
-                <Text20>CANCEL</Text20>
+              <button
+                className={width < 1024 ? classes.buttons : classes.buttons2}
+                onClick={() => handleClose()}
+              >
+                <Text20 className={width >= 1024 && classes.buttons2Text}>
+                  CANCEL
+                </Text20>
               </button>
               <button
-                className={classes.buttons}
+                className={width < 1024 ? classes.buttons : classes.buttons2}
                 onClick={() => {
                   handleItems();
                   handleClose();
                 }}
               >
-                <Text20>DELETE</Text20>
+                <Text20 className={width >= 1024 && classes.buttons2Text}>
+                  DELETE
+                </Text20>
               </button>
             </div>
           </div>

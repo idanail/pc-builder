@@ -28,6 +28,11 @@ const SkeletonCardWrapper = styled.div`
     width: 50%;
     margin: 0 25% 15px;
   }
+  @media only screen and (min-width: 1024px) {
+    .skeleton-img {
+      height: 250px;
+    }
+  }
 `;
 // component
 
