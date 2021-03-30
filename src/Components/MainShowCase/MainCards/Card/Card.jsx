@@ -55,10 +55,18 @@ const CardWrapper = styled.div`
   }
   @media (min-width: 1024px) {
     .card-img {
+      &:hover {
+        /* outline: 2px solid black; */
+        border-radius: 15px;
+      }
       img {
         height: 220px;
         width: unset;
         margin: 0 auto;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.15, 1.15);
+        }
       }
     }
   }

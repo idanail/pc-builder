@@ -15,8 +15,8 @@ import { GlobalContext } from "../../Context/GlobalContext";
 import { Heading55, Text17, Heading22 } from "../../Assets/Text/Text";
 
 // npm images impoirts
-import HomePageBackgroundImgBlack from "../../Assets/Images/HomeBg-Black.png";
-import HomePageBackgroundImgWhite from "../../Assets/Images/HomeBg-White.png";
+import HomePageBackgroundImgBlack from "../../Assets/Images/HomeBg-Black.webp";
+import HomePageBackgroundImgWhite from "../../Assets/Images/HomeBg-White.webp";
 //styled-components
 const lightBg = `linear-gradient(
   rgba(255, 255, 255, 0.7),
@@ -26,10 +26,10 @@ const lightBg = `linear-gradient(
 ),url(${HomePageBackgroundImgBlack})`;
 
 const darkBg = `linear-gradient(
-  rgba(0, 0, 0, 0.7),
-  rgba(0, 0, 0, 0.8),
-  rgba(0, 0, 0, 0.8),
-  rgba(0, 0, 0, 0.7)
+  rgba(36, 37, 38, 0.7),
+  rgba(36, 37, 38, 0.8),
+  rgba(36, 37, 38, 0.8),
+  rgba(36, 37, 38, 0.7)
 ),url(${HomePageBackgroundImgWhite})`;
 
 const HomePageWrapper = styled.div`

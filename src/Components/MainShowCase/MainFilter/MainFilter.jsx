@@ -89,7 +89,6 @@ const useStyles = makeStyles((theme) => ({
 
 const MainFilter = ({ open, handleClose, theme }) => {
   const classes = useStyles();
-  const route = localStorage.getItem("route");
   return (
     <MainFilterWrapper>
       <Modal

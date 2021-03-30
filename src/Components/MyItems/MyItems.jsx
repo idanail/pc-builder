@@ -72,7 +72,7 @@ const MyItemsWrapper = styled.div`
       margin-right: 40px;
       img {
         display: block;
-        width: 100%;
+        height: 100%;
       }
     }
     .component-detail {
@@ -108,6 +108,26 @@ const MyItemsWrapper = styled.div`
         margin-right: 5px;
         color: ${(props) => props.theme.black};
       }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .component-wrapper {
+      width: 50%;
+    }
+    .components-holder {
+      display: flex;
+      flex-basis: 50%;
+      justify-content: flex-start;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .component-wrapper {
+      width: 25%;
+    }
+    .components-holder {
+      flex-basis: 25%;
     }
   }
 `;
@@ -168,34 +188,36 @@ const MyItems = (props) => {
         </div>
         <hr />
       </div>
-      {myItems.Processor.map((el, i) => (
-        <div key={i} className="component-wrapper">
-          <div className="component-img">
-            <img
-              src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
-                el.img
-              }`}
-              alt=""
-            />
-          </div>
-          <div className="component-detail">
-            <Text14 className="my-item-brand">{el.brand}</Text14>
-            <Text14 className="my-item-model">{el.model}</Text14>
-            <Text14 className="my-item-price">${el.price}</Text14>
-            <div className="delete-item">
-              <button
-                onClick={() => {
-                  setClickedCategory(el.category);
-                  setClickedId(el.id);
-                  handleOpen();
-                }}
-              >
-                <DeleteIcon />
-              </button>
+      <div className="components-holder">
+        {myItems.Processor.map((el, i) => (
+          <div key={i} className="component-wrapper">
+            <div className="component-img">
+              <img
+                src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
+                  el.img
+                }`}
+                alt=""
+              />
+            </div>
+            <div className="component-detail">
+              <Text14 className="my-item-brand">{el.brand}</Text14>
+              <Text14 className="my-item-model">{el.model}</Text14>
+              <Text14 className="my-item-price">${el.price}</Text14>
+              <div className="delete-item">
+                <button
+                  onClick={() => {
+                    setClickedCategory(el.category);
+                    setClickedId(el.id);
+                    handleOpen();
+                  }}
+                >
+                  <DeleteIcon />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className="my-component-wrapper">
         <div className="component-name-wrapper">
           <div className="checked checked-cpu-cooler">
@@ -221,32 +243,34 @@ const MyItems = (props) => {
 
         <hr />
       </div>
-      {myItems["CPU Cooler"].map((el, i) => (
-        <div key={i} className="component-wrapper">
-          <div className="component-img">
-            <img
-              src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
-                el.img
-              }`}
-              alt=""
-            />
-          </div>
-          <div className="component-detail">
-            <Text14 className="my-item-brand">{el.brand}</Text14>
-            <Text14 className="my-item-model">{el.model}</Text14>
-            <Text14 className="my-item-price">${el.price}</Text14>
-            <div className="delete-item">
-              <button
-                onClick={() => {
-                  deleteItem(el.category, el.id);
-                }}
-              >
-                <DeleteIcon />
-              </button>
+      <div className="components-holder">
+        {myItems["CPU Cooler"].map((el, i) => (
+          <div key={i} className="component-wrapper">
+            <div className="component-img">
+              <img
+                src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
+                  el.img
+                }`}
+                alt=""
+              />
+            </div>
+            <div className="component-detail">
+              <Text14 className="my-item-brand">{el.brand}</Text14>
+              <Text14 className="my-item-model">{el.model}</Text14>
+              <Text14 className="my-item-price">${el.price}</Text14>
+              <div className="delete-item">
+                <button
+                  onClick={() => {
+                    deleteItem(el.category, el.id);
+                  }}
+                >
+                  <DeleteIcon />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className="my-component-wrapper">
         <div className="component-name-wrapper">
           <div className="checked checked-motherboard">
@@ -271,34 +295,36 @@ const MyItems = (props) => {
         </div>
         <hr />
       </div>
-      {myItems.Motherboard.map((el, i) => (
-        <div key={i} className="component-wrapper">
-          <div className="component-img">
-            <img
-              src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
-                el.img
-              }`}
-              alt=""
-            />
-          </div>
-          <div className="component-detail">
-            <Text14 className="my-item-brand">{el.brand}</Text14>
-            <Text14 className="my-item-model">{el.model}</Text14>
-            <Text14 className="my-item-price">${el.price}</Text14>
-            <div className="delete-item">
-              <button
-                onClick={() => {
-                  setClickedCategory(el.category);
-                  setClickedId(el.id);
-                  handleOpen();
-                }}
-              >
-                <DeleteIcon />
-              </button>
+      <div className="components-holder">
+        {myItems.Motherboard.map((el, i) => (
+          <div key={i} className="component-wrapper">
+            <div className="component-img">
+              <img
+                src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
+                  el.img
+                }`}
+                alt=""
+              />
+            </div>
+            <div className="component-detail">
+              <Text14 className="my-item-brand">{el.brand}</Text14>
+              <Text14 className="my-item-model">{el.model}</Text14>
+              <Text14 className="my-item-price">${el.price}</Text14>
+              <div className="delete-item">
+                <button
+                  onClick={() => {
+                    setClickedCategory(el.category);
+                    setClickedId(el.id);
+                    handleOpen();
+                  }}
+                >
+                  <DeleteIcon />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className="my-component-wrapper">
         <div className="component-name-wrapper">
           <div className="checked checked-graphic-card">
@@ -323,32 +349,34 @@ const MyItems = (props) => {
         </div>
         <hr />
       </div>
-      {myItems["Graphic Card"].map((el, i) => (
-        <div key={i} className="component-wrapper">
-          <div className="component-img">
-            <img
-              src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
-                el.img
-              }`}
-              alt=""
-            />
-          </div>
-          <div className="component-detail">
-            <Text14 className="my-item-brand">{el.brand}</Text14>
-            <Text14 className="my-item-model">{el.model}</Text14>
-            <Text14 className="my-item-price">${el.price}</Text14>
-            <div className="delete-item">
-              <button
-                onClick={() => {
-                  deleteItem(el.category, el.id);
-                }}
-              >
-                <DeleteIcon />
-              </button>
+      <div className="components-holder">
+        {myItems["Graphic Card"].map((el, i) => (
+          <div key={i} className="component-wrapper">
+            <div className="component-img">
+              <img
+                src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
+                  el.img
+                }`}
+                alt=""
+              />
+            </div>
+            <div className="component-detail">
+              <Text14 className="my-item-brand">{el.brand}</Text14>
+              <Text14 className="my-item-model">{el.model}</Text14>
+              <Text14 className="my-item-price">${el.price}</Text14>
+              <div className="delete-item">
+                <button
+                  onClick={() => {
+                    deleteItem(el.category, el.id);
+                  }}
+                >
+                  <DeleteIcon />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className="my-component-wrapper">
         <div className="component-name-wrapper">
           <div className="checked checked-ram-memory">
@@ -374,32 +402,34 @@ const MyItems = (props) => {
 
         <hr />
       </div>
-      {myItems["RAM Memory"].map((el, i) => (
-        <div key={i} className="component-wrapper">
-          <div className="component-img">
-            <img
-              src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
-                el.img
-              }`}
-              alt=""
-            />
-          </div>
-          <div className="component-detail">
-            <Text14 className="my-item-brand">{el.brand}</Text14>
-            <Text14 className="my-item-model">{el.model}</Text14>
-            <Text14 className="my-item-price">${el.price}</Text14>
-            <div className="delete-item">
-              <button
-                onClick={() => {
-                  deleteItem(el.category, el.id);
-                }}
-              >
-                <DeleteIcon />
-              </button>
+      <div className="components-holder">
+        {myItems["RAM Memory"].map((el, i) => (
+          <div key={i} className="component-wrapper">
+            <div className="component-img">
+              <img
+                src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
+                  el.img
+                }`}
+                alt=""
+              />
+            </div>
+            <div className="component-detail">
+              <Text14 className="my-item-brand">{el.brand}</Text14>
+              <Text14 className="my-item-model">{el.model}</Text14>
+              <Text14 className="my-item-price">${el.price}</Text14>
+              <div className="delete-item">
+                <button
+                  onClick={() => {
+                    deleteItem(el.category, el.id);
+                  }}
+                >
+                  <DeleteIcon />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className="my-component-wrapper">
         <div className="component-name-wrapper">
           <div className="checked checked-ssd">
@@ -424,32 +454,34 @@ const MyItems = (props) => {
         </div>
         <hr />
       </div>
-      {myItems.SSD.map((el, i) => (
-        <div key={i} className="component-wrapper">
-          <div className="component-img">
-            <img
-              src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
-                el.img
-              }`}
-              alt=""
-            />
-          </div>
-          <div className="component-detail">
-            <Text14 className="my-item-brand">{el.brand}</Text14>
-            <Text14 className="my-item-model">{el.model}</Text14>
-            <Text14 className="my-item-price">${el.price}</Text14>
-            <div className="delete-item">
-              <button
-                onClick={() => {
-                  deleteItem(el.category, el.id);
-                }}
-              >
-                <DeleteIcon />
-              </button>
+      <div className="components-holder">
+        {myItems.SSD.map((el, i) => (
+          <div key={i} className="component-wrapper">
+            <div className="component-img">
+              <img
+                src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
+                  el.img
+                }`}
+                alt=""
+              />
+            </div>
+            <div className="component-detail">
+              <Text14 className="my-item-brand">{el.brand}</Text14>
+              <Text14 className="my-item-model">{el.model}</Text14>
+              <Text14 className="my-item-price">${el.price}</Text14>
+              <div className="delete-item">
+                <button
+                  onClick={() => {
+                    deleteItem(el.category, el.id);
+                  }}
+                >
+                  <DeleteIcon />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className="my-component-wrapper">
         <div className="component-name-wrapper">
           <div className="checked checked-hard-drive">
@@ -474,32 +506,34 @@ const MyItems = (props) => {
         </div>
         <hr />
       </div>
-      {myItems["Hard Drive"].map((el, i) => (
-        <div key={i} className="component-wrapper">
-          <div className="component-img">
-            <img
-              src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
-                el.img
-              }`}
-              alt=""
-            />
-          </div>
-          <div className="component-detail">
-            <Text14 className="my-item-brand">{el.brand}</Text14>
-            <Text14 className="my-item-model">{el.model}</Text14>
-            <Text14 className="my-item-price">${el.price}</Text14>
-            <div className="delete-item">
-              <button
-                onClick={() => {
-                  deleteItem(el.category, el.id);
-                }}
-              >
-                <DeleteIcon />
-              </button>
+      <div className="components-holder">
+        {myItems["Hard Drive"].map((el, i) => (
+          <div key={i} className="component-wrapper">
+            <div className="component-img">
+              <img
+                src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
+                  el.img
+                }`}
+                alt=""
+              />
+            </div>
+            <div className="component-detail">
+              <Text14 className="my-item-brand">{el.brand}</Text14>
+              <Text14 className="my-item-model">{el.model}</Text14>
+              <Text14 className="my-item-price">${el.price}</Text14>
+              <div className="delete-item">
+                <button
+                  onClick={() => {
+                    deleteItem(el.category, el.id);
+                  }}
+                >
+                  <DeleteIcon />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className="my-component-wrapper">
         <div className="component-name-wrapper">
           <div className="checked checked-optical-drive">
@@ -525,23 +559,25 @@ const MyItems = (props) => {
 
         <hr />
       </div>
-      {myItems["Optical Drive"].map((el, i) => (
-        <div key={i} className="component-wrapper">
-          <div className="component-img">
-            <img
-              src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
-                el.img
-              }`}
-              alt=""
-            />
+      <div className="components-holder">
+        {myItems["Optical Drive"].map((el, i) => (
+          <div key={i} className="component-wrapper">
+            <div className="component-img">
+              <img
+                src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
+                  el.img
+                }`}
+                alt=""
+              />
+            </div>
+            <div className="component-detail">
+              <Text14 className="my-item-brand">{el.brand}</Text14>
+              <Text14 className="my-item-model">{el.model}</Text14>
+              <Text14 className="my-item-price">${el.price}</Text14>
+            </div>
           </div>
-          <div className="component-detail">
-            <Text14 className="my-item-brand">{el.brand}</Text14>
-            <Text14 className="my-item-model">{el.model}</Text14>
-            <Text14 className="my-item-price">${el.price}</Text14>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className="my-component-wrapper">
         <div className="component-name-wrapper">
           <div className="checked checked-power-supply">
@@ -566,32 +602,34 @@ const MyItems = (props) => {
         </div>
         <hr />
       </div>
-      {myItems["Power Supply"].map((el, i) => (
-        <div key={i} className="component-wrapper">
-          <div className="component-img">
-            <img
-              src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
-                el.img
-              }`}
-              alt=""
-            />
-          </div>
-          <div className="component-detail">
-            <Text14 className="my-item-brand">{el.brand}</Text14>
-            <Text14 className="my-item-model">{el.model}</Text14>
-            <Text14 className="my-item-price">${el.price}</Text14>
-            <div className="delete-item">
-              <button
-                onClick={() => {
-                  deleteItem(el.category, el.id);
-                }}
-              >
-                <DeleteIcon />
-              </button>
+      <div className="components-holder">
+        {myItems["Power Supply"].map((el, i) => (
+          <div key={i} className="component-wrapper">
+            <div className="component-img">
+              <img
+                src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
+                  el.img
+                }`}
+                alt=""
+              />
+            </div>
+            <div className="component-detail">
+              <Text14 className="my-item-brand">{el.brand}</Text14>
+              <Text14 className="my-item-model">{el.model}</Text14>
+              <Text14 className="my-item-price">${el.price}</Text14>
+              <div className="delete-item">
+                <button
+                  onClick={() => {
+                    deleteItem(el.category, el.id);
+                  }}
+                >
+                  <DeleteIcon />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className="my-component-wrapper">
         <div className="component-name-wrapper">
           <div className="checked checked-case">
@@ -616,32 +654,36 @@ const MyItems = (props) => {
         </div>
         <hr />
       </div>
-      {myItems.Case.map((el, i) => (
-        <div key={i} className="component-wrapper">
-          <div className="component-img">
-            <img
-              src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
-                el.img
-              }`}
-              alt=""
-            />
-          </div>
-          <div className="component-detail">
-            <Text14 className="my-item-brand">{el.brand}</Text14>
-            <Text14 className="my-item-model">{el.model}</Text14>
-            <Text14 className="my-item-price">${el.price}</Text14>
-            <div className="delete-item">
-              <button
-                onClick={() => {
-                  deleteItem(el.category, el.id);
-                }}
-              >
-                <DeleteIcon />
-              </button>
+      <div className="components-holder">
+        {myItems.Case.map((el, i) => (
+          <div key={i} className="component-wrapper">
+            <div className="component-img">
+              <img
+                src={`/img/${el.category.replace(" ", "-").toLowerCase()}/${
+                  el.img
+                }`}
+                alt=""
+              />
+            </div>
+            <div className="component-detail">
+              <Text14 className="my-item-brand">{el.brand}</Text14>
+              <Text14 className="my-item-model">{el.model}</Text14>
+              <Text14 className="my-item-price">${el.price}</Text14>
+              <div className="delete-item">
+                <button
+                  onClick={() => {
+                    deleteItem(el.category, el.id);
+                  }}
+                >
+                  <DeleteIcon />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
+      {/* Modal delete confirmation button */}
       <ItemDelete
         open={open}
         handleClose={handleClose}

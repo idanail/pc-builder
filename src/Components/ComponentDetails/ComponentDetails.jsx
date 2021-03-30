@@ -146,9 +146,12 @@ const ComponentDetailsWrapper = styled.div`
       justify-content: space-between;
       align-items: flex-start;
       .details-img-wrapper {
+        display: flex;
         flex: 1;
         height: 350px;
+        justify-content: flex-end;
         .details-img {
+          width: 70%;
           .add-to-cart {
             cursor: pointer;
             width: 60px;
@@ -171,6 +174,7 @@ const ComponentDetailsWrapper = styled.div`
         flex: 1;
         .details-wrapper {
           padding-left: 20px;
+          width: 70%;
         }
       }
     }

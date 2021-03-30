@@ -12,6 +12,7 @@ import { GlobalContext } from "../../../../Context/GlobalContext";
 
 // styled-components
 const FilterSelectWrapper = styled.select`
+  width: 120px;
   cursor: pointer;
   font-size: ${(props) => props.theme.normalText};
   border: none;
@@ -27,6 +28,13 @@ const FilterSelectWrapper = styled.select`
   }
   &:focus {
     outline: 2px solid #d6d6d6;
+  }
+  option {
+    background-color: ${(props) => props.theme.gray3};
+  }
+
+  @media (min-width: 1024px) {
+    width: unset;
   }
 `;
 // component

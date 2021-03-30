@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 // npm imports
 import styled, { withTheme } from "styled-components";
@@ -81,7 +81,6 @@ const MainFilterInnerWrapper = styled.div`
   }
 `;
 // component
-const route = localStorage.getItem("route");
 const MainFilterInner = ({ theme, handleClose }) => {
   const classes = useStyles();
   const {
@@ -97,6 +96,14 @@ const MainFilterInner = ({ theme, handleClose }) => {
     purposeData,
   } = useContext(GlobalContext);
   const { width } = useWindowDimensions();
+  const route = localStorage.getItem("route");
+
+  const [expanded, setExpanded] = useState("panel-purpose");
+
+  const handleExpanded = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   return (
     <MainFilterInnerWrapper>
       <Text17
@@ -137,6 +144,8 @@ const MainFilterInner = ({ theme, handleClose }) => {
         </Accordion>
         {route === "Processor" && (
           <Accordion
+            expanded={expanded === "panel-purpose"}
+            onChange={handleExpanded("panel-purpose")}
             className={`${classes.accordionStyle} ${classes.borderTop}`}
             style={{
               backgroundColor: width >= 1024 ? theme.main_gray : theme.gray3,
@@ -167,7 +176,7 @@ const MainFilterInner = ({ theme, handleClose }) => {
             </>
           </Accordion>
         )}
-        {mainData[route][0].type && (
+        {mainData[route][0].type !== undefined && (
           <Accordion
             className={classes.accordionStyle}
             style={{
@@ -200,7 +209,7 @@ const MainFilterInner = ({ theme, handleClose }) => {
             </>
           </Accordion>
         )}
-        {mainData[route][0].color && (
+        {mainData[route][0].color !== undefined && (
           <Accordion
             className={classes.accordionStyle}
             style={{
