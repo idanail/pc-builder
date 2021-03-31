@@ -1,10 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 // npm imports
 import styled from "styled-components";
 import CheckIcon from "@material-ui/icons/Check";
 import DeleteIcon from "@material-ui/icons/Delete";
 import PowerIcon from "@material-ui/icons/Power";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
+import SaveAltIcon from "@material-ui/icons/SaveAlt";
 import { Link } from "@reach/router";
 
 // text inports
@@ -25,8 +28,20 @@ const MyItemsWrapper = styled.div`
   width: 90%;
   margin: 0 auto;
   .my-items-navbar {
-    text-align: right;
-    padding: 25px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0px;
+    .back-button,
+    .save-button {
+      display: flex;
+      align-items: center;
+      svg {
+        color: ${(props) =>
+          props.darkMode ? props.theme.black : props.theme.red};
+        font-size: ${(props) => props.theme.iconSize};
+      }
+    }
   }
   .my-component-wrapper {
     display: flex;
@@ -95,20 +110,26 @@ const MyItemsWrapper = styled.div`
       }
     }
   }
-  .power-calculator {
+  .power-calculator,
+  .price-calculator {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
 
-    .total-wattage {
+    .total-wattage,
+    .total-price {
       display: flex;
       align-items: center;
+      width: 90px;
       svg {
         margin-right: 5px;
         color: ${(props) => props.theme.black};
       }
     }
+  }
+  .price-calculator {
+    margin-bottom: 10px;
   }
 
   @media (min-width: 768px) {
@@ -116,46 +137,114 @@ const MyItemsWrapper = styled.div`
       width: 50%;
     }
     .components-holder {
+      width: 100%;
       display: flex;
+      flex-wrap: wrap;
       flex-basis: 50%;
       justify-content: flex-start;
     }
   }
 
   @media (min-width: 1024px) {
-    .component-wrapper {
-      width: 25%;
+    width: 40%;
+    .price-calculator {
+      margin-top: 30px;
     }
     .components-holder {
-      flex-basis: 25%;
+      width: 100%;
+    }
+    .my-items-navbar {
+      justify-content: flex-end;
+      .back-button {
+        display: none;
+      }
     }
   }
 `;
 // component
 
 const MyItems = (props) => {
-  const { deleteItem, totalPower } = useContext(GlobalContext);
+  const {
+    deleteItem,
+    totalPower,
+    totalAmount,
+    darkMode,
+    handleSave,
+  } = useContext(GlobalContext);
   const [clickedCategory, setClickedCategory] = useState("");
   const [clickedId, setClickedId] = useState("");
   const myItems = JSON.parse(localStorage.getItem("myItems"));
 
-  //Model
+  //Modal
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const [downloadLink, setDownloadLink] = useState("");
+
+  const makeTextFile = () => {
+    // const data = new Blob([myItems], { type: "text/plain" });
+    // const data = new Blob([{ name: "1" }, { name: "2" }], {
+    //   type: "text/plain",
+    // });
+
+    const obj = [];
+
+    for (const key in myItems) {
+      if (myItems[key].length > 0) {
+        myItems[key].forEach((el) =>
+          obj.push(
+            `Component: ${el.category}`,
+            `Model: ${el.brand} ${el.model}`,
+            `Price: ${el.price}`
+          )
+        );
+      }
+    }
+
+    const data = new Blob([JSON.stringify(obj, null, 2)], {
+      type: "text/plain",
+    });
+
+    // this part avoids memory leaks
+    if (downloadLink !== "") window.URL.revokeObjectURL(downloadLink);
+
+    // update the download link state
+    setDownloadLink(window.URL.createObjectURL(data));
+  };
+
+  // useEffect(() => {
+  //   makeTextFile();
+  // }, [myItems]);
+
   return (
-    <MyItemsWrapper>
+    <MyItemsWrapper darkMode={darkMode}>
       <div className="my-items-navbar">
-        <Text17>SAVE</Text17>
+        <div className="back-button" onClick={() => window.history.back()}>
+          <KeyboardArrowLeftIcon />
+        </div>
+        <div className="save-button">
+          <a download="list.txt" href={downloadLink}>
+            <SaveAltIcon />
+          </a>
+        </div>
       </div>
-      <div>
+      <div id="current-component">
         <MainTitle
           name={`${Object.values(myItems).flat().length}/${
             Object.keys(myItems).flat().length
           } 
           parts piched`}
         />
+        <div className="price-calculator">
+          <Text17>This build will cost you</Text17>
+          <div className="total-price">
+            <AttachMoneyIcon />
+            <Text17>
+              {totalAmount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,")}
+            </Text17>
+          </div>
+        </div>
         <div className="power-calculator">
           <Text17>For this build you will need</Text17>
           <div className="total-wattage">

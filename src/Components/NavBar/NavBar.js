@@ -4,6 +4,7 @@ import React, { useContext, useEffect } from "react";
 import styled, { css } from "styled-components";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
 import { Link } from "@reach/router";
 
 // npm text imports
@@ -26,6 +27,11 @@ const NavBarWrapper = styled.div`
   justify-content: flex-end;
   padding: 18px 0px;
   .nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: ${(props) =>
+      props.showBackButton ? "space-between" : "flex-end"};
+    align-items: center;
     position: relative;
     .main-title-wrapper {
       display: none;
@@ -42,7 +48,7 @@ const NavBarWrapper = styled.div`
         font-size: ${(props) => props.theme.extraSmallText};
       }
       padding: 0 4px;
-      left: 65%;
+      right: -3px;
       top: -30%;
       border-radius: 3px;
     }
@@ -60,6 +66,9 @@ const NavBarWrapper = styled.div`
       justify-content: ${(props) =>
         props.componentSelectorActive ? " space-between" : "flex-end"};
       align-items: center;
+      .back-button {
+        display: none;
+      }
       .main-title-wrapper {
         display: ${(props) =>
           props.componentSelectorActive ? "flex" : "none"};
@@ -87,7 +96,8 @@ const NavBarWrapper = styled.div`
       .icons-wrapper {
         display: flex;
         .nav-bar-amount {
-          left: 99%;
+          left: unset;
+          right: -3px;
           top: -30%;
         }
       }
@@ -111,6 +121,7 @@ const NavBar = ({ currentComponent }) => {
     mobileMenuActive,
     setMobileMenuActive,
     componentSelectorActive,
+    showBackButton,
   } = useContext(GlobalContext);
 
   useEffect(() => {
@@ -118,7 +129,10 @@ const NavBar = ({ currentComponent }) => {
   }, [mobileMenuActive]);
 
   return (
-    <NavBarWrapper componentSelectorActive={componentSelectorActive}>
+    <NavBarWrapper
+      componentSelectorActive={componentSelectorActive}
+      showBackButton={showBackButton}
+    >
       <div className="nav-bar">
         <div
           className="main-title-wrapper"
@@ -133,6 +147,11 @@ const NavBar = ({ currentComponent }) => {
             </span>
           </div>
         </div>
+        {showBackButton && (
+          <div className="back-button" onClick={() => window.history.back()}>
+            <KeyboardArrowLeftIcon />
+          </div>
+        )}
         <div className="icons-wrapper">
           <div className="dark-mode-icon">
             <DarkModeIcon />

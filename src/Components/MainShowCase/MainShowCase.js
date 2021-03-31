@@ -173,6 +173,7 @@ const MainShowCase = () => {
     searchBarActive,
     mobileMenuActive,
     setComponentSelectorActive,
+    setShowBackButton,
   } = useContext(GlobalContext);
 
   const { width } = useWindowDimensions();
@@ -184,7 +185,6 @@ const MainShowCase = () => {
         el.replace(" ", "_").toLowerCase() === location.pathname.split("/")[2]
     )
     .toString();
-  console.log(currentComponent);
   const myItems = JSON.parse(localStorage.getItem("myItems"));
 
   let currentData;
@@ -224,6 +224,7 @@ const MainShowCase = () => {
     setCurrentType("");
     setCurrentColor("");
     setComponentSelectorActive(true);
+    setShowBackButton(false);
   }, [currentComponent]);
 
   //Back to top when the scroll button is clicked.

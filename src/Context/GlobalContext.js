@@ -1,8 +1,6 @@
-import React, { createContext, useState, useEffect } from "react";
-
+import React, { createContext, useEffect, useState } from "react";
 //npm imports
 import { v4 as uuid } from "uuid";
-
 //data import
 import { data, myItems as myItemsData, purpose } from "../Data/data";
 
@@ -35,11 +33,14 @@ export const GlobalContextProvider = (props) => {
   const [filterSortDefaultValue, setFilterSortDefaultValue] = useState("");
   const [wattageArray, setWattageArray] = useState([]);
   const [totalPower, setTotalPower] = useState(0);
+  const [priceArray, setPriceArray] = useState([]);
+  const [totalAmount, setTotalAmount] = useState(0);
   const [scrollToTopActive, setScrollToTopActive] = useState(false);
   const [searchBarActive, setSearchBarActive] = useState(false);
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
   const [darkMode, setDarkMode] = useState(getMode);
   const [componentSelectorActive, setComponentSelectorActive] = useState(true);
+  const [showBackButton, setShowBackButton] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
@@ -287,6 +288,8 @@ export const GlobalContextProvider = (props) => {
   const handleItems = () => {
     setMyItems(myItemsInitial);
     localStorage.setItem("myItems", JSON.stringify(myItemsInitial));
+    setTotalAmount(0);
+    setTotalPower(0);
   };
 
   useEffect(() => {
@@ -314,8 +317,10 @@ export const GlobalContextProvider = (props) => {
 
   // Delete items from myItems
   const deleteItem = (category, id) => {
-    const filteredItems = myItems[category].filter((el) => el.id !== id);
-    setMyItems({ ...myItems, [category]: filteredItems });
+    let myItemsLocal = JSON.parse(localStorage.getItem("myItems")) || {};
+
+    const filteredItems = myItemsLocal[category].filter((el) => el.id !== id);
+    setMyItems({ ...myItemsLocal, [category]: filteredItems });
 
     localStorage.setItem(
       "myItems",
@@ -325,11 +330,17 @@ export const GlobalContextProvider = (props) => {
       })
     );
   };
-  let wattageArr = [];
+
+  // Total Power
+
+  let wattageArr = JSON.parse(localStorage.getItem("totalWattage")) || [];
+
   useEffect(() => {
+    wattageArr = [];
+    let myItemsLocal = JSON.parse(localStorage.getItem("myItems")) || {};
     for (const key in myItems) {
-      if (myItems[key].length >= 1) {
-        myItems[key].forEach(
+      if (myItemsLocal[key].length >= 1) {
+        myItemsLocal[key].forEach(
           (el) => (wattageArr = [...wattageArr, el.powerConsumption])
         );
       }
@@ -340,7 +351,33 @@ export const GlobalContextProvider = (props) => {
   useEffect(() => {
     const reducer = (a, b) => a + b;
     setTotalPower(Math.floor(wattageArray.reduce(reducer, 0)));
+
+    wattageArray.length > 0 &&
+      localStorage.setItem("totalWattage", JSON.stringify(wattageArray));
   }, [wattageArray]);
+
+  // Total Amount
+
+  let priceArr = JSON.parse(localStorage.getItem("totalPrice")) || [];
+
+  useEffect(() => {
+    priceArr = [];
+    let myItemsLocal = JSON.parse(localStorage.getItem("myItems")) || {};
+    for (const key in myItems) {
+      if (myItemsLocal[key].length >= 1) {
+        myItemsLocal[key].forEach((el) => (priceArr = [...priceArr, el.price]));
+      }
+    }
+    setPriceArray(priceArr);
+  }, [myItems]);
+
+  useEffect(() => {
+    const reducer = (a, b) => a + b;
+    setTotalAmount(Math.floor(priceArray.reduce(reducer, 0)));
+
+    priceArray.length > 0 &&
+      localStorage.setItem("totalPrice", JSON.stringify(priceArray));
+  }, [priceArray]);
 
   // Search logic
   const handleSearch = (query) => {
@@ -379,14 +416,21 @@ export const GlobalContextProvider = (props) => {
       : setCurrentObj({});
   };
 
-  // useEffect(() => {
-  //   if (localStorage.getItem("darkMode")) {
-  //     setDarkMode(localStorage.getItem("darkMode"));
-  //   } else {
-  //     localStorage.setItem("darkMode", false);
-  //     setDarkMode(false);
-  //   }
-  // }, [darkMode]);
+  // Save
+
+  const handleSave = () => {
+    // let element = document.getElementById("current-component");
+    // window.scrollTo(0, 0);
+    // let opt = {
+    //   margin: [12, 0, 0, 0],
+    //   filename: `pc_configuration`,
+    //   image: { type: "png", quality: 1 },
+    //   html2canvas: { scale: 2, useCORS: true },
+    //   jsPDF: { unit: "mm", format: "a4" },
+    // };
+    // html2pdf().from(element).set(opt).save();
+    // html2pdf(element, opt);
+  };
 
   const globalState = {
     mainData,
@@ -435,7 +479,9 @@ export const GlobalContextProvider = (props) => {
     filterSortDefaultValue,
     setFilterSortDefaultValue,
     totalPower,
+    totalAmount,
     wattageArray,
+    wattageArr,
     scrollToTopActive,
     setScrollToTopActive,
     searchBarActive,
@@ -446,6 +492,9 @@ export const GlobalContextProvider = (props) => {
     setDarkMode,
     componentSelectorActive,
     setComponentSelectorActive,
+    showBackButton,
+    setShowBackButton,
+    handleSave,
   };
 
   return <Provider value={globalState}>{props.children}</Provider>;

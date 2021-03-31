@@ -77,7 +77,9 @@ const HomePage = () => {
 
   useEffect(() => {
     localStorage.setItem("route", "Processor");
-    localStorage.setItem("myItems", JSON.stringify(myItemsData));
+    if (!localStorage.getItem("myItems")) {
+      localStorage.setItem("myItems", JSON.stringify(myItemsData));
+    }
   }, []);
 
   return (

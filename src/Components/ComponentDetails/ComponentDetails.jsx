@@ -187,6 +187,8 @@ const ComponentDetails = (props) => {
     addItem,
     setSearchBarActive,
     setComponentSelectorActive,
+    showBackButton,
+    setShowBackButton,
   } = useContext(GlobalContext);
   const [prevUrl, setPrevUrl] = useState(useParams());
   const [onLoaded, setOnLoaded] = useState(false);
@@ -253,6 +255,7 @@ const ComponentDetails = (props) => {
     if (currentObj) {
       setSearchBarActive(false);
       setComponentSelectorActive(false);
+      setShowBackButton(true);
     }
   }, [currentObj]);
 
