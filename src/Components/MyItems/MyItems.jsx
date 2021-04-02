@@ -183,11 +183,6 @@ const MyItems = (props) => {
   const [downloadLink, setDownloadLink] = useState("");
 
   const makeTextFile = () => {
-    // const data = new Blob([myItems], { type: "text/plain" });
-    // const data = new Blob([{ name: "1" }, { name: "2" }], {
-    //   type: "text/plain",
-    // });
-
     const obj = [];
 
     for (const key in myItems) {
@@ -645,7 +640,6 @@ const MyItems = (props) => {
             </Link>
           </div>
         </div>
-
         <hr />
       </div>
       <div className="components-holder">
@@ -663,6 +657,15 @@ const MyItems = (props) => {
               <Text14 className="my-item-brand">{el.brand}</Text14>
               <Text14 className="my-item-model">{el.model}</Text14>
               <Text14 className="my-item-price">${el.price}</Text14>
+              <div className="delete-item">
+                <button
+                  onClick={() => {
+                    deleteItem(el.category, el.id);
+                  }}
+                >
+                  <DeleteIcon />
+                </button>
+              </div>
             </div>
           </div>
         ))}

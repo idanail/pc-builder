@@ -40,13 +40,18 @@ const FilterSelectWrapper = styled.select`
 // component
 
 const FilterSelect = (props) => {
-  const { handleSort, filterSortDefaultValue } = useContext(GlobalContext);
+  const {
+    handleSort,
+    filterSortDefaultValue,
+    filteredData,
+    route,
+  } = useContext(GlobalContext);
 
   return (
     <FilterSelectWrapper
       id="select-sort"
-      onChange={(e) => handleSort(e.target.value)}
-      value={filterSortDefaultValue}
+      onChange={(e) => handleSort(e.target.value, filteredData[route])}
+      // value={filterSortDefaultValue}
     >
       <option value="Featured">Featured</option>
       <option value="Low to High">Price: Low to High</option>

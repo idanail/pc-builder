@@ -254,6 +254,11 @@ export const GlobalContextProvider = (props) => {
     setFilteredData({ ...filteredData, [route]: sortType });
   };
 
+  // Apply sort after filter is clicked
+  useEffect(() => {
+    handleSort(filterSortDefaultValue);
+  }, [clickedBrands]);
+
   // Get current component from initialData
   const getRoute = (currentComponent) => {
     setRoute(currentComponent);

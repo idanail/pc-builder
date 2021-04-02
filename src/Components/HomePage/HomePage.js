@@ -62,6 +62,7 @@ const HomePageWrapper = styled.div`
       background-size: 300%;
       background-position: right;
       transition: 300ms background-position ease-in-out;
+      cursor: pointer;
       &:hover {
         background-position: left;
       }
@@ -90,13 +91,7 @@ const HomePage = () => {
           Be your own boss and complete the system of your dreams. Pick your
           favorite parts for all components of your system.
         </Text17>
-        <Link
-          to={Paths.paths.main.replace("{COMPONENT}", "processor")}
-          // onClick={() => {
-          //   localStorage.setItem("route", "Processor");
-          //   localStorage.setItem("myItems", JSON.stringify(myItemsData));
-          // }}
-        >
+        <Link to={Paths.paths.main.replace("{COMPONENT}", "processor")}>
           <button className="home-info-btn">
             <Heading22>Start Building</Heading22>
           </button>

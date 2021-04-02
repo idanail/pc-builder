@@ -91,6 +91,9 @@ const useStyles = makeStyles((theme) => ({
       transition: "0.2s ease-in-out",
     },
   },
+  componentTextMain: {
+    display: "inline",
+  },
   componentText: {
     marginBottom: "7px",
     "&:hover": {
@@ -182,7 +185,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Processor
                             </Text20>
@@ -198,7 +203,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -231,7 +238,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Processor
                             </Text20>
@@ -247,7 +256,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -263,7 +274,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -288,7 +301,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -304,7 +319,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -360,7 +377,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Processor
                             </Text20>
@@ -376,7 +395,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -392,7 +413,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -408,7 +431,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -434,7 +459,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -450,7 +477,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -466,7 +495,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -491,7 +522,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -507,7 +540,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -532,7 +567,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -548,7 +585,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -605,7 +644,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Processor
                             </Text20>
@@ -621,7 +662,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -637,7 +680,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -653,7 +698,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -669,7 +716,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -696,7 +745,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -712,7 +763,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -728,7 +781,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -744,7 +799,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -770,7 +827,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -786,7 +845,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -802,7 +863,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -828,7 +891,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -844,7 +909,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -860,7 +927,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -885,7 +954,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -901,7 +972,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -926,7 +999,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -942,7 +1017,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -967,7 +1044,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -983,7 +1062,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -1054,7 +1135,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Processor
                             </Text20>
@@ -1070,7 +1153,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -1086,7 +1171,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -1102,7 +1189,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -1118,7 +1207,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -1134,7 +1225,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -1162,7 +1255,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -1178,7 +1273,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -1194,7 +1291,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -1210,7 +1309,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -1226,7 +1327,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -1253,7 +1356,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -1269,7 +1374,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -1285,7 +1392,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -1301,7 +1410,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -1328,7 +1439,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -1344,7 +1457,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -1360,7 +1475,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -1376,7 +1493,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -1402,7 +1521,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -1418,7 +1539,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -1434,7 +1557,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -1460,7 +1585,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -1476,7 +1603,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -1492,7 +1621,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -1518,7 +1649,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -1534,7 +1667,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -1550,7 +1685,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -1575,7 +1712,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -1591,7 +1730,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -1616,7 +1757,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -1632,7 +1775,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -1657,7 +1802,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -1673,7 +1820,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -1698,7 +1847,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -1714,7 +1865,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -1739,7 +1892,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -1755,7 +1910,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -1780,7 +1937,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -1796,7 +1955,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -1855,8 +2016,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   myItems["Motherboard"].length === 0 &&
                   myItems["Graphic Card"].length === 0 &&
                   myItems["RAM Memory"].length === 0 &&
-                  myItems["SSD"].length === 0 &&
-                  myItems["Hard Drive"].length === 0 ? (
+                  (myItems["SSD"].length === 0 ||
+                    myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -1872,7 +2033,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Processor
                             </Text20>
@@ -1888,7 +2051,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -1904,7 +2069,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -1920,7 +2087,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -1936,7 +2105,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -1952,13 +2123,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -1968,7 +2149,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -1980,8 +2163,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     myItems["Motherboard"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -1997,7 +2180,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2013,7 +2198,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -2029,7 +2216,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -2045,7 +2234,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -2061,13 +2252,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -2077,7 +2278,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -2088,8 +2291,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["Motherboard"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -2105,7 +2308,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -2121,7 +2326,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -2137,7 +2344,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -2153,13 +2362,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -2169,7 +2388,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -2180,8 +2401,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -2197,7 +2418,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2213,7 +2436,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -2229,7 +2454,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -2245,13 +2472,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -2261,7 +2498,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -2288,7 +2527,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2304,7 +2545,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -2320,7 +2563,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -2336,7 +2581,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -2363,7 +2610,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2379,7 +2628,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -2395,7 +2646,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -2411,7 +2664,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -2421,8 +2676,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -2438,7 +2693,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2454,7 +2711,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -2470,13 +2729,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -2486,7 +2755,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -2496,8 +2767,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -2513,7 +2784,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2529,7 +2802,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -2545,13 +2820,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -2561,7 +2846,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -2571,8 +2858,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -2588,7 +2875,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -2604,7 +2893,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -2620,13 +2911,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -2636,7 +2937,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -2662,7 +2965,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2678,7 +2983,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -2694,7 +3001,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -2720,7 +3029,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2736,7 +3047,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -2752,7 +3065,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -2778,7 +3093,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2794,7 +3111,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -2810,7 +3129,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -2836,7 +3157,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2852,7 +3175,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -2868,7 +3193,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -2894,7 +3221,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2910,7 +3239,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -2926,7 +3257,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -2935,8 +3268,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -2952,7 +3285,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -2968,13 +3303,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -2984,7 +3329,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -3010,7 +3357,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -3026,7 +3375,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -3042,7 +3393,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -3068,7 +3421,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -3084,7 +3439,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -3100,7 +3457,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -3109,8 +3468,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -3126,7 +3485,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -3142,13 +3503,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -3158,7 +3529,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -3167,8 +3540,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -3184,7 +3557,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -3200,13 +3575,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -3216,7 +3601,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -3241,7 +3628,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -3257,7 +3646,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -3282,7 +3673,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -3298,7 +3691,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -3323,7 +3718,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -3339,7 +3736,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -3364,7 +3763,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -3380,7 +3781,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -3405,7 +3808,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -3421,7 +3826,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -3446,7 +3853,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -3462,7 +3871,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -3487,7 +3898,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -3503,7 +3916,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -3528,7 +3943,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -3544,7 +3961,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -3569,7 +3988,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -3585,7 +4006,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -3593,7 +4016,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["SSD"].length === 0 &&
+                  ) : myItems["SSD"].length === 0 ||
                     myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -3610,13 +4033,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -3626,7 +4059,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -3707,9 +4142,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   myItems["Motherboard"].length === 0 &&
                   myItems["Graphic Card"].length === 0 &&
                   myItems["RAM Memory"].length === 0 &&
-                  myItems["SSD"].length === 0 &&
-                  myItems["Hard Drive"].length === 0 &&
-                  myItems["Optical Drive"].length === 0 ? (
+                  (myItems["SSD"].length === 0 ||
+                    myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -3725,7 +4159,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Processor
                             </Text20>
@@ -3741,7 +4177,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -3757,7 +4195,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -3773,7 +4213,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -3789,7 +4231,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -3805,13 +4249,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -3821,25 +4275,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -3849,9 +4289,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     myItems["Motherboard"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -3867,7 +4306,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -3883,7 +4324,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -3899,7 +4342,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -3915,7 +4360,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -3931,13 +4378,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -3947,25 +4404,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -3974,9 +4417,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["Motherboard"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -3992,7 +4434,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -4008,7 +4452,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -4024,7 +4470,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -4040,13 +4488,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -4056,224 +4514,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -4284,8 +4527,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -4301,7 +4544,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -4317,7 +4562,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -4333,7 +4580,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -4349,25 +4598,37 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[7]
+                              Object.keys(myItems)[6]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              Optical Drive
+                              Hard Drive
                             </Text20>
                           </Link>
                         </li>
@@ -4376,8 +4637,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -4393,7 +4654,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -4409,7 +4672,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -4425,175 +4690,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -4609,13 +4708,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -4625,117 +4734,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -4760,7 +4763,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -4776,7 +4781,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -4792,7 +4799,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -4808,7 +4817,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -4835,7 +4846,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -4851,7 +4864,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -4867,7 +4882,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -4883,7 +4900,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -4893,8 +4912,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -4910,7 +4929,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -4926,7 +4947,173 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -4942,7 +5129,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -4952,15 +5141,43 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[7]
+                              Object.keys(myItems)[5]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              Optical Drive
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
                             </Text20>
                           </Link>
                         </li>
@@ -4968,7 +5185,90 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
                     myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -4985,7 +5285,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -5001,516 +5303,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -5526,157 +5321,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -5692,175 +5339,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -5884,7 +5367,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -5900,7 +5385,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -5916,7 +5403,946 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -5942,7 +6368,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -5958,7 +6386,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -5974,7 +6404,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -6000,7 +6432,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -6016,7 +6450,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -6032,995 +6468,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["SSD"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -7043,7 +6495,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -7059,7 +6513,939 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["SSD"].length === 0 ||
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -7084,7 +7470,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -7100,7 +7488,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -7125,7 +7515,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -7141,7 +7533,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -7166,7 +7560,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -7182,7 +7578,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -7190,8 +7588,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                  ) : myItems["CPU Cooler"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -7207,25 +7604,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -7248,7 +7631,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -7264,7 +7649,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -7289,7 +7676,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -7305,7 +7694,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -7330,7 +7721,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -7346,7 +7739,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -7354,8 +7749,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                  ) : myItems["Graphic Card"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -7371,25 +7765,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -7412,7 +7792,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -7428,7 +7810,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -7453,7 +7837,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -7469,7 +7855,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -7477,8 +7865,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                  ) : myItems["RAM Memory"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -7494,31 +7881,17 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
                       </ul>
                     </>
-                  ) : myItems["SSD"].length === 0 &&
+                  ) : myItems["SSD"].length === 0 ||
                     myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -7535,13 +7908,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -7551,7 +7934,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -7559,8 +7944,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                  ) : myItems["SSD"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -7576,32 +7960,17 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
                       </ul>
                     </>
-                  ) : myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                  ) : myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -7617,25 +7986,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -7693,7 +8048,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         Please add a SSD.
                       </Text20>
                     </Link>
-                  ) : myItems["Hard Drive"].length === 0 ? (
+                  ) : (
                     <Link
                       to={Paths.paths.main.replace(
                         "{COMPONENT}",
@@ -7706,19 +8061,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         Please add a Hard Drive.
                       </Text20>
                     </Link>
-                  ) : (
-                    <Link
-                      to={Paths.paths.main.replace(
-                        "{COMPONENT}",
-                        Object.keys(myItems)[7]
-                          .replace(" ", "_")
-                          .toLocaleLowerCase()
-                      )}
-                    >
-                      <Text20 className={classes.marginBSmall}>
-                        Please add an Optical Drive.
-                      </Text20>
-                    </Link>
                   )
                 ) : // Case
                 category === "Case" ? (
@@ -7727,9 +8069,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   myItems["Motherboard"].length === 0 &&
                   myItems["Graphic Card"].length === 0 &&
                   myItems["RAM Memory"].length === 0 &&
-                  myItems["SSD"].length === 0 &&
-                  myItems["Hard Drive"].length === 0 &&
-                  myItems["Optical Drive"].length === 0 &&
+                  (myItems["SSD"].length === 0 ||
+                    myItems["Hard Drive"].length === 0) &&
                   myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -7746,7 +8087,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Processor
                             </Text20>
@@ -7762,7 +8105,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -7778,7 +8123,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -7794,7 +8141,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -7810,7 +8159,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -7826,13 +8177,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -7842,28 +8203,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -7874,7 +8222,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -7886,9 +8236,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     myItems["Motherboard"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -7905,7 +8254,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -7921,7 +8272,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -7937,7 +8290,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -7953,7 +8308,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -7969,13 +8326,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -7985,28 +8352,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -8017,7 +8371,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -8028,9 +8384,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -8047,7 +8402,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -8063,7 +8420,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -8079,7 +8438,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -8095,13 +8456,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -8111,28 +8482,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -8143,7 +8501,139 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -8155,6 +8645,218 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
                     myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
                     myItems["Hard Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
@@ -8172,7 +8874,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -8188,7 +8892,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -8204,25 +8910,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
                             </Text20>
                           </Link>
                         </li>
@@ -8236,12 +8928,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -8252,7 +8947,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -8262,9 +8959,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -8281,7 +8977,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -8297,25 +8995,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
                             </Text20>
                           </Link>
                         </li>
@@ -8329,28 +9013,41 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[7]
+                              Object.keys(myItems)[6]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              Optical Drive
+                              Hard Drive
                             </Text20>
                           </Link>
                         </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -8361,7 +9058,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -8370,119 +9069,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -8499,225 +9088,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -8733,7 +9106,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -8749,13 +9124,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -8765,28 +9150,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -8797,7 +9169,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -8807,9 +9181,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -8826,7 +9199,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -8842,7 +9217,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -8858,13 +9235,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -8874,28 +9261,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -8906,7 +9280,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -8917,9 +9293,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["Motherboard"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -8936,7 +9311,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Motherboard
                             </Text20>
@@ -8952,7 +9329,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -8968,7 +9347,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -8984,13 +9365,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -9000,28 +9391,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -9032,7 +9410,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -9042,9 +9422,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -9061,7 +9440,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -9077,7 +9458,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -9093,13 +9476,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -9109,9 +9502,60 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
                             </Text20>
                           </Link>
                         </li>
@@ -9119,15 +9563,246 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[7]
+                              Object.keys(myItems)[3]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              Optical Drive
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
                             </Text20>
                           </Link>
                         </li>
@@ -9141,7 +9816,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -9152,7 +9829,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
                     myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -9169,7 +9845,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -9185,7 +9863,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -9201,283 +9881,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -9493,25 +9899,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -9537,7 +9929,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -9553,7 +9947,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -9569,7 +9965,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -9585,7 +9983,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -9601,7 +10001,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -9612,7 +10014,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -9629,7 +10030,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -9645,7 +10048,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -9661,28 +10066,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -9693,7 +10085,211 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -9704,99 +10300,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -9813,7 +10316,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -9829,7 +10334,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -9845,28 +10352,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -9877,99 +10371,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -9980,7 +10384,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
                     myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -9997,7 +10400,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -10013,7 +10418,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -10029,28 +10436,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -10061,7 +10455,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -10071,9 +10467,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -10089,7 +10484,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -10105,7 +10502,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -10121,13 +10520,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -10137,9 +10546,41 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
                             </Text20>
                           </Link>
                         </li>
@@ -10147,15 +10588,80 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[7]
+                              Object.keys(myItems)[4]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              Optical Drive
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
                             </Text20>
                           </Link>
                         </li>
@@ -10164,6 +10670,89 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
                     myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
                     myItems["Hard Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
@@ -10181,7 +10770,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -10197,25 +10788,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
                             </Text20>
                           </Link>
                         </li>
@@ -10229,12 +10806,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -10245,7 +10825,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -10254,10 +10836,101 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -10267,15 +10940,17 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[1]
+                              Object.keys(myItems)[3]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              CPU Cooler
+                              Graphic Card
                             </Text20>
                           </Link>
                         </li>
@@ -10289,7 +10964,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -10305,50 +10982,46 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[7]
+                              Object.keys(myItems)[6]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
+                              Hard Drive
                             </Text20>
                           </Link>
                         </li>
                       </ul>
                     </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
+                  ) : myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -10359,15 +11032,17 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[1]
+                              Object.keys(myItems)[3]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              CPU Cooler
+                              Graphic Card
                             </Text20>
                           </Link>
                         </li>
@@ -10381,85 +11056,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
                             </Text20>
                           </Link>
                         </li>
@@ -10473,13 +11074,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -10489,28 +11100,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -10521,7 +11119,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -10532,99 +11132,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
                     myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -10641,7 +11148,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -10657,7 +11166,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -10673,28 +11184,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -10705,99 +11203,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -10808,7 +11216,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                   ) : myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
                     myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -10825,7 +11232,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -10841,7 +11250,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -10857,28 +11268,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -10889,7 +11287,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -10898,9 +11298,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -10917,7 +11316,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -10933,13 +11334,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -10949,28 +11360,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -10981,7 +11379,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -10990,9 +11390,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -11009,7 +11408,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -11025,13 +11426,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -11041,28 +11452,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -11073,7 +11471,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -11100,7 +11500,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -11116,7 +11518,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -11132,7 +11536,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -11148,7 +11554,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -11175,7 +11583,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -11191,7 +11601,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -11207,7 +11619,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -11223,7 +11637,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -11233,8 +11649,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                    myItems["RAM Memory"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -11250,7 +11665,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -11266,7 +11683,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -11282,25 +11701,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -11325,7 +11730,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -11341,7 +11748,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -11357,7 +11766,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -11373,7 +11784,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -11383,7 +11796,244 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
                     myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["Graphic Card"].length === 0 &&
                     myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -11400,7 +12050,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -11416,232 +12068,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -11657,25 +12086,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -11700,7 +12115,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -11716,7 +12133,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -11732,7 +12151,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -11748,7 +12169,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -11758,7 +12181,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Graphic Card"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -11775,7 +12197,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -11791,28 +12215,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -11823,7 +12234,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -11833,7 +12246,244 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
                     myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
                     myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -11850,7 +12500,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -11866,232 +12518,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -12107,25 +12536,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -12150,7 +12565,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -12166,7 +12583,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -12182,7 +12601,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -12198,7 +12619,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -12208,7 +12631,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -12225,7 +12647,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -12241,28 +12665,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -12273,7 +12684,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -12282,9 +12695,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -12300,7 +12712,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -12316,13 +12730,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -12332,9 +12756,40 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
                             </Text20>
                           </Link>
                         </li>
@@ -12342,15 +12797,62 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[7]
+                              Object.keys(myItems)[5]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              Optical Drive
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
                             </Text20>
                           </Link>
                         </li>
@@ -12358,6 +12860,70 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Hard Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
@@ -12375,157 +12941,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -12541,28 +12959,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -12573,7 +12978,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -12583,7 +12990,244 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
                     myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["RAM Memory"].length === 0 &&
                     myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -12600,7 +13244,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -12616,232 +13262,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -12857,25 +13280,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -12900,7 +13309,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -12916,7 +13327,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -12932,7 +13345,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -12948,7 +13363,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -12958,7 +13375,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["Graphic Card"].length === 0 &&
                     myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -12975,7 +13391,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -12991,7 +13409,350 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["Hard Drive"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -13001,40 +13762,52 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[7]
+                              Object.keys(myItems)[5]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              Optical Drive
+                              SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[8]
+                              Object.keys(myItems)[6]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              Power Supply
+                              Hard Drive
                             </Text20>
                           </Link>
                         </li>
                       </ul>
                     </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
+                    myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -13044,15 +13817,17 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
-                              Object.keys(myItems)[3]
+                              Object.keys(myItems)[4]
                                 .replace(" ", "_")
                                 .toLocaleLowerCase()
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
-                              Graphic Card
+                              RAM Memory
                             </Text20>
                           </Link>
                         </li>
@@ -13066,13 +13841,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -13082,87 +13867,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -13173,157 +13886,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -13333,82 +13898,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["RAM Memory"].length === 0 &&
                     myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -13425,7 +13914,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -13441,28 +13932,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -13473,82 +13951,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -13558,7 +13963,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     </>
                   ) : myItems["RAM Memory"].length === 0 &&
                     myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -13575,7 +13979,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -13591,28 +13997,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -13623,7 +14016,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -13631,9 +14026,8 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
+                  ) : (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -13650,13 +14044,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -13666,28 +14070,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -13698,7 +14089,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -13724,7 +14117,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -13740,7 +14135,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -13756,7 +14153,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -13782,7 +14181,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -13798,7 +14199,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -13814,7 +14217,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -13840,7 +14245,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -13856,7 +14263,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -13872,7 +14281,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -13881,8 +14292,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Graphic Card"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                    myItems["Graphic Card"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -13898,7 +14308,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -13914,25 +14326,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -13956,7 +14354,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -13972,7 +14372,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -13988,7 +14390,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -14014,7 +14418,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -14030,7 +14436,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -14046,7 +14454,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -14072,7 +14482,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -14088,7 +14500,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -14104,7 +14518,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -14113,8 +14529,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                    myItems["RAM Memory"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -14130,7 +14545,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -14146,25 +14563,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -14188,7 +14591,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -14204,7 +14609,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -14220,7 +14627,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -14229,7 +14638,187 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[1]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              CPU Cooler
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["CPU Cooler"].length === 0 &&
                     myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -14246,181 +14835,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[1]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -14436,25 +14853,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -14478,7 +14881,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -14494,7 +14899,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -14510,7 +14917,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -14519,7 +14928,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -14536,28 +14944,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -14568,7 +14963,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -14594,7 +14991,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -14610,7 +15009,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -14626,7 +15027,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -14652,7 +15055,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -14668,7 +15073,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -14684,7 +15091,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -14693,8 +15102,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                    myItems["RAM Memory"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -14710,7 +15118,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -14726,25 +15136,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -14768,7 +15164,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -14784,7 +15182,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -14800,7 +15200,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -14809,7 +15211,187 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["Graphic Card"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
                     myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[3]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Graphic Card
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["Graphic Card"].length === 0 &&
                     myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -14826,181 +15408,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[3]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -15016,25 +15426,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -15058,7 +15454,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -15074,7 +15472,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -15090,7 +15490,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -15099,7 +15501,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -15116,28 +15517,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -15148,7 +15536,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -15157,7 +15547,187 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["RAM Memory"].length === 0 &&
+                    (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
+                    myItems["SSD"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
                     myItems["SSD"].length === 0 &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[4]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              RAM Memory
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["RAM Memory"].length === 0 &&
                     myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -15174,181 +15744,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["SSD"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[4]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -15364,25 +15762,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -15406,7 +15790,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -15422,7 +15808,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -15438,7 +15826,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -15447,7 +15837,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -15464,28 +15853,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -15496,7 +15872,135 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Power Supply
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : myItems["SSD"].length === 0 ||
+                    myItems["Hard Drive"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+                      </ul>
+                    </>
+                  ) : (myItems["SSD"].length === 0 ||
+                      myItems["Hard Drive"].length === 0) &&
+                    myItems["Power Supply"].length === 0 ? (
+                    <>
+                      <Text20 className={classes.marginBSmall}>
+                        Please add the following components:
+                      </Text20>
+                      <ul className="modal-ul">
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[5]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              SSD
+                            </Text20>
+                          </Link>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[6]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
+                            >
+                              Hard Drive
+                            </Text20>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to={Paths.paths.main.replace(
+                              "{COMPONENT}",
+                              Object.keys(myItems)[8]
+                                .replace(" ", "_")
+                                .toLocaleLowerCase()
+                            )}
+                          >
+                            <Text20
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -15505,65 +16009,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["SSD"].length === 0 &&
-                    myItems["Hard Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -15580,28 +16025,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[6]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -15612,65 +16044,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Power Supply
-                            </Text20>
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
-                    <>
-                      <Text20 className={classes.marginBSmall}>
-                        Please add the following components:
-                      </Text20>
-                      <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[5]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[8]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -15679,7 +16055,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                       </ul>
                     </>
                   ) : myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 &&
                     myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -15696,28 +16071,15 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -15728,7 +16090,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -15753,7 +16117,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -15769,7 +16135,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -15794,7 +16162,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -15810,7 +16180,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -15835,7 +16207,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -15851,7 +16225,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -15876,7 +16252,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -15892,7 +16270,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -15900,8 +16280,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["CPU Cooler"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                  ) : myItems["CPU Cooler"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -15917,25 +16296,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -15958,7 +16323,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               CPU Cooler
                             </Text20>
@@ -15974,7 +16341,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -15999,7 +16368,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -16015,7 +16386,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -16040,7 +16413,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -16056,7 +16431,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -16081,7 +16458,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -16097,7 +16476,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -16105,8 +16486,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["Graphic Card"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                  ) : myItems["Graphic Card"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -16122,25 +16502,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -16163,7 +16529,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Graphic Card
                             </Text20>
@@ -16179,7 +16547,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -16204,7 +16574,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -16220,7 +16592,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -16245,7 +16619,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -16261,7 +16637,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -16269,8 +16647,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["RAM Memory"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                  ) : myItems["RAM Memory"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -16286,25 +16663,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -16327,7 +16690,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               RAM Memory
                             </Text20>
@@ -16343,7 +16708,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -16351,7 +16718,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["SSD"].length === 0 &&
+                  ) : myItems["SSD"].length === 0 ||
                     myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
@@ -16368,13 +16735,23 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
                           </Link>
-                        </li>
-                        <li>
+                          <span
+                            className={classes.slashSeparator}
+                            style={{
+                              color: darkMode ? "#E4E6EB" : "#050505",
+                              fontSize: "20px",
+                              margin: "0 5px",
+                            }}
+                          >
+                            /
+                          </span>
                           <Link
                             to={Paths.paths.main.replace(
                               "{COMPONENT}",
@@ -16384,7 +16761,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -16392,8 +16771,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["SSD"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                  ) : myItems["SSD"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -16409,25 +16787,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -16450,7 +16814,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               SSD
                             </Text20>
@@ -16466,7 +16832,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -16474,8 +16842,7 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["Hard Drive"].length === 0 &&
-                    myItems["Optical Drive"].length === 0 ? (
+                  ) : myItems["Hard Drive"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
@@ -16491,25 +16858,11 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
-                            </Text20>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
                             </Text20>
                           </Link>
                         </li>
@@ -16532,7 +16885,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Hard Drive
                             </Text20>
@@ -16548,7 +16903,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -16556,29 +16913,12 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                         </li>
                       </ul>
                     </>
-                  ) : myItems["Optical Drive"].length === 0 &&
-                    myItems["Power Supply"].length === 0 ? (
+                  ) : myItems["Power Supply"].length === 0 ? (
                     <>
                       <Text20 className={classes.marginBSmall}>
                         Please add the following components:
                       </Text20>
                       <ul className="modal-ul">
-                        <li>
-                          <Link
-                            to={Paths.paths.main.replace(
-                              "{COMPONENT}",
-                              Object.keys(myItems)[7]
-                                .replace(" ", "_")
-                                .toLocaleLowerCase()
-                            )}
-                          >
-                            <Text20
-                              className={width >= 1024 && classes.componentText}
-                            >
-                              Optical Drive
-                            </Text20>
-                          </Link>
-                        </li>
                         <li>
                           <Link
                             to={Paths.paths.main.replace(
@@ -16589,7 +16929,9 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                             )}
                           >
                             <Text20
-                              className={width >= 1024 && classes.componentText}
+                              className={`${classes.componentTextMain} ${
+                                width >= 1024 && classes.componentText
+                              }`}
                             >
                               Power Supply
                             </Text20>
@@ -16660,19 +17002,6 @@ const CheckForPreviousComponent = ({ open, handleClose, category, theme }) => {
                     >
                       <Text20 className={classes.marginBSmall}>
                         Please add a Hard Drive.
-                      </Text20>
-                    </Link>
-                  ) : myItems["Optical Drive"].length === 0 ? (
-                    <Link
-                      to={Paths.paths.main.replace(
-                        "{COMPONENT}",
-                        Object.keys(myItems)[7]
-                          .replace(" ", "_")
-                          .toLocaleLowerCase()
-                      )}
-                    >
-                      <Text20 className={classes.marginBSmall}>
-                        Please add an Optical Drive.
                       </Text20>
                     </Link>
                   ) : (

@@ -328,8 +328,7 @@ const ComponentDetails = (props) => {
                     myItems["CPU Cooler"].length === 1 &&
                     myItems["Motherboard"].length === 1 &&
                     myItems["Graphic Card"].length === 1 &&
-                    myItems["RAM Memory"].length >= 1 &&
-                    myItems["SSD"].length >= 1
+                    myItems["RAM Memory"].length >= 1
                     ? addItem(currentObj[0])
                     : handleOpen()
                   : // Optical Drive
@@ -339,8 +338,8 @@ const ComponentDetails = (props) => {
                     myItems["Motherboard"].length === 1 &&
                     myItems["Graphic Card"].length === 1 &&
                     myItems["RAM Memory"].length >= 1 &&
-                    myItems["SSD"].length >= 1 &&
-                    myItems["Hard Drive"].length >= 1
+                    (myItems["SSD"].length >= 1 ||
+                      myItems["Hard Drive"].length >= 1)
                     ? addItem(currentObj[0])
                     : handleOpen()
                   : // Power Supply
@@ -350,9 +349,8 @@ const ComponentDetails = (props) => {
                     myItems["Motherboard"].length === 1 &&
                     myItems["Graphic Card"].length === 1 &&
                     myItems["RAM Memory"].length >= 1 &&
-                    myItems["SSD"].length >= 1 &&
-                    myItems["Hard Drive"].length >= 1 &&
-                    myItems["Optical Drive"].length === 1
+                    (myItems["SSD"].length >= 1 ||
+                      myItems["Hard Drive"].length >= 1)
                     ? addItem(currentObj[0])
                     : handleOpen()
                   : // Case
@@ -362,10 +360,9 @@ const ComponentDetails = (props) => {
                     myItems["Motherboard"].length === 1 &&
                     myItems["Graphic Card"].length === 1 &&
                     myItems["RAM Memory"].length >= 1 &&
-                    myItems["SSD"].length >= 1 &&
-                    myItems["Hard Drive"].length >= 1 &&
-                    myItems["Optical Drive"].length === 1 &&
-                    myItems["Power Supply"].length === 1
+                    myItems["Power Supply"].length === 1 &&
+                    (myItems["SSD"].length >= 1 ||
+                      myItems["Hard Drive"].length >= 1)
                     ? addItem(currentObj[0])
                     : handleOpen()
                   : // Else
