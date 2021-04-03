@@ -169,7 +169,8 @@ const MyItems = (props) => {
     totalPower,
     totalAmount,
     darkMode,
-    handleSave,
+    clickedPurpose,
+    setCurrentObj,
   } = useContext(GlobalContext);
   const [clickedCategory, setClickedCategory] = useState("");
   const [clickedId, setClickedId] = useState("");
@@ -226,9 +227,9 @@ const MyItems = (props) => {
       </div>
       <div id="current-component">
         <MainTitle
-          name={`${Object.values(myItems).flat().length}/${
-            Object.keys(myItems).flat().length
-          } 
+          name={`${
+            Object.values(myItems).filter((el) => el.length > 0).length
+          }/${Object.keys(myItems).flat().length} 
           parts piched`}
         />
         <div className="price-calculator">
@@ -261,6 +262,11 @@ const MyItems = (props) => {
           </div>
           <div className="component-name">
             <Link
+              onClick={() => {
+                clickedPurpose.length > 0
+                  ? setCurrentObj({ purpose: clickedPurpose })
+                  : setCurrentObj({});
+              }}
               to={Paths.paths.main.replace(
                 "{COMPONENT}",
                 Object.keys(myItems)[0].replace(" ", "_").toLocaleLowerCase()
@@ -315,6 +321,11 @@ const MyItems = (props) => {
           </div>
           <div className="component-name">
             <Link
+              onClick={() => {
+                clickedPurpose.length > 0
+                  ? setCurrentObj({ purpose: clickedPurpose })
+                  : setCurrentObj({});
+              }}
               to={Paths.paths.main.replace(
                 "{COMPONENT}",
                 Object.keys(myItems)[1].replace(" ", "_").toLocaleLowerCase()
@@ -368,6 +379,11 @@ const MyItems = (props) => {
           </div>
           <div className="component-name">
             <Link
+              onClick={() => {
+                clickedPurpose.length > 0
+                  ? setCurrentObj({ purpose: clickedPurpose })
+                  : setCurrentObj({});
+              }}
               to={Paths.paths.main.replace(
                 "{COMPONENT}",
                 Object.keys(myItems)[2].replace(" ", "_").toLocaleLowerCase()
@@ -422,6 +438,11 @@ const MyItems = (props) => {
           </div>
           <div className="component-name">
             <Link
+              onClick={() => {
+                clickedPurpose.length > 0
+                  ? setCurrentObj({ purpose: clickedPurpose })
+                  : setCurrentObj({});
+              }}
               to={Paths.paths.main.replace(
                 "{COMPONENT}",
                 Object.keys(myItems)[3].replace(" ", "_").toLocaleLowerCase()
@@ -474,6 +495,11 @@ const MyItems = (props) => {
           </div>
           <div className="component-name">
             <Link
+              onClick={() => {
+                clickedPurpose.length > 0
+                  ? setCurrentObj({ purpose: clickedPurpose })
+                  : setCurrentObj({});
+              }}
               to={Paths.paths.main.replace(
                 "{COMPONENT}",
                 Object.keys(myItems)[4].replace(" ", "_").toLocaleLowerCase()
@@ -527,6 +553,11 @@ const MyItems = (props) => {
           </div>
           <div className="component-name">
             <Link
+              onClick={() => {
+                clickedPurpose.length > 0
+                  ? setCurrentObj({ purpose: clickedPurpose })
+                  : setCurrentObj({});
+              }}
               to={Paths.paths.main.replace(
                 "{COMPONENT}",
                 Object.keys(myItems)[5].replace(" ", "_").toLocaleLowerCase()
@@ -579,6 +610,11 @@ const MyItems = (props) => {
           </div>
           <div className="component-name">
             <Link
+              onClick={() => {
+                clickedPurpose.length > 0
+                  ? setCurrentObj({ purpose: clickedPurpose })
+                  : setCurrentObj({});
+              }}
               to={Paths.paths.main.replace(
                 "{COMPONENT}",
                 Object.keys(myItems)[6].replace(" ", "_").toLocaleLowerCase()
@@ -631,6 +667,11 @@ const MyItems = (props) => {
           </div>
           <div className="component-name">
             <Link
+              onClick={() => {
+                clickedPurpose.length > 0
+                  ? setCurrentObj({ purpose: clickedPurpose })
+                  : setCurrentObj({});
+              }}
               to={Paths.paths.main.replace(
                 "{COMPONENT}",
                 Object.keys(myItems)[7].replace(" ", "_").toLocaleLowerCase()
@@ -683,6 +724,11 @@ const MyItems = (props) => {
           </div>
           <div className="component-name">
             <Link
+              onClick={() => {
+                clickedPurpose.length > 0
+                  ? setCurrentObj({ purpose: clickedPurpose })
+                  : setCurrentObj({});
+              }}
               to={Paths.paths.main.replace(
                 "{COMPONENT}",
                 Object.keys(myItems)[8].replace(" ", "_").toLocaleLowerCase()
@@ -735,6 +781,11 @@ const MyItems = (props) => {
           </div>
           <div className="component-name">
             <Link
+              onClick={() => {
+                clickedPurpose.length > 0
+                  ? setCurrentObj({ purpose: clickedPurpose })
+                  : setCurrentObj({});
+              }}
               to={Paths.paths.main.replace(
                 "{COMPONENT}",
                 Object.keys(myItems)[9].replace(" ", "_").toLocaleLowerCase()

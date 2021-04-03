@@ -402,6 +402,7 @@ export const GlobalContextProvider = (props) => {
 
   const handleReset = () => {
     setClickedBrands([]);
+    setClickedPurpose([]);
     setClickedTypes([]);
     setClickedColors([]);
     setCurrentPriceRange([

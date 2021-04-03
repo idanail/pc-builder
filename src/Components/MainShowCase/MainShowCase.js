@@ -174,11 +174,11 @@ const MainShowCase = () => {
     mobileMenuActive,
     setComponentSelectorActive,
     setShowBackButton,
+    totalPower,
   } = useContext(GlobalContext);
 
   const { width } = useWindowDimensions();
   const [filterActive, setFilterActive] = useState(true);
-
   const currentComponent = Object.keys(mainData)
     .filter(
       (el) =>
@@ -207,10 +207,24 @@ const MainShowCase = () => {
     currentData = filteredData[currentComponent].filter((el) =>
       myItems.Motherboard[0].support.includes(el.memorySpeed)
     );
+  } else if (
+    currentComponent === "Power Supply" &&
+    JSON.parse(totalPower) >= 400
+  ) {
+    currentData = filteredData[currentComponent].filter(
+      (el) => el.wattage[1] >= JSON.parse(totalPower) + 100
+    );
+  } else if (
+    currentComponent === "Power Supply" &&
+    JSON.parse(totalPower) < 400 &&
+    JSON.parse(totalPower) >= 1
+  ) {
+    currentData = filteredData[currentComponent].filter(
+      (el) => el.wattage[0] <= 400
+    );
   } else {
     currentData = filteredData[currentComponent];
   }
-
   //Model
   const [open, setOpen] = useState(false);
 

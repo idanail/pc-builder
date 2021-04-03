@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 // npm imports
 import styled from "styled-components";
@@ -47,15 +47,42 @@ const FilterRender = ({ element, clickedElement, filterType }) => {
   const { findClickedElement } = useContext(GlobalContext);
 
   const [isActive, setIsActive] = useState(clickedElement.includes(element));
+  useEffect(() => {
+    console.log(clickedElement, element);
+  });
   return (
     <FilterRenderWrapper
       onClick={() => {
         findClickedElement(element, filterType);
-        setIsActive(!isActive);
+        filterType === "purpose"
+          ? setIsActive(clickedElement.toString() === element ? true : false)
+          : setIsActive(!isActive);
       }}
     >
-      <span className={`rendered-element ${isActive ? "active" : ""}`}>
-        <Span14 className={`${isActive ? "active" : ""}`}>{element}</Span14>
+      <span
+        className={`rendered-element ${
+          filterType === "purpose"
+            ? clickedElement.toString() === element
+              ? "active"
+              : ""
+            : isActive
+            ? "active"
+            : ""
+        }`}
+      >
+        <Span14
+          className={`${
+            filterType === "purpose"
+              ? clickedElement.toString() === element
+                ? "active"
+                : ""
+              : isActive
+              ? "active"
+              : ""
+          }`}
+        >
+          {element}
+        </Span14>
       </span>
     </FilterRenderWrapper>
   );
