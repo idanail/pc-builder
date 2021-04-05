@@ -16,7 +16,7 @@ const SkeletonCardWrapper = styled.div`
   .skeleton-img {
     border-radius: 15px;
     width: 100%;
-    height: 150px;
+    height: 180px;
     margin-bottom: 15px;
   }
   .skeleton-model {

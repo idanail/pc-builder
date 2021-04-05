@@ -47,13 +47,12 @@ const FilterRender = ({ element, clickedElement, filterType }) => {
   const { findClickedElement } = useContext(GlobalContext);
 
   const [isActive, setIsActive] = useState(clickedElement.includes(element));
-  useEffect(() => {
-    console.log(clickedElement, element);
-  });
+
   return (
     <FilterRenderWrapper
       onClick={() => {
         findClickedElement(element, filterType);
+
         filterType === "purpose"
           ? setIsActive(clickedElement.toString() === element ? true : false)
           : setIsActive(!isActive);

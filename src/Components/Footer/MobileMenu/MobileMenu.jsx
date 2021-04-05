@@ -1,5 +1,5 @@
 import { Link } from "@reach/router";
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useReducer, useRef } from "react";
 
 // npm imports
 import styled, { css, withTheme } from "styled-components";
@@ -119,27 +119,7 @@ const MobileMenu = ({ ref }) => {
     mobileMenuActive && setSearchBarActive(false);
   }, [mobileMenuActive]);
 
-  // const wrapperRef = useRef();
-
-  // Handle click outside of the mobile menu
-  // useEffect(() => {
-  //   console.log(wrapperRef);
-  //   function handleClickOutside(event) {
-  //     !ref && setMobileMenuActive(false);
-  //   }
-  //   // Bind the event listener
-  //   document.addEventListener("mouseup", () => {
-  //     handleClickOutside();
-  //     setMobileMenuActive(false);
-  //   });
-  //   return () => {
-  //     // Unbind the event listener on clean up
-  //     document.removeEventListener("mouseup", () => {
-  //       handleClickOutside();
-  //       setMobileMenuActive(false);
-  //     });
-  //   };
-  // }, [ref]);
+  const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
   return (
     <MobileMenuWrapper mobileMenuActive={mobileMenuActive}>

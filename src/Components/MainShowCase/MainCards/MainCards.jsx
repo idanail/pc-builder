@@ -35,7 +35,7 @@ const MainCards = ({ data, name }) => {
       {data && data.length === 0 ? (
         <Text17>No results found.</Text17>
       ) : (
-        data && data.map((el, i) => <Card key={i} el={el} name={name} />)
+        data && data.map((el, i) => <Card key={el.id} el={el} name={name} />)
       )}
     </MainCardsWrapper>
   );
