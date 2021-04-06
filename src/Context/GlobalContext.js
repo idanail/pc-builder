@@ -61,7 +61,12 @@ export const GlobalContextProvider = (props) => {
           (key === "query" &&
             el.brand.toLowerCase().includes(currentObj[key].toLowerCase())) ||
           (key === "query" &&
-            el.model.toLowerCase().includes(currentObj[key].toLowerCase()))
+            el.model.toLowerCase().includes(currentObj[key].toLowerCase())) ||
+          (key === "query" &&
+            el.brand
+              .toLowerCase()
+              .concat(" ", el.model.toLowerCase())
+              .includes(currentObj[key].toLowerCase()))
         ) {
           return el;
         }
